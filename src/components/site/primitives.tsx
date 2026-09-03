@@ -243,7 +243,7 @@ type BtnProps = {
 };
 
 const btnBase =
-  "inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:-translate-y-px active:scale-[0.985]";
+  "inline-flex h-12 items-center justify-center gap-2 rounded-md px-6 text-sm font-semibold transition-all duration-300 hover:-translate-y-px active:scale-[0.985]";
 
 const btnVariants = {
   primary:

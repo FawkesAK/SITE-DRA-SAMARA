@@ -11,11 +11,11 @@ export const site = {
   cidade: "Porto Alegre — RS",
   endereco: "Av. Dr. Nilo Peçanha, 724, 4º andar – Bairro Petrópolis",
   telefone: "{{TELEFONE}}",
-  whatsapp: "(51) 3316-3000",
+  whatsapp: "(51) 99392-9951",
   whatsappUrl:
-    "https://api.whatsapp.com/send?phone=555133163000&text=Ol%C3%A1%2C+vim+do+site+da+dra+Diane+e+gostaria+de+agendar+uma+consulta",
-  instagramUrl: "https://www.instagram.com/dianermarinho/",
-  instagramHandle: "@dianermarinho",
+    "https://api.whatsapp.com/send?phone=55051993929951&text=Oi,%20quero%20agendar%20uma%20consulta%20com%20a%20Dra%20Samara",
+  instagramUrl: "https://www.instagram.com/oftalmosamara/",
+  instagramHandle: "@oftalmosamara",
   googleMapsEmbed: "{{GOOGLE_MAPS_EMBED}}",
 } as const;
 

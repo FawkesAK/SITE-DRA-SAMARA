@@ -7,7 +7,6 @@ import {
   AuthorityMetrics,
   CTAButton,
   Figure,
-  InstitutionStrip,
   Reveal,
   Section,
   SectionHeader,
@@ -15,6 +14,8 @@ import {
 } from "@/components/site/blocks";
 import { ScienceCards } from "@/components/site/science";
 import { Depoimentos } from "@/components/site/depoimentos";
+import { InstagramStrip } from "@/components/site/instagram";
+import { ParallaxImage } from "@/components/site/parallax";
 
 /**
  * Rola até uma seção da Home e só então executa `onArrived` — usado pelos
@@ -471,7 +472,7 @@ function Home() {
           </p>
         </Reveal>
 
-        <ul className="mx-auto mt-12 grid max-w-[1080px] gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8">
+        <ul className="mx-auto mt-12 grid max-w-[1160px] gap-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-16">
           {biblioteca.map((item, i) => (
             <Reveal as="li" key={item.titulo} delay={i * 90}>
               <Link
@@ -528,7 +529,37 @@ function Home() {
         </ul>
       </Section>
 
-      <InstitutionStrip />
+      {/* 06 — Continue acompanhando (tira de posts do Instagram)
+          Fundo areia. À esquerda a tira horizontal de posts (carrossel, mesmo
+          padrão dos Depoimentos: seta à direita + dots); à direita o título
+          serif bicolor e o botão contornado "Ver no Instagram". Empilha no
+          mobile (título → tira). */}
+      <section className="relative overflow-hidden bg-secondary/45 py-16 text-foreground md:py-24">
+        <div className="px-5 sm:px-8 lg:flex lg:items-center lg:gap-12 lg:px-0">
+          <div className="lg:order-2 lg:ml-10 lg:mr-[10%] lg:w-[26%] lg:shrink-0 lg:-translate-y-3">
+            <Reveal>
+              <h2 className="text-[clamp(1.9rem,5.8vw,2.3rem)] leading-[1.14] tracking-[-0.01em] sm:text-[2.4rem] md:text-[2.7rem] lg:text-[clamp(2.4rem,3.2vw,3.2rem)] lg:leading-[1.1]">
+                <span className="text-[var(--gold)]">Continue acompanhando</span>{" "}
+                <span className="text-[#4a3629]">conteúdos sobre</span>{" "}
+                <span className="text-primary">saúde ocular.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={80} className="mt-7 lg:mt-9">
+              <CTAButton
+                href={site.instagramUrl}
+                variant="secondary"
+                className="rounded-md px-6 text-[0.82rem] shadow-none"
+              >
+                Ver no Instagram
+              </CTAButton>
+            </Reveal>
+          </div>
+
+          <div className="mt-10 min-w-0 flex-1 lg:order-1 lg:ml-[15%] lg:mt-0">
+            <InstagramStrip />
+          </div>
+        </div>
+      </section>
 
       {/* CTA final — mesma lógica da seção da lente intraocular: mobile e
           desktop são composições irmãs (lg:hidden / hidden lg:flex). No
@@ -551,16 +582,19 @@ function Home() {
 
             <Reveal className="pt-3 sm:pt-4">
               <h2 className="text-[clamp(1.4rem,6.2vw,1.95rem)] leading-[1.18] text-[var(--primary-foreground)]">
-                Sua visão merece uma decisão bem compreendida.
+                Cada visão tem uma história.
               </h2>
               <p className="mt-2.5 max-w-[480px] text-[clamp(0.86rem,3.8vw,0.96rem)] leading-[1.5] text-[var(--primary-foreground)]/75">
-                Se você tem uma dúvida sobre sua visão, recebeu um diagnóstico ou está
-                considerando uma cirurgia, a consulta é o momento de entender o seu caso e as
-                possibilidades disponíveis.
+                Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou
+                deseja avaliar a possibilidade de um tratamento cirúrgico, a consulta é o
+                primeiro passo.
               </p>
-              <div className="mt-6 flex justify-center sm:mt-7">
+              <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-7">
                 <CTAButton href={site.whatsappUrl} variant="light-solid" className="h-11 px-5 text-[0.92rem]">
                   Agendar consulta
+                </CTAButton>
+                <CTAButton href={site.whatsappUrl} variant="ghost-light" className="h-11 px-5 text-[0.92rem]">
+                  Entrar em contato
                 </CTAButton>
               </div>
             </Reveal>
@@ -569,28 +603,32 @@ function Home() {
 
         <Section
           tone="deep"
-          className="relative hidden overflow-hidden py-16 lg:flex lg:min-h-[420px] lg:items-center lg:py-0"
+          className="relative hidden overflow-hidden py-16 lg:flex lg:min-h-[560px] lg:items-center lg:py-0"
         >
-          <img
-            src={imageUrl("home_13_final_cta_olho.jpg")}
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover"
+          <ParallaxImage
+            file="home_14_cta_consultorio.jpg"
+            objectPosition="50% 25%"
+            amplitude={13}
           />
-          <Reveal className="relative z-10 max-w-md">
-            <h2 className="text-3xl leading-tight text-[var(--primary-foreground)] sm:text-4xl">
-              Sua visão merece uma decisão bem compreendida.
+          {/* card terracota translúcido — sobreposição necessária para leitura
+              do texto sobre a foto clara do consultório */}
+          <Reveal className="relative z-10 ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] lg:p-10">
+            <h2 className="text-3xl leading-tight text-[#4a3629] sm:text-4xl">
+              Cada visão tem uma história.
             </h2>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[var(--primary-foreground)]/75">
-              Se você tem uma dúvida sobre sua visão, recebeu um diagnóstico ou está
-              considerando uma cirurgia, a consulta é o momento de entender o seu caso e as
-              possibilidades disponíveis.
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858]">
+              Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou
+              deseja avaliar a possibilidade de um tratamento cirúrgico, a consulta é o
+              primeiro passo.
             </p>
-            <CTAButton href={site.whatsappUrl} variant="light-solid" className="mt-7">
-              Agendar consulta
-            </CTAButton>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <CTAButton href={site.whatsappUrl} variant="primary">
+                Agendar consulta
+              </CTAButton>
+              <CTAButton href={site.whatsappUrl} variant="light-solid">
+                Entrar em contato
+              </CTAButton>
+            </div>
           </Reveal>
         </Section>
       </div>

@@ -5,25 +5,33 @@ import { cn } from "@/lib/utils";
 import { nav, site } from "@/content/site";
 import { CTAButton } from "./primitives";
 
+const LOGO_MASK = {
+  WebkitMaskImage: "url(/images/logo-samara.png)",
+  maskImage: "url(/images/logo-samara.png)",
+  WebkitMaskRepeat: "no-repeat",
+  maskRepeat: "no-repeat",
+  WebkitMaskPosition: "center",
+  maskPosition: "center",
+  WebkitMaskSize: "contain",
+  maskSize: "contain",
+} as const;
+
 function Logo({ invert = false }: { invert?: boolean }) {
   return (
-    <Link to="/" hash="inicio" className="block leading-tight" aria-label="Dra. Samara Marafon — início">
+    <Link
+      to="/"
+      hash="inicio"
+      className="block"
+      aria-label="Samara B. Marafon — Oftalmologia, início"
+    >
       <span
+        aria-hidden="true"
         className={cn(
-          "block font-display text-[1.1rem] leading-tight tracking-wide sm:text-[1.2rem]",
-          invert ? "text-[var(--primary-foreground)]" : "text-primary",
+          "block h-[46px] w-[69px] sm:h-[52px] sm:w-[78px]",
+          invert ? "bg-[var(--primary-foreground)]" : "bg-primary",
         )}
-      >
-        Dra. Samara Marafon
-      </span>
-      <span
-        className={cn(
-          "eyebrow mt-0.5 block text-[9px] sm:text-[10px]",
-          invert ? "text-gold/90" : "text-gold",
-        )}
-      >
-        Córnea e Catarata
-      </span>
+        style={LOGO_MASK}
+      />
     </Link>
   );
 }
