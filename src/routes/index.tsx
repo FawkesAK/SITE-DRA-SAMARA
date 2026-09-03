@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { Aperture, Eye, Glasses, Layers } from "lucide-react";
 import { site } from "@/content/site";
@@ -14,6 +14,7 @@ import {
   SpecialtyCard,
 } from "@/components/site/blocks";
 import { ScienceCards } from "@/components/site/science";
+import { Depoimentos } from "@/components/site/depoimentos";
 
 /**
  * Rola até uma seção da Home e só então executa `onArrived` — usado pelos
@@ -55,13 +56,13 @@ function scrollToSectionThenRun(sectionId: string, onArrived: () => void) {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dra. Diane Marinho | Oftalmologista em Porto Alegre" },
+      { title: "Dra. Samara Marafon | Oftalmologista em Porto Alegre" },
       {
         name: "description",
         content:
           "Oftalmologista em Porto Alegre, professora da UFRGS e chefe do Setor de Córnea do HCPA. Córnea, catarata, lentes intraoculares e cirurgia refrativa.",
       },
-      { property: "og:title", content: "Dra. Diane Marinho | Oftalmologista em Porto Alegre" },
+      { property: "og:title", content: "Dra. Samara Marafon | Oftalmologista em Porto Alegre" },
       {
         property: "og:description",
         content:
@@ -116,8 +117,35 @@ const areas = [
   },
 ];
 
+/**
+ * "Biblioteca da Córnea" — cards em formato de pasta (aba "+ Explorar" no topo)
+ * para os conteúdos educativos sobre doenças da córnea. Fotos macro de olho
+ * (placeholder "INSERIR" até chegarem os arquivos reais). Ambos apontam para
+ * a página /cornea.
+ */
+const biblioteca = [
+  {
+    titulo: "Ceratocone",
+    file: "biblioteca_01_ceratocone.jpg",
+    alt: "Foto macro de um olho — conteúdo sobre ceratocone",
+    to: "/cornea",
+  },
+  {
+    titulo: "Distrofias",
+    file: "biblioteca_02_distrofias.jpg",
+    alt: "Foto macro de um olho — conteúdo sobre distrofias da córnea",
+    to: "/cornea",
+  },
+  {
+    titulo: "Olho seco",
+    file: "biblioteca_03_olho_seco.jpg",
+    alt: "Foto macro de um olho — conteúdo sobre olho seco",
+    to: "/cornea",
+  },
+];
+
 function Home() {
-  const heroPhoto = imageUrl("home_01_hero_dra_diane.jpg");
+  const heroPhoto = imageUrl("home_01_hero_dra_samara.jpg");
   const [scienceActiveId, setScienceActiveId] = useState<string | null>(null);
   const scienceTriggerRef = useRef<HTMLElement | null>(null);
 
@@ -146,264 +174,358 @@ function Home() {
           Mesma lógica em todas as larguras: foto full-bleed (absolute inset-0)
           com o texto sobreposto em faixa absoluta à esquerda — nunca empilha.
           Só a altura do container, a largura da faixa de texto, a tipografia
-          e o object-position da foto mudam por breakpoint. */}
-      <section id="inicio" className="texture-paper relative overflow-hidden bg-paper">
-        <div className="relative mx-auto mt-[4.25rem] min-h-[clamp(400px,108vw,460px)] w-full max-w-[1920px] sm:mt-[4.5rem] sm:min-h-[clamp(460px,66vw,560px)] lg:aspect-[1.85/1] lg:min-h-[520px] lg:max-h-[calc(100svh+14rem)]">
-          <Reveal className="absolute inset-y-0 left-0 z-10 flex w-[56%] flex-col justify-center px-4 py-6 sm:w-[54%] sm:px-6 lg:left-[clamp(64px,10vw,170px)] lg:top-1/2 lg:h-auto lg:w-[32%] lg:max-w-[520px] lg:min-w-[360px] lg:-translate-y-1/2 lg:px-0 lg:py-0">
-            <p className="eyebrow text-[0.6rem] font-medium leading-snug tracking-[0.1em] text-gold sm:text-[0.65rem] sm:tracking-[0.13em] lg:text-xs lg:tracking-[0.15em]">
-              Oftalmologista em Porto Alegre • Córnea e catarata
+          e o object-position da foto mudam por breakpoint.
+          Adaptado à identidade da Dra. Samara (terracota, tokens em styles.css):
+          credencial no lugar do eyebrow, título bicolor (trechos em `text-primary`),
+          dois CTAs empilhados, "feather" na borda esquerda da foto e faixa
+          diagonal (`bg-gold` + `bg-primary`) no rodapé como transição. */}
+      <section id="inicio" className="texture-paper relative overflow-hidden bg-background">
+        <div className="relative mx-auto mt-[4.25rem] min-h-[clamp(560px,158vw,620px)] w-full max-w-[1920px] sm:mt-[4.5rem] sm:min-h-[clamp(520px,72vw,580px)] lg:aspect-[1.85/1] lg:min-h-[660px] lg:max-h-[calc(100svh+14rem)]">
+          <Reveal className="absolute inset-y-0 left-0 z-10 flex w-[66%] flex-col justify-center px-4 py-6 sm:w-[58%] sm:px-6 lg:left-[clamp(64px,10vw,170px)] lg:top-1/2 lg:h-auto lg:w-[34%] lg:max-w-[480px] lg:min-w-[380px] lg:-translate-y-1/2 lg:px-0 lg:py-0 xl:top-[14.8%] xl:bottom-auto xl:max-w-[540px] xl:-mt-[2.25rem] xl:translate-y-0">
+            <p className="eyebrow flex flex-wrap items-center gap-x-8 gap-y-1 text-[0.6rem] leading-snug text-muted-foreground sm:gap-x-10 sm:text-[0.65rem] lg:text-[0.7rem]">
+              <span>CRM-RS 37669&nbsp;&nbsp;|&nbsp;&nbsp;RQE 29525</span>
+              <span>Porto Alegre - RS</span>
             </p>
-            <h1 className="mt-3 text-[clamp(1.5rem,6.6vw,2.5rem)] font-normal leading-[1.05] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.6vw,2.75rem)] lg:mt-5 lg:max-w-[480px] lg:text-[clamp(3rem,4vw,4.25rem)] lg:leading-[0.98] lg:tracking-[-0.02em]">
-              Sua visão cuidada por quem também ensina.
+            <h1 className="mt-3 text-[clamp(1.6rem,6vw,2.4rem)] font-normal leading-[1.03] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.35rem,3.5vw,2.9rem)] lg:leading-[1.05] xl:text-[clamp(2.9rem,3vw,3.7rem)] xl:leading-[1]">
+              Quando a córnea
+              <br className="hidden lg:block" />{" "}
+              <span className="text-primary">perde a transparência,</span>
+              <br className="hidden lg:block" />{" "}
+              enxergar deixa de
+              <br className="hidden lg:block" />{" "}
+              <span className="text-primary">ser simples.</span>
             </h1>
-            <p className="mt-3 text-[0.78rem] leading-[1.45] text-muted-foreground sm:mt-4 sm:text-[0.85rem] lg:mt-6 lg:max-w-[430px] lg:text-base lg:leading-[1.6]">
-              Professora da UFRGS, especialista em córnea e cirurgiã de catarata. Uma
-              trajetória dedicada ao ensino, à pesquisa e às decisões que envolvem a
-              qualidade da visão.
+            <span
+              aria-hidden="true"
+              className="mt-4 block h-px w-12 bg-primary sm:mt-5 lg:mt-6 lg:w-14"
+            />
+            <p className="mt-3 text-[0.78rem] leading-[1.5] text-muted-foreground sm:mt-4 sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[0.98rem] lg:leading-[1.6]">
+              Especialista em córnea, catarata e cirurgia refrativa, com atuação no
+              diagnóstico e tratamento das doenças corneanas.
             </p>
-            <div className="mt-4 flex flex-col items-start gap-2 sm:mt-6 sm:flex-row sm:flex-wrap sm:gap-3 lg:mt-9">
-              <CTAButton
-                onClick={scrollToScienceAndOpen}
-                className="h-9 px-4 text-[0.78rem] sm:h-11 sm:px-5 sm:text-[0.85rem] lg:h-12 lg:px-6 lg:text-sm"
-              >
-                Conheça a Dra. Diane
-              </CTAButton>
+            <div className="mt-5 flex flex-col items-start gap-3 sm:mt-6 lg:mt-8">
               <CTAButton
                 href={site.whatsappUrl}
-                variant="light-solid"
-                className="h-9 px-4 text-[0.78rem] sm:h-11 sm:px-5 sm:text-[0.85rem] lg:h-12 lg:px-6 lg:text-sm"
+                className="h-11 rounded-md bg-primary px-7 text-[0.8rem] shadow-none hover:bg-[var(--primary-deep)] sm:h-12 sm:px-8 sm:text-[0.88rem]"
               >
                 Agendar consulta
+              </CTAButton>
+              <CTAButton
+                to="/"
+                hash="especialidades"
+                variant="secondary"
+                className="h-11 rounded-md border-primary/45 px-7 text-[0.8rem] text-primary hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem]"
+              >
+                Conheça as doenças da córnea
               </CTAButton>
             </div>
           </Reveal>
 
-          <Reveal delay={120} className="absolute inset-0">
+          <Reveal delay={120} className="absolute inset-0 z-0">
             {heroPhoto ? (
               <img
                 src={heroPhoto}
-                alt="Dra. Diane Marinho em seu consultório de oftalmologia em Porto Alegre"
+                alt="Dra. Samara Marafon em seu consultório de oftalmologia em Porto Alegre"
                 loading="eager"
                 decoding="async"
-                className="h-full w-full object-cover object-[58%_center] sm:object-[68%_center] lg:object-center"
+                className="h-full w-full object-cover object-[58%_center] sm:object-[68%_center] lg:object-[72%_center]"
               />
             ) : (
               <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-center">
                 <span className="optic-ring block h-8 w-8 rotate-45" aria-hidden="true" />
                 <span className="eyebrow text-gold">Inserir</span>
                 <span className="max-w-full truncate font-mono text-[11px] text-muted-foreground">
-                  home_01_hero_dra_diane.jpg
+                  home_01_hero_dra_samara.jpg
                 </span>
               </div>
             )}
+            {/* Feather: funde a borda esquerda da foto com o fundo, como na referência. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to right, var(--background) 0%, color-mix(in srgb, var(--background) 72%, transparent) 34%, transparent 64%)",
+              }}
+            />
+          </Reveal>
+
+          {/* Faixa diagonal terracota no rodapé do hero — transição para a seção seguinte. */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-[1]">
+            <div
+              className="h-7 w-full bg-gold sm:h-9 lg:h-12"
+              style={{ clipPath: "polygon(0 55%, 100% 0, 100% 100%, 0 100%)" }}
+            />
+            <div className="h-2.5 w-full bg-primary sm:h-3" />
+          </div>
+        </div>
+      </section>
+
+      {/* 02 — Quando procurar um especialista em córnea
+          Faixa terracota (tone="primary") na mesma linguagem da hero: fundo
+          primário, texto creme. Título centralizado; no desktop, foto à esquerda
+          e lista de "pílulas" com falas do paciente à direita — empilha no
+          mobile (foto → lista). Rodapé com faixa diagonal (caramelo + areia)
+          como transição para a seção seguinte, espelhando a faixa da hero.
+          id="sobre" mantido (é a âncora do menu "Sobre"). */}
+      <Section
+        id="sobre"
+        tone="primary"
+        className="overflow-hidden py-16 pb-28 md:py-24 md:pb-36"
+      >
+        <SectionHeader
+          title="Quando procurar um especialista em córnea"
+          align="center"
+          invert
+          titleClassName="text-[1.9rem] leading-[1.15] sm:text-[2.2rem] md:text-[2.5rem]"
+        />
+
+        <div className="mt-12 grid gap-8 lg:mt-16 lg:grid-cols-[0.82fr_1fr] lg:items-stretch lg:gap-14">
+          <Reveal variant="image" className="lg:h-full">
+            <Figure
+              file="home_02_quando_procurar.jpg"
+              alt="Dra. Samara Marafon durante avaliação no consultório"
+              ratio="4/3.4"
+              priority
+              className="h-full rounded-2xl"
+              imgClassName="object-[45%_center]"
+            />
+          </Reveal>
+
+          <ul className="space-y-2.5 sm:space-y-3 lg:flex lg:h-full lg:flex-col lg:justify-between lg:space-y-0">
+            {[
+              "Minha visão ficou embaçada ou mudou de repente.",
+              "Meus olhos vivem secos, irritados ou ardendo.",
+              "Sinto dor ou desconforto ao usar lentes de contato.",
+              "Recebi o diagnóstico de ceratocone.",
+              "Disseram que tenho uma cicatriz na córnea.",
+              "Disseram que posso precisar de um transplante de córnea.",
+              "Quero reduzir minha dependência dos óculos.",
+            ].map((frase, i) => (
+              <Reveal
+                key={frase}
+                as="li"
+                delay={i * 60}
+                className="rounded-xl border border-[var(--primary-foreground)]/15 bg-[var(--primary-foreground)]/[0.07] px-5 py-3.5 text-[0.9rem] leading-snug text-[var(--primary-foreground)]/90 shadow-[var(--shadow-card)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[var(--primary-foreground)]/35 hover:bg-[var(--primary-foreground)]/[0.14] hover:shadow-[var(--shadow-lift)] active:scale-[0.99] sm:text-[0.95rem]"
+              >
+                {frase}
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* 03 — Uma carreira dedicada à córnea
+          Geometria da 1ª referência (desktop): fundo off-white liso (sem textura);
+          coluna de texto começando em ~15% da largura da tela, ~27% de largura,
+          centrada na vertical; foto começando em ~48% (folga entre texto e foto),
+          sangrando até a borda direita, grande e horizontal, centrada na vertical
+          com margem clara acima e abaixo — não ocupa a seção inteira. Mobile:
+          texto → foto em fluxo. <section> cru para o posicionamento por % da
+          viewport. id="especialidades" mantido (âncora do menu). */}
+      <section
+        id="especialidades"
+        className="relative overflow-hidden bg-background text-foreground"
+      >
+        <div className="relative px-5 py-16 sm:px-8 md:py-20 lg:flex lg:items-center lg:px-0 lg:py-16 lg:min-h-[100svh]">
+          {/* Coluna de texto — flui no mobile; no desktop começa em ~15%, ~30% de
+              largura e fica centrada na vertical (alinhada à altura da foto) */}
+          <div className="lg:ml-[15%] lg:w-[30%] lg:shrink-0">
+            <Reveal>
+              <h2 className="text-[clamp(1.85rem,5.8vw,2.2rem)] leading-[1.12] tracking-[-0.01em] sm:text-[2.45rem] md:text-[2.9rem] lg:text-[clamp(2.6rem,3.6vw,3.8rem)] lg:leading-[1.08]">
+                <span className="text-[#4a3629]">Uma carreira</span>
+                <br />
+                <span className="text-primary">dedicada à córnea.</span>
+              </h2>
+            </Reveal>
+
+            <Reveal
+              delay={80}
+              className="mt-6 space-y-5 text-justify text-[0.82rem] leading-[1.7] text-[#7d6858] sm:mt-7 sm:space-y-6 sm:text-[0.86rem] lg:mt-7 lg:space-y-6 lg:text-[1rem] lg:leading-[1.75]"
+            >
+              <p>
+                Algumas áreas da oftalmologia exigem uma dedicação integral.{" "}
+                <strong className="font-semibold text-[var(--primary-deep)] underline decoration-[var(--primary-deep)]/40 underline-offset-4">
+                  A córnea
+                </strong>{" "}
+                está entre elas.
+              </p>
+              <p>
+                Foi essa escolha que levou a{" "}
+                <strong className="font-semibold text-[var(--primary-deep)]">Dra. Samara Marafon</strong> a
+                dedicar sua carreira ao diagnóstico, tratamento e cirurgia das doenças corneanas.
+              </p>
+              <p>
+                Sua <strong className="font-semibold text-[var(--primary-deep)]">formação</strong> inclui
+                residência médica, fellowship em córnea, catarata e cirurgia refrativa, mestrado,
+                aperfeiçoamento internacional e participação na formação de novos especialistas.
+              </p>
+              <p>
+                Hoje, une a{" "}
+                <strong className="font-semibold text-[var(--primary-deep)]">experiência</strong> do
+                consultório, do centro cirúrgico, da pesquisa e da formação de novos especialistas
+                para oferecer um cuidado individualizado, baseado em conhecimento científico e
+                experiência prática.
+              </p>
+            </Reveal>
+
+            <ul className="mt-8 flex flex-wrap gap-1.5 sm:mt-9 lg:mt-10 lg:gap-2 xl:flex-nowrap xl:gap-2.5">
+              {["Atendimento Clínico", "Cirurgia", "Pesquisa", "Ensino"].map((tag, i) => (
+                <Reveal
+                  key={tag}
+                  as="li"
+                  delay={120 + i * 50}
+                  className="whitespace-nowrap rounded border border-[var(--gold)]/45 bg-[var(--gold)]/[0.18] px-2.5 py-1 text-[0.7rem] font-medium text-[var(--primary-deep)] shadow-sm transition-colors duration-200 hover:bg-[var(--gold)]/30 lg:px-2 lg:py-1.5 lg:text-[0.82rem] xl:flex-auto xl:text-center"
+                >
+                  {tag}
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+
+          {/* Foto — mobile / tablet: em fluxo, abaixo do texto (grande e horizontal) */}
+          <Reveal variant="image" className="mt-10 lg:hidden">
+            <Figure
+              file="home_03_carreira_cornea.jpg"
+              alt="Dra. Samara Marafon, oftalmologista especialista em córnea, em seu consultório"
+              ratio="3/2"
+              priority
+              className="rounded-2xl"
+              imgClassName="object-[46%_top]"
+            />
+          </Reveal>
+
+          {/* Foto — desktop: começa em ~52% (folga confortável da coluna de texto),
+              sangra à direita, grande, centrada na vertical com o mesmo espaço
+              acima e abaixo. Altura acompanha a viewport (~74svh) sem ocupar a
+              seção toda. */}
+          <Reveal
+            variant="image"
+            className="absolute left-[52%] right-0 top-1/2 hidden h-[74svh] max-h-[720px] -translate-y-1/2 lg:block"
+          >
+            {imageUrl("home_03_carreira_cornea.jpg") ? (
+              <img
+                src={imageUrl("home_03_carreira_cornea.jpg")}
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="async"
+                className="h-full w-full rounded-l-2xl object-cover object-[46%_top]"
+              />
+            ) : null}
           </Reveal>
         </div>
       </section>
 
-      {/* 02 — Sobre
-          Mobile (ordem no DOM = ordem de leitura, sem overrides lg: aplicando):
-          título → fotos → eyebrow → texto → dados → botão.
-          Desktop: cada peça recebe posição explícita no grid (coluna 2, linhas
-          1–5, na ordem eyebrow→título→texto→dados→botão) para reproduzir a
-          composição original, com o mosaico ocupando a coluna 1 nas 5 linhas. */}
-      <Section id="sobre" tone="background" className="py-14 md:py-16">
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-x-16 lg:gap-y-0">
-          <Reveal className="lg:col-start-2 lg:row-start-2">
-            <h2 className="text-3xl leading-[1.14] text-foreground sm:text-4xl md:text-[2.85rem]">
-              Conheça a
-              <br />
-              Dra. Diane Ruschel Marinho
-            </h2>
-          </Reveal>
-
-          <Reveal className="grid aspect-square grid-cols-[1.35fr_1fr] grid-rows-2 gap-3 sm:gap-4 lg:col-start-1 lg:row-start-1 lg:row-span-5">
-            <Figure
-              file="home_02_sobre_retrato.jpg"
-              alt="Retrato profissional da Dra. Diane Marinho"
-              className="row-span-2 h-full w-full rounded-2xl"
-              imgClassName="object-center"
-              priority
-            />
-            <Figure
-              file="home_03_sobre_congresso_palco.jpg"
-              alt="Dra. Diane Marinho durante exame oftalmológico em consultório"
-              className="h-full w-full rounded-2xl"
-              imgClassName="object-[center_80%]"
-            />
-            <Figure
-              file="home_04_sobre_congresso_simposio.jpg"
-              alt="Dra. Diane Marinho palestrando em congresso científico"
-              className="h-full w-full rounded-2xl"
-              imgClassName="object-center"
-            />
-          </Reveal>
-
-          <Reveal className="lg:col-start-2 lg:row-start-1 lg:mb-4">
-            <p className="eyebrow text-gold">Quem é a Dra. Diane</p>
-          </Reveal>
-
-          <Reveal className="space-y-4 text-[0.95rem] leading-relaxed text-muted-foreground lg:col-start-2 lg:row-start-3 lg:mt-5">
-            <p>
-              Médica oftalmologista, professora da Faculdade de Medicina da UFRGS,
-              chefe do Setor de Córnea do Hospital de Clínicas de Porto Alegre e
-              Diretora Médica do Banco de Olhos do HCPA.
-            </p>
-            <p>
-              Ao longo da carreira, assistência, ensino e pesquisa passaram a fazer
-              parte do mesmo trabalho: compreender melhor as doenças da visão para
-              tomar decisões cada vez mais precisas na prática clínica.
-            </p>
-          </Reveal>
-
-          <AuthorityMetrics dense className="lg:col-start-2 lg:row-start-4 lg:mt-10" />
-
-          <Reveal
-            delay={120}
-            className="text-center lg:col-start-2 lg:row-start-5 lg:mt-10"
-          >
-            <CTAButton onClick={scrollToScienceAndOpen}>Conheça a trajetória completa</CTAButton>
-          </Reveal>
-        </div>
-      </Section>
-
-      {/* 03 — Áreas de atuação */}
-      <Section id="especialidades" tone="sand" className="py-9 md:py-12">
-        <SectionHeader
-          eyebrow="Áreas de atuação"
-          title="Como posso ajudar você"
-          align="center"
-        />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {areas.map((a, i) => (
-            <SpecialtyCard key={a.title} {...a} delay={i * 80} className="rounded-2xl" />
-          ))}
-        </div>
-      </Section>
-
-      {/* 04 — Lentes intraoculares
-          Mobile (<lg) e desktop (lg:+) são duas composições deliberadamente
-          diferentes, renderizadas como blocos irmãos (lg:hidden / hidden lg:flex)
-          em vez de um único markup responsivo: no mobile a imagem (vertical,
-          arquivo próprio) empilha ACIMA do texto em fluxo normal; no desktop a
-          imagem (paisagem, arquivo original) é background full-bleed atrás do
-          texto. Mantendo-os como blocos separados, o desktop preserva o markup
-          exato já aprovado — zero risco de regressão ao mexer só no mobile. */}
-      <div id="catarata">
-        {/* Mobile — a própria <section> usa a imagem vertical como background (não um
-            <div>/<img> filho): texto flui por cima dela, uma única superfície de verdade,
-            sem elemento de imagem separado. A imagem-fonte é bem mais alta (941×1672) do
-            que o necessário pra mostrar só a lente — depois de ~65% da altura já é só
-            fundo verde vazio por design — então um spacer invisível (mesmo aspect-ratio,
-            mesma largura full-bleed do background) reserva no fluxo normal só até esse
-            ponto, e o texto começa logo em seguida. Abaixo do recorte, `backgroundColor`
-            usa a cor exata amostrada da própria imagem naquela linha (em vez do
-            `--primary-deep` padrão do site, que é mais azulado) — corte 100% imperceptível,
-            sem gradiente/overlay. */}
-        <section
-          className="relative overflow-hidden bg-[#3b3b23] bg-no-repeat pb-6 pt-0 text-[var(--primary-foreground)] sm:pb-7 md:pb-7 md:pt-0 lg:hidden"
-          style={{
-            backgroundImage: `url(${imageUrl("home_09b_lente_intraocular_mobile.jpg")})`,
-            backgroundPosition: "center top",
-            backgroundSize: "100% auto",
-          }}
-        >
-          <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
-            <div aria-hidden="true" className="-mx-5 aspect-[941/869] w-[calc(100%+2.5rem)] sm:-mx-8 sm:w-[calc(100%+4rem)]" />
-
-            <Reveal className="pt-3 sm:pt-4">
-              <h2 className="text-[clamp(1.2rem,5.4vw,1.7rem)] leading-[1.18] text-[var(--primary-foreground)]">
-                A cirurgia de catarata também pode ser uma decisão sobre como você quer
-                enxergar depois.
-              </h2>
-              <div className="mt-2.5 max-w-[480px] space-y-1.5 text-[clamp(0.76rem,3.3vw,0.86rem)] leading-[1.45] text-[var(--primary-foreground)]/75">
-                <p>
-                  Ao remover a catarata, uma lente intraocular passa a exercer a função do
-                  cristalino. Hoje existem diferentes tecnologias capazes de corrigir graus e
-                  oferecer diferentes possibilidades de visão.
-                </p>
-                <p>
-                  A escolha começa pela avaliação dos olhos, mas também passa pela rotina,
-                  pelas prioridades e pelas expectativas de cada pessoa.
-                </p>
-              </div>
-              <div className="mt-6 flex justify-center sm:mt-7">
-                <CTAButton href={site.whatsappUrl} variant="light-solid" className="h-10 px-5 text-[0.85rem]">
-                  Agendar avaliação
-                </CTAButton>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* Desktop — aprovado, inalterado: imagem full-bleed atrás, texto sobreposto à esquerda. */}
-        <Section
-          tone="deep"
-          className="hidden overflow-hidden lg:flex lg:min-h-[clamp(480px,60vh,680px)] lg:items-center lg:py-0"
-        >
-          <Reveal className="relative z-10 max-w-[480px] lg:py-10">
-            <h2 className="text-[2.7rem] leading-[1.15] text-[var(--primary-foreground)]">
-              A cirurgia de catarata também pode ser uma decisão sobre como você quer
-              enxergar depois.
-            </h2>
-            <div className="mt-7 max-w-[430px] space-y-4 text-sm leading-relaxed text-[var(--primary-foreground)]/75">
-              <p>
-                Ao remover a catarata, uma lente intraocular passa a exercer a função do
-                cristalino. Hoje existem diferentes tecnologias capazes de corrigir graus e
-                oferecer diferentes possibilidades de visão.
-              </p>
-              <p>
-                A escolha começa pela avaliação dos olhos, mas também passa pela rotina,
-                pelas prioridades e pelas expectativas de cada pessoa.
-              </p>
-            </div>
-            <CTAButton href={site.whatsappUrl} variant="light-solid" className="mt-9">
-              Agendar avaliação
-            </CTAButton>
-          </Reveal>
-
-          <img
-            src={imageUrl("home_09_lente_intraocular.jpg")}
-            alt="Lente intraocular utilizada na cirurgia de catarata"
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-right"
-          />
-        </Section>
-      </div>
-
-      {/* 05 — Ciência */}
-      <Section
-        id="formacoes"
-        tone="paper"
-        className="py-16 md:py-20 lg:flex lg:min-h-[100svh] lg:flex-col lg:justify-center"
+      {/* 04 — Depoimentos (estilo Doctoralia)
+          Fundo claro liso (mesmo tom das seções anteriores). À esquerda o título
+          serif bicolor ("meus pacientes" em itálico + terracota) e o botão
+          "Ver mais no Doctoralia"; à direita o carrossel de avaliações (2 páginas
+          de 3 cards). A margem direita dos cards = a margem esquerda do texto
+          (15%). Empilha no mobile (título → carrossel).
+          id="catarata" mantido (âncora do menu). */}
+      <section
+        id="catarata"
+        className="relative overflow-hidden bg-background py-16 text-foreground md:py-24"
       >
-        <div className="grid gap-12 lg:grid-cols-[34fr_66fr] lg:items-start lg:gap-20">
-          <div>
-            <SectionHeader
-              eyebrow="Ciência que chega à consulta"
-              title="Quando pesquisa, ensino e prática clínica se encontram."
-              text={
-                <p>
-                  A pesquisa sempre esteve presente na trajetória da Dra. Diane. Da
-                  superfície ocular aos transplantes de córnea, parte das perguntas que
-                  surgem diante dos pacientes também se transforma em investigação
-                  científica.
-                </p>
-              }
-            />
-            <Reveal delay={120} className="mt-8 lg:mt-10">
-              <CTAButton onClick={openFormacaoMedica}>
-                Conheça sua atuação em ciência e ensino
+        <div className="px-5 sm:px-8 lg:flex lg:items-center lg:gap-12 lg:px-0">
+          <div className="lg:ml-[15%] lg:w-[26%] lg:shrink-0">
+            <Reveal>
+              <h2 className="text-[clamp(1.9rem,5.8vw,2.3rem)] leading-[1.14] tracking-[-0.01em] sm:text-[2.4rem] md:text-[2.7rem] lg:text-[clamp(2.4rem,3.2vw,3.2rem)] lg:leading-[1.1]">
+                <span className="text-[#4a3629]">Veja o que</span>
+                <br />
+                <span className="italic text-primary">meus pacientes</span>
+                <br />
+                <span className="text-[#4a3629]">têm a dizer:</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={80} className="mt-7 lg:mt-9">
+              <CTAButton
+                href="https://www.doctoralia.com.br/samara-b-marafon/oftalmologista/porto-alegre#profile-reviews"
+                className="rounded-md bg-primary px-6 text-[0.82rem] shadow-none hover:bg-[var(--primary-deep)]"
+              >
+                Ver mais no Doctoralia
               </CTAButton>
             </Reveal>
           </div>
 
-          <ScienceCards
-            activeId={scienceActiveId}
-            setActiveId={setScienceActiveId}
-            triggerRef={scienceTriggerRef}
-          />
+          <div className="mt-10 min-w-0 flex-1 lg:mr-[15%] lg:mt-0">
+            <Depoimentos />
+          </div>
         </div>
+      </section>
+
+      {/* 05 — Biblioteca da Córnea
+          Título + subtítulo centralizados; dois cards em formato "pasta" (aba
+          "+ Explorar" no topo) com foto macro de olho e o nome do tema.
+          id="formacoes" mantido (âncora do menu "Formações"). */}
+      <Section id="formacoes" tone="paper" className="py-16 md:py-24">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <h2 className="text-[clamp(1.9rem,5.8vw,2.3rem)] leading-[1.14] tracking-[-0.01em] sm:text-[2.4rem] md:text-[2.7rem] lg:text-[clamp(2.4rem,3.2vw,3.2rem)] lg:leading-[1.1]">
+            <span className="text-[#4a3629]">Biblioteca da </span>
+            <span className="text-primary">Córnea</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-[0.9rem] leading-[1.7] text-[#7d6858] sm:text-[0.95rem] lg:text-[1.02rem]">
+            Conteúdos claros e baseados em evidência sobre as principais doenças da
+            córnea e seus tratamentos.
+          </p>
+        </Reveal>
+
+        <ul className="mx-auto mt-12 grid max-w-[1080px] gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8">
+          {biblioteca.map((item, i) => (
+            <Reveal as="li" key={item.titulo} delay={i * 90}>
+              <Link
+                to={item.to}
+                className="group relative block pr-[11px] pt-[46px] drop-shadow-[0_18px_30px_-20px_rgba(80,40,25,0.6)] transition-transform duration-[450ms] ease-out hover:-translate-y-1"
+              >
+                {/* corpo/aba da pasta (fundo) — mesma silhueta do ícone: aba
+                    curva à esquerda, cantos arredondados, leve gradiente. */}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 340 340"
+                  preserveAspectRatio="none"
+                  className="absolute inset-0 -z-10 h-full w-full"
+                >
+                  <defs>
+                    <linearGradient id={`pasta-fundo-${i}`} x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="var(--primary-deep)" />
+                      <stop offset="100%" stopColor="var(--primary)" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M0,24 Q0,8 16,8 L104,8 Q118,8 125,20 L134,32 Q140,40 156,40 L324,40 Q340,40 340,56 L340,324 Q340,340 324,340 L16,340 Q0,340 0,324 Z"
+                    fill={`url(#pasta-fundo-${i})`}
+                    className="transition-opacity duration-300 group-hover:opacity-90"
+                  />
+                </svg>
+
+                {/* rótulo na aba */}
+                <span className="absolute left-[22px] top-[14px] z-10 flex items-center gap-1 text-[0.62rem] font-semibold uppercase tracking-[0.13em] text-[var(--primary-foreground)]">
+                  <span aria-hidden="true" className="text-[0.8rem] leading-none">
+                    +
+                  </span>
+                  Explorar
+                </span>
+
+                {/* folha da frente — tom mais claro, cantos arredondados,
+                    guarda a foto e o rótulo */}
+                <div className="relative rounded-[13px] bg-primary p-1.5 shadow-[0_2px_14px_-6px_rgba(80,40,25,0.4),inset_0_1px_0_rgba(255,255,255,0.14)] transition-colors duration-300 group-hover:bg-[color-mix(in_oklab,var(--primary)_90%,black)]">
+                  <Figure
+                    file={item.file}
+                    alt={item.alt}
+                    ratio="4/3"
+                    className="rounded-[9px] border-0"
+                  />
+                  <div className="px-1.5 pb-3 pt-3.5 text-[var(--primary-foreground)]">
+                    <h3 className="font-display text-[1.45rem] leading-tight">
+                      {item.titulo}
+                    </h3>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </ul>
       </Section>
 
       <InstitutionStrip />
@@ -473,7 +595,7 @@ function Home() {
         </Section>
       </div>
       <p className="sr-only">
-        Dra. Diane Marinho — oftalmologista em Porto Alegre. Atendimento em {site.clinica}.
+        Dra. Samara Marafon — oftalmologista em Porto Alegre. Atendimento em {site.clinica}.
       </p>
     </>
   );

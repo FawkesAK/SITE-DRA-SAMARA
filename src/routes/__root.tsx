@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dra. Diane Marinho | Oftalmologista em Porto Alegre" },
+      { title: "Dra. Samara Marafon | Oftalmologista em Porto Alegre" },
       {
         name: "description",
         content:
           "Médica oftalmologista em Porto Alegre, professora da UFRGS, especialista em córnea e cirurgia de catarata.",
       },
-      { name: "author", content: "Dra. Diane Marinho" },
-      { property: "og:site_name", content: "Dra. Diane Marinho" },
+      { name: "author", content: "Dra. Samara Marafon" },
+      { property: "og:site_name", content: "Dra. Samara Marafon" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Physician",
-          name: "Dra. Diane Marinho",
+          name: "Dra. Samara Marafon",
           medicalSpecialty: "Ophthalmology",
           address: {
             "@type": "PostalAddress",

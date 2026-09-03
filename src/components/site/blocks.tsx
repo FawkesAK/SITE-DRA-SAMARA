@@ -36,7 +36,7 @@ export function AuthorityMetrics({
    * empilhamento vertical padrão abaixo de `sm`), com números/rótulos e
    * padding reduzidos para caber em 3 colunas apertadas. Não afeta `sm:` para
    * cima — nesse ponto o resultado já é idêntico ao padrão. Uso pontual
-   * (ver Home, seção "Quem é a Dra. Diane"); outros usos não passam essa prop
+   * (ver Home, seção "Quem é a Dra. Samara"); outros usos não passam essa prop
    * e continuam exatamente como antes.
    */
   dense?: boolean;
@@ -482,7 +482,7 @@ export function ArticleCard({
           <p className="eyebrow text-gold">{category}</p>
           <h3 className="mt-3 flex-1 font-display text-xl leading-snug">{title}</h3>
           <span className="arrow-link mt-5">
-            Dra. Diane explica
+            Dra. Samara explica
             <span className="arrow" aria-hidden="true">
               →
             </span>

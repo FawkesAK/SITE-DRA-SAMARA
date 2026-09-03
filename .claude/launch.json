@@ -6,9 +6,9 @@
       "runtimeExecutable": "cmd.exe",
       "runtimeArgs": [
         "/c",
-        "C:\\Users\\55519\\Desktop\\SITE DRA DIANE\\.claude\\dev-server.cmd"
+        "C:\\Users\\amand\\OneDrive\\Desktop\\SITE-DRA-SAMARA\\.claude\\dev-server.cmd"
       ],
-      "port": 8080
+      "port": 8081
     }
   ]
 }

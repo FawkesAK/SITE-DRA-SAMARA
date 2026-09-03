@@ -38,9 +38,9 @@ const rotina = [
 export const Route = createFileRoute("/catarata")({
   head: () => ({
     meta: [
-      { title: "Cirurgia de Catarata em Porto Alegre | Dra. Diane Marinho" },
-      { name: "description", content: "Cirurgia de catarata em Porto Alegre com a Dra. Diane Marinho: diagnóstico, planejamento das lentes intraoculares e possibilidade de correção do grau." },
-      { property: "og:title", content: "Cirurgia de Catarata em Porto Alegre | Dra. Diane Marinho" },
+      { title: "Cirurgia de Catarata em Porto Alegre | Dra. Samara Marafon" },
+      { name: "description", content: "Cirurgia de catarata em Porto Alegre com a Dra. Samara Marafon: diagnóstico, planejamento das lentes intraoculares e possibilidade de correção do grau." },
+      { property: "og:title", content: "Cirurgia de Catarata em Porto Alegre | Dra. Samara Marafon" },
       { property: "og:description", content: "Entenda a cirurgia de catarata, os tipos de lentes intraoculares e como a indicação é feita." },
       { property: "og:url", content: "/catarata" },
       { property: "og:type", content: "article" },
@@ -98,7 +98,7 @@ function Page() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <Figure file="catarata_01_hero_dra_diane.jpg" alt="Dra. Diane Marinho no consultório, ao lado da lâmpada de fenda" ratio="4/3.1" priority />
+            <Figure file="catarata_01_hero_dra_diane.jpg" alt="Dra. Samara Marafon no consultório, ao lado da lâmpada de fenda" ratio="4/3.1" priority />
           </Reveal>
         </div>
       </section>

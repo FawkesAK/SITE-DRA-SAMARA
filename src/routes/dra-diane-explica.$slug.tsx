@@ -22,7 +22,7 @@ export const Route = createFileRoute("/dra-diane-explica/$slug")({
     const { artigo } = loaderData;
     return {
       meta: [
-        { title: `${artigo.titulo} | Dra. Diane Marinho` },
+        { title: `${artigo.titulo} | Dra. Samara Marafon` },
         { name: "description", content: artigo.resumo },
         { property: "og:title", content: artigo.titulo },
         { property: "og:description", content: artigo.resumo },
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/dra-diane-explica/$slug")({
             "@type": "Article",
             headline: artigo.titulo,
             description: artigo.resumo,
-            author: { "@type": "Person", name: "Dra. Diane Marinho" },
+            author: { "@type": "Person", name: "Dra. Samara Marafon" },
             about: artigo.categoria,
           }),
         },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/dra-diane-explica/$slug")({
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Início", item: "/" },
-              { "@type": "ListItem", position: 2, name: "Dra. Diane Explica", item: "/dra-diane-explica" },
+              { "@type": "ListItem", position: 2, name: "Dra. Samara Explica", item: "/dra-diane-explica" },
               { "@type": "ListItem", position: 3, name: artigo.titulo, item: `/dra-diane-explica/${params.slug}` },
             ],
           }),
@@ -70,7 +70,7 @@ function Page() {
           <nav aria-label="Trilha de navegação" className="flex flex-wrap gap-2 text-xs text-muted-foreground">
             <Link to="/" className="hover:text-primary">Início</Link>
             <span aria-hidden="true">/</span>
-            <Link to="/dra-diane-explica" className="hover:text-primary">Dra. Diane Explica</Link>
+            <Link to="/dra-diane-explica" className="hover:text-primary">Dra. Samara Explica</Link>
             <span aria-hidden="true">/</span>
             <span className="text-foreground">{artigo.categoria}</span>
           </nav>

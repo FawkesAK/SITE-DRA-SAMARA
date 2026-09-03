@@ -26,13 +26,13 @@ import {
 export const Route = createFileRoute("/dra-diane")({
   head: () => ({
     meta: [
-      { title: "Dra. Diane Marinho | Trajetória, Ciência e Ensino" },
+      { title: "Dra. Samara Marafon | Trajetória, Ciência e Ensino" },
       {
         name: "description",
         content:
-          "Trajetória da Dra. Diane Marinho: professora da Faculdade de Medicina da UFRGS, chefe do Setor de Córnea do HCPA e Diretora Médica do Banco de Olhos do HCPA.",
+          "Trajetória da Dra. Samara Marafon: professora da Faculdade de Medicina da UFRGS, chefe do Setor de Córnea do HCPA e Diretora Médica do Banco de Olhos do HCPA.",
       },
-      { property: "og:title", content: "Dra. Diane Marinho | Trajetória, Ciência e Ensino" },
+      { property: "og:title", content: "Dra. Samara Marafon | Trajetória, Ciência e Ensino" },
       {
         property: "og:description",
         content: "Assistência, ensino e pesquisa em oftalmologia, córnea e transplantes em Porto Alegre.",
@@ -141,11 +141,11 @@ function Page() {
         <div className="mx-auto grid w-full max-w-[1240px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-[36fr_58fr] lg:gap-16">
           <div>
             <Reveal>
-              <p className="eyebrow text-gold">Sobre a Dra. Diane</p>
+              <p className="eyebrow text-gold">Sobre a Dra. Samara</p>
             </Reveal>
             <Reveal delay={80}>
               <h1 className="mt-5 text-4xl leading-[1.08] sm:text-5xl lg:text-[3.2rem]">
-                Conheça a Dra. Diane Marinho
+                Conheça a Dra. Samara Marafon
               </h1>
             </Reveal>
             <Reveal delay={180}>
@@ -170,7 +170,7 @@ function Page() {
           <Reveal variant="image" delay={100} className="aspect-[4/5] w-full lg:aspect-[5/6]">
             <Figure
               file="sobre_01_hero_dra_diane.jpg"
-              alt="Dra. Diane Marinho, oftalmologista em Porto Alegre"
+              alt="Dra. Samara Marafon, oftalmologista em Porto Alegre"
               ratio="4/5"
               className="h-full w-full rounded-2xl"
               imgClassName="object-[78%_18%]"
@@ -209,7 +209,7 @@ function Page() {
             <Reveal variant="image">
               <Figure
                 file="sobre_02_trajetoria_aula.jpg"
-                alt="Dra. Diane Marinho em aula sobre transplante de córnea"
+                alt="Dra. Samara Marafon em aula sobre transplante de córnea"
                 ratio="16/9"
                 className="rounded-2xl"
               />
@@ -217,7 +217,7 @@ function Page() {
             <Reveal variant="image" delay={100}>
               <Figure
                 file="sobre_03_trajetoria_congresso.jpg"
-                alt="Dra. Diane Marinho em congresso de catarata e cirurgia refrativa"
+                alt="Dra. Samara Marafon em congresso de catarata e cirurgia refrativa"
                 ratio="16/9"
                 className="rounded-2xl"
               />
@@ -226,9 +226,9 @@ function Page() {
         </div>
       </Section>
 
-      {/* 4 — Onde a Dra. Diane atua hoje */}
+      {/* 4 — Onde a Dra. Samara atua hoje */}
       <Section tone="sand" className={SECTION_SPACE}>
-        <SectionHeader title="Onde a Dra. Diane atua hoje" align="center" />
+        <SectionHeader title="Onde a Dra. Samara atua hoje" align="center" />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {atuacao.map((a, i) => {
             const logoSrc = imageUrl(instituicoes[i]?.logo ?? "");
@@ -264,7 +264,7 @@ function Page() {
           <Reveal variant="image">
             <Figure
               file="sobre_04_ciencia_microscopio.jpg"
-              alt="Dra. Diane Marinho em laboratório de pesquisa em oftalmologia"
+              alt="Dra. Samara Marafon em laboratório de pesquisa em oftalmologia"
               ratio="4/3"
               className="rounded-2xl"
             />
@@ -275,7 +275,7 @@ function Page() {
               text={
                 <>
                   <p>
-                    Parte da trajetória da Dra. Diane também se construiu na pesquisa, na
+                    Parte da trajetória da Dra. Samara também se construiu na pesquisa, na
                     orientação de alunos, na formação de residentes e na participação em estudos
                     que ajudam a ampliar o entendimento sobre doenças da córnea, superfície ocular
                     e transplantes.
@@ -310,7 +310,7 @@ function Page() {
           align="center"
           text={
             <p>
-              A forma como a Dra. Diane conduz cada caso parte de uma ideia simples: duas pessoas
+              A forma como a Dra. Samara conduz cada caso parte de uma ideia simples: duas pessoas
               com o mesmo diagnóstico podem precisar de decisões diferentes.
             </p>
           }

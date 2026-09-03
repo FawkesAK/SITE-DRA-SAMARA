@@ -7,14 +7,14 @@ import { CTAButton } from "./primitives";
 
 function Logo({ invert = false }: { invert?: boolean }) {
   return (
-    <Link to="/" hash="inicio" className="block leading-tight" aria-label="Dra. Diane Marinho — início">
+    <Link to="/" hash="inicio" className="block leading-tight" aria-label="Dra. Samara Marafon — início">
       <span
         className={cn(
           "block font-display text-[1.1rem] leading-tight tracking-wide sm:text-[1.2rem]",
           invert ? "text-[var(--primary-foreground)]" : "text-primary",
         )}
       >
-        Dra. Diane Marinho
+        Dra. Samara Marafon
       </span>
       <span
         className={cn(

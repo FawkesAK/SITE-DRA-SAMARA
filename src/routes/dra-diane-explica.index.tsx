@@ -11,9 +11,9 @@ import {
 export const Route = createFileRoute("/dra-diane-explica/")({
   head: () => ({
     meta: [
-      { title: "Dra. Diane Explica | Conteúdos sobre Visão e Oftalmologia" },
-      { name: "description", content: "Conteúdos sobre catarata, córnea, ceratocone, lentes intraoculares e cirurgia refrativa explicados pela Dra. Diane Marinho." },
-      { property: "og:title", content: "Dra. Diane Explica | Conteúdos sobre Visão e Oftalmologia" },
+      { title: "Dra. Samara Explica | Conteúdos sobre Visão e Oftalmologia" },
+      { name: "description", content: "Conteúdos sobre catarata, córnea, ceratocone, lentes intraoculares e cirurgia refrativa explicados pela Dra. Samara Marafon." },
+      { property: "og:title", content: "Dra. Samara Explica | Conteúdos sobre Visão e Oftalmologia" },
       { property: "og:description", content: "Perguntas sobre visão merecem respostas que façam sentido." },
       { property: "og:url", content: "/dra-diane-explica" },
       { property: "og:type", content: "website" },
@@ -29,7 +29,7 @@ function Page() {
       <Section tone="paper" className="pt-32 md:pt-36">
         <Reveal>
           <p className="eyebrow text-gold">Conteúdo</p>
-          <h1 className="mt-5 max-w-3xl text-4xl leading-[1.08] sm:text-5xl">Dra. Diane explica</h1>
+          <h1 className="mt-5 max-w-3xl text-4xl leading-[1.08] sm:text-5xl">Dra. Samara explica</h1>
           <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-muted-foreground">
             Perguntas sobre visão merecem respostas que façam sentido.
           </p>

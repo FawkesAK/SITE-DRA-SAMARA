@@ -4,12 +4,12 @@ import { Reveal, Section } from "@/components/site/blocks";
 export const Route = createFileRoute("/politica-de-privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade | Dra. Diane Marinho" },
+      { title: "Política de Privacidade | Dra. Samara Marafon" },
       {
         name: "description",
-        content: "Política de privacidade do site institucional da Dra. Diane Marinho.",
+        content: "Política de privacidade do site institucional da Dra. Samara Marafon.",
       },
-      { property: "og:title", content: "Política de Privacidade | Dra. Diane Marinho" },
+      { property: "og:title", content: "Política de Privacidade | Dra. Samara Marafon" },
       { property: "og:url", content: "/politica-de-privacidade" },
       { property: "og:type", content: "website" },
     ],
@@ -35,7 +35,7 @@ function Page() {
         <Reveal className="max-w-2xl space-y-5 text-[0.95rem] leading-relaxed text-muted-foreground">
           <p>
             Este site possui caráter institucional e informativo e tem como objetivo apresentar a
-            atuação profissional da Dra. Diane Marinho e facilitar o acesso aos seus canais de
+            atuação profissional da Dra. Samara Marafon e facilitar o acesso aos seus canais de
             atendimento.
           </p>
           <p>O site não solicita diretamente informações médicas ou dados pessoais por meio de formulários.</p>
@@ -55,7 +55,7 @@ function Page() {
             funcionamento, segurança e melhoria do site.
           </p>
           <p>
-            A Dra. Diane Marinho compromete-se a respeitar a privacidade dos usuários e a
+            A Dra. Samara Marafon compromete-se a respeitar a privacidade dos usuários e a
             legislação brasileira aplicável à proteção de dados pessoais.
           </p>
           <p>

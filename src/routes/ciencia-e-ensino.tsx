@@ -12,9 +12,9 @@ import {
 export const Route = createFileRoute("/ciencia-e-ensino")({
   head: () => ({
     meta: [
-      { title: "Ciência e Ensino | Dra. Diane Marinho" },
-      { name: "description", content: "Pesquisa, ensino e produção científica da Dra. Diane Marinho na UFRGS e no Hospital de Clínicas de Porto Alegre." },
-      { property: "og:title", content: "Ciência e Ensino | Dra. Diane Marinho" },
+      { title: "Ciência e Ensino | Dra. Samara Marafon" },
+      { name: "description", content: "Pesquisa, ensino e produção científica da Dra. Samara Marafon na UFRGS e no Hospital de Clínicas de Porto Alegre." },
+      { property: "og:title", content: "Ciência e Ensino | Dra. Samara Marafon" },
       { property: "og:description", content: "Conhecimento que sai da pesquisa e volta para o cuidado." },
       { property: "og:url", content: "/ciencia-e-ensino" },
       { property: "og:type", content: "article" },
@@ -39,10 +39,10 @@ function Page() {
         title="Conhecimento que sai da pesquisa e volta para o cuidado."
         paragraphs={[
           "Assistência, ensino e pesquisa fazem parte da mesma trajetória.",
-          "Ao ensinar, investigar e participar da produção científica, a Dra. Diane mantém uma relação contínua com a evolução da Oftalmologia.",
+          "Ao ensinar, investigar e participar da produção científica, a Dra. Samara mantém uma relação contínua com a evolução da Oftalmologia.",
         ]}
         file="ciencia_01_hero_aula.jpg"
-        alt="Dra. Diane Marinho em atividade de ensino"
+        alt="Dra. Samara Marafon em atividade de ensino"
       />
 
       <Section tone="background" className="py-14">

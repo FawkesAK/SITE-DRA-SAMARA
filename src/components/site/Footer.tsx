@@ -16,7 +16,7 @@ export function Footer() {
               >
                 <span className="block h-2.5 w-2.5 rounded-full bg-[var(--primary-foreground)]" />
               </span>
-              <span className="font-display text-xl">Dra. Diane Marinho</span>
+              <span className="font-display text-xl">Dra. Samara Marafon</span>
             </div>
             <p className="mt-5 max-w-sm text-sm text-[var(--primary-foreground)]/70">
               Médica oftalmologista em Porto Alegre. Córnea, catarata, cirurgia
@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-[var(--primary-foreground)]/15 pt-6 text-xs text-[var(--primary-foreground)]/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Dra. Diane Marinho. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Dra. Samara Marafon. Todos os direitos reservados.</p>
           <div className="flex gap-6">
             <Link to="/politica-de-privacidade" className="hover:text-[var(--primary-foreground)]">
               Política de Privacidade

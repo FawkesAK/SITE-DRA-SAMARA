@@ -3,7 +3,7 @@
 @import "tw-animate-css";
 
 /*
- * Design system — Dra. Diane Marinho
+ * Design system — Dra. Samara Marafon
  * Editorial, científico, atemporal.
  * Verde profundo, off-white, areia, dourado envelhecido pontual.
  */
@@ -52,67 +52,77 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --shadow-card: 0 1px 2px oklch(0.3 0.03 150 / 4%);
-  --shadow-lift: 0 14px 40px -22px oklch(0.3 0.04 150 / 35%);
+  --shadow-card: 0 1px 2px oklch(0.35 0.04 38 / 5%);
+  --shadow-lift: 0 14px 40px -22px oklch(0.38 0.06 38 / 30%);
 }
 
 :root {
   --radius: 0.375rem;
 
-  /* #F7F5EF */
-  --background: oklch(0.966 0.008 92);
-  /* #2C2C2C */
-  --foreground: oklch(0.303 0 0);
-  /* #FCFBF7 */
-  --card: oklch(0.986 0.005 95);
-  --card-foreground: oklch(0.303 0 0);
-  --popover: oklch(0.986 0.005 95);
-  --popover-foreground: oklch(0.303 0 0);
-  /* #1F4D3A */
-  --primary: oklch(0.379 0.06 158);
-  --primary-foreground: oklch(0.986 0.005 95);
-  /* #153A2C */
-  --primary-deep: oklch(0.305 0.052 159);
-  /* #D8D1C7 */
-  --secondary: oklch(0.86 0.014 84);
-  --secondary-foreground: oklch(0.379 0.06 158);
-  --muted: oklch(0.94 0.008 90);
-  --muted-foreground: oklch(0.52 0.012 90);
-  --accent: oklch(0.92 0.012 88);
-  --accent-foreground: oklch(0.379 0.06 158);
-  --sand: oklch(0.86 0.014 84);
-  /* #B49A68 */
-  --gold: oklch(0.68 0.058 84);
-  --paper: oklch(0.986 0.005 95);
-  --destructive: oklch(0.55 0.18 27);
-  --destructive-foreground: oklch(0.986 0.005 95);
-  /* #E8E8E5 */
-  --border: oklch(0.918 0.003 90);
-  --input: oklch(0.918 0.003 90);
-  --ring: oklch(0.379 0.06 158);
+  /* Identidade Dra. Samara — terracota / caramelo / areia quente.
+     Paleta base: #9E4E3A #BF8168 #D9C6B7 #DDC8BE #F1EEEC #E6DED6 */
 
-  --sidebar: oklch(0.966 0.008 92);
-  --sidebar-foreground: oklch(0.303 0 0);
-  --sidebar-primary: oklch(0.379 0.06 158);
-  --sidebar-primary-foreground: oklch(0.986 0.005 95);
-  --sidebar-accent: oklch(0.92 0.012 88);
-  --sidebar-accent-foreground: oklch(0.379 0.06 158);
-  --sidebar-border: oklch(0.918 0.003 90);
-  --sidebar-ring: oklch(0.379 0.06 158);
+  /* #F1EEEC */
+  --background: oklch(0.951 0.004 56.4);
+  /* #33302D */
+  --foreground: oklch(0.311 0.007 67.6);
+  /* #FAF7F5 */
+  --card: oklch(0.978 0.004 56.4);
+  --card-foreground: oklch(0.311 0.007 67.6);
+  --popover: oklch(0.978 0.004 56.4);
+  --popover-foreground: oklch(0.311 0.007 67.6);
+  /* #9E4E3A */
+  --primary: oklch(0.519 0.111 35.1);
+  /* #FAF6F3 */
+  --primary-foreground: oklch(0.975 0.006 59.7);
+  /* #7A3B2C */
+  --primary-deep: oklch(0.431 0.092 34.6);
+  /* #D9C6B7 */
+  --secondary: oklch(0.838 0.03 60.7);
+  --secondary-foreground: oklch(0.431 0.092 34.6);
+  /* #EAE4DE */
+  --muted: oklch(0.922 0.01 67.7);
+  /* #8A7F75 */
+  --muted-foreground: oklch(0.603 0.02 64.7);
+  /* #DDC8BE */
+  --accent: oklch(0.847 0.027 47.2);
+  --accent-foreground: oklch(0.431 0.092 34.6);
+  --sand: oklch(0.838 0.03 60.7);
+  /* #BF8168 */
+  --gold: oklch(0.66 0.085 42.8);
+  /* #FAF7F5 */
+  --paper: oklch(0.978 0.004 56.4);
+  --destructive: oklch(0.55 0.18 27);
+  --destructive-foreground: oklch(0.975 0.006 59.7);
+  /* #E6DED6 */
+  --border: oklch(0.905 0.014 67.7);
+  --input: oklch(0.905 0.014 67.7);
+  --ring: oklch(0.519 0.111 35.1);
+
+  --sidebar: oklch(0.951 0.004 56.4);
+  --sidebar-foreground: oklch(0.311 0.007 67.6);
+  --sidebar-primary: oklch(0.519 0.111 35.1);
+  --sidebar-primary-foreground: oklch(0.975 0.006 59.7);
+  --sidebar-accent: oklch(0.847 0.027 47.2);
+  --sidebar-accent-foreground: oklch(0.431 0.092 34.6);
+  --sidebar-border: oklch(0.905 0.014 67.7);
+  --sidebar-ring: oklch(0.519 0.111 35.1);
 
   /* Texturas oficiais de acabamento — aplicadas por tipo de fundo (claro/escuro),
      nunca por seção específica. Ver .texture-paper (claro) e .texture-dark (escuro). */
   --texture-light: url("/images/textura_de_papel_marfim_artesanal.png");
+  /* Textura de veludo é esverdeada — quase invisível sobre os fundos terracota
+     da nova identidade para não criar cast de cor. */
   --texture-dark-img: url("/images/veludo_esmeralda_em_ondas_suaves.png");
   --texture-light-opacity: 0.42;
-  --texture-dark-opacity: 0.13;
+  --texture-dark-opacity: 0.04;
   --header-texture-opacity: 0.08;
 }
 
 @media (max-width: 768px) {
   :root {
     --texture-light-opacity: 0.32;
-    --texture-dark-opacity: 0.1;
+    --texture-dark-opacity: 0.03;
     --header-texture-opacity: 0.06;
   }
 }

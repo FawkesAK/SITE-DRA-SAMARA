@@ -11,6 +11,12 @@ import retratoBancada from "@/assets/Ensaio_-_Dra_Diane_17.webp.asset.json";
  */
 export const imageMap: Record<string, string> = {
   "home_01_hero_dra_diane.jpg": "/images/home-hero-dra-diane-v3.jpg",
+  "home_01_hero_dra_samara.jpg": "/images/home-hero-dra-samara.jpg",
+  "home_02_quando_procurar.jpg": "/images/home-quando-procurar-samara.jpg",
+  "home_03_carreira_cornea.jpg": "/images/home-carreira-cornea-samara.jpg",
+  "biblioteca_01_ceratocone.jpg": "/images/biblioteca-ceratocone.jpg",
+  "biblioteca_02_distrofias.jpg": "/images/biblioteca-distrofias.jpg",
+  "biblioteca_03_olho_seco.jpg": "/images/biblioteca-olho-seco.jpg",
   "home_02_sobre_retrato.jpg": "/images/home-sobre-retrato.jpg",
   "home_03_sobre_congresso_palco.jpg": "/images/home-sobre-retrato-topo.png",
   "home_04_sobre_congresso_simposio.jpg": "/images/home-sobre-retrato-base.png",

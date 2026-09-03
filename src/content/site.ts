@@ -3,7 +3,7 @@
  * Placeholders configuráveis — substituir pelos dados reais antes de publicar.
  */
 export const site = {
-  nome: "Dra. Diane Marinho",
+  nome: "Dra. Samara Marafon",
   especialidade: "Oftalmologia",
   crm: "CRM-RS 16.740",
   rqe: "RQE 8.146",

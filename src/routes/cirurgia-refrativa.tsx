@@ -14,9 +14,9 @@ import {
 export const Route = createFileRoute("/cirurgia-refrativa")({
   head: () => ({
     meta: [
-      { title: "Cirurgia Refrativa em Porto Alegre | Dra. Diane Marinho" },
-      { name: "description", content: "Miopia, hipermetropia e astigmatismo: entenda quando existe indicação para cirurgia refrativa em Porto Alegre com a Dra. Diane Marinho." },
-      { property: "og:title", content: "Cirurgia Refrativa em Porto Alegre | Dra. Diane Marinho" },
+      { title: "Cirurgia Refrativa em Porto Alegre | Dra. Samara Marafon" },
+      { name: "description", content: "Miopia, hipermetropia e astigmatismo: entenda quando existe indicação para cirurgia refrativa em Porto Alegre com a Dra. Samara Marafon." },
+      { property: "og:title", content: "Cirurgia Refrativa em Porto Alegre | Dra. Samara Marafon" },
       { property: "og:description", content: "Menos dependência dos óculos pode começar por uma boa indicação." },
       { property: "og:url", content: "/cirurgia-refrativa" },
       { property: "og:type", content: "article" },
@@ -62,7 +62,7 @@ function Page() {
         ]}
         actions={<ArrowLink to="/cirurgia-refrativa" hash="quem-pode-fazer">Entenda se existe indicação</ArrowLink>}
         file="refrativa_01_hero.jpg"
-        alt="Dra. Diane Marinho, oftalmologista especialista em córnea"
+        alt="Dra. Samara Marafon, oftalmologista especialista em córnea"
       />
 
       <Section tone="background">

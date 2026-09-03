@@ -12,9 +12,9 @@ import {
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato e Agendamento | Dra. Diane Marinho" },
-      { name: "description", content: "Onde encontrar a Dra. Diane Marinho, oftalmologista em Porto Alegre. Endereço, telefone, WhatsApp e agendamento de consulta." },
-      { property: "og:title", content: "Contato e Agendamento | Dra. Diane Marinho" },
+      { title: "Contato e Agendamento | Dra. Samara Marafon" },
+      { name: "description", content: "Onde encontrar a Dra. Samara Marafon, oftalmologista em Porto Alegre. Endereço, telefone, WhatsApp e agendamento de consulta." },
+      { property: "og:title", content: "Contato e Agendamento | Dra. Samara Marafon" },
       { property: "og:description", content: "Atendimento no Oftalmocentro, Porto Alegre — RS." },
       { property: "og:url", content: "/contato" },
       { property: "og:type", content: "website" },
@@ -31,7 +31,7 @@ function Page() {
         <Reveal>
           <p className="eyebrow text-gold">Contato</p>
           <h1 className="mt-5 max-w-2xl text-4xl leading-[1.08] sm:text-5xl">
-            Onde encontrar a Dra. Diane
+            Onde encontrar a Dra. Samara
           </h1>
           <p className="mt-5 text-[0.95rem] text-muted-foreground">
             {site.clinica} — {site.cidade}

@@ -22,7 +22,7 @@ export const cienciaItems = [
       "No Hospital de Clínicas de Porto Alegre, a implementação desse tratamento foi resultado de anos de pesquisa e organização institucional.",
       "Após aproximadamente uma década de estudos na área, o HCPA estruturou uma parceria público-privada para viabilizar a produção e disponibilização do tratamento, seguindo critérios técnicos e as regulamentações estabelecidas pela Anvisa.",
       "A iniciativa envolveu o Serviço de Oftalmologia do HCPA e o Banco de Sangue, dentro de um processo que buscou garantir segurança, qualidade e padronização na produção.",
-      "A Dra. Diane Marinho participou desse processo em posição de coordenação, conectando pesquisa acadêmica, assistência aos pacientes e implementação clínica.",
+      "A Dra. Samara Marafon participou desse processo em posição de coordenação, conectando pesquisa acadêmica, assistência aos pacientes e implementação clínica.",
     ],
     apoio: undefined,
     file: "home_10_ciencia_soro_autologo.jpg",
@@ -35,7 +35,7 @@ export const cienciaItems = [
     textoLongo: [
       "O tratamento das doenças da córnea exige compreender que diferentes condições podem comprometer diferentes camadas da estrutura corneana.",
       "Essa evolução do conhecimento permitiu o desenvolvimento dos transplantes lamelares — técnicas nas quais é possível substituir seletivamente determinadas camadas da córnea, preservando estruturas saudáveis sempre que a indicação clínica permite.",
-      "A formação da Dra. Diane em córnea e superfície ocular foi construída ao longo de diferentes etapas acadêmicas e assistenciais.",
+      "A formação da Dra. Samara em córnea e superfície ocular foi construída ao longo de diferentes etapas acadêmicas e assistenciais.",
       "Em 2000, realizou extensão universitária em Ocular Surface na University of Miami, nos Estados Unidos, com carga horária de 120 horas, aprofundando sua formação na área de superfície ocular.",
       "Esse período integrou uma trajetória que posteriormente incluiu mestrado e doutorado em Oftalmologia, além de atuação contínua em córnea, doenças externas, superfície ocular e transplantes no Hospital de Clínicas de Porto Alegre.",
       "Hoje, sua atuação nessa área reúne avaliação clínica, experiência cirúrgica, ensino e pesquisa.",
@@ -50,7 +50,7 @@ export const cienciaItems = [
     titulo: "Formação médica",
     textoCurto: "Ensino de alunos de graduação, residentes, fellows e pós-graduandos na UFRGS e no HCPA.",
     textoLongo: [
-      "A trajetória da Dra. Diane foi construída entre formação especializada, pesquisa e ensino. Após a residência em Oftalmologia e o fellow em córnea no HCPA, concluiu mestrado e doutorado pela UNIFESP e ampliou sua formação em superfície ocular na University of Miami. Hoje, como professora da UFRGS e preceptora no HCPA, participa ativamente da formação de alunos de graduação, residentes, fellows e pós-graduandos, integrando conhecimento acadêmico e experiência clínica.",
+      "A trajetória da Dra. Samara foi construída entre formação especializada, pesquisa e ensino. Após a residência em Oftalmologia e o fellow em córnea no HCPA, concluiu mestrado e doutorado pela UNIFESP e ampliou sua formação em superfície ocular na University of Miami. Hoje, como professora da UFRGS e preceptora no HCPA, participa ativamente da formação de alunos de graduação, residentes, fellows e pós-graduandos, integrando conhecimento acadêmico e experiência clínica.",
     ],
     apoio: undefined,
     file: "home_12_ciencia_formacao_medica.jpg",

@@ -11,9 +11,9 @@ import {
 export const Route = createFileRoute("/cornea")({
   head: () => ({
     meta: [
-      { title: "Especialista em Córnea em Porto Alegre | Dra. Diane Marinho" },
-      { name: "description", content: "Ceratocone, superfície ocular, olho seco, infecções e transplantes de córnea em Porto Alegre com a Dra. Diane Marinho." },
-      { property: "og:title", content: "Especialista em Córnea em Porto Alegre | Dra. Diane Marinho" },
+      { title: "Especialista em Córnea em Porto Alegre | Dra. Samara Marafon" },
+      { name: "description", content: "Ceratocone, superfície ocular, olho seco, infecções e transplantes de córnea em Porto Alegre com a Dra. Samara Marafon." },
+      { property: "og:title", content: "Especialista em Córnea em Porto Alegre | Dra. Samara Marafon" },
       { property: "og:description", content: "Investigação especializada em doenças da córnea e da superfície ocular." },
       { property: "og:url", content: "/cornea" },
       { property: "og:type", content: "article" },
@@ -37,13 +37,13 @@ function Page() {
     <>
       <PageHero
         eyebrow="Córnea"
-        title="A córnea está no centro de grande parte da trajetória da Dra. Diane."
+        title="A córnea está no centro de grande parte da trajetória da Dra. Samara."
         paragraphs={[
           "Transparente e delicada, a córnea participa diretamente da forma como a luz entra nos olhos.",
           "Alterações na sua estrutura podem afetar muito a qualidade da visão e exigir investigação especializada.",
         ]}
         file="cornea_01_hero.jpg"
-        alt="Dra. Diane Marinho examinando um paciente na lâmpada de fenda"
+        alt="Dra. Samara Marafon examinando um paciente na lâmpada de fenda"
       />
 
       <Section tone="background">

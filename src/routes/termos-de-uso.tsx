@@ -4,12 +4,12 @@ import { Reveal, Section } from "@/components/site/blocks";
 export const Route = createFileRoute("/termos-de-uso")({
   head: () => ({
     meta: [
-      { title: "Termos de Uso | Dra. Diane Marinho" },
+      { title: "Termos de Uso | Dra. Samara Marafon" },
       {
         name: "description",
-        content: "Termos de uso do site institucional da Dra. Diane Marinho.",
+        content: "Termos de uso do site institucional da Dra. Samara Marafon.",
       },
-      { property: "og:title", content: "Termos de Uso | Dra. Diane Marinho" },
+      { property: "og:title", content: "Termos de Uso | Dra. Samara Marafon" },
       { property: "og:url", content: "/termos-de-uso" },
       { property: "og:type", content: "website" },
     ],
@@ -33,7 +33,7 @@ function Page() {
         <Reveal className="max-w-2xl space-y-5 text-[0.95rem] leading-relaxed text-muted-foreground">
           <p>
             Este site possui finalidade institucional e informativa e apresenta informações sobre
-            a atuação profissional da Dra. Diane Marinho e suas áreas de atuação em oftalmologia.
+            a atuação profissional da Dra. Samara Marafon e suas áreas de atuação em oftalmologia.
           </p>
           <p>
             Os conteúdos disponibilizados têm caráter educativo e não substituem consulta médica,
