@@ -505,7 +505,7 @@ function Page() {
           />
         ) : null}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/5" />
-        <Reveal className="relative mx-auto max-w-2xl px-5 pb-[13vh] sm:px-8 md:pb-[15vh]">
+        <Reveal className="relative mx-auto max-w-2xl px-5 pb-[13vh] sm:px-8 md:pb-[6vh]">
           <h1 className="font-display text-[clamp(2.6rem,7vw,4.2rem)] leading-[1.05]">Ceratocone</h1>
           <p className="mx-auto mt-4 max-w-lg text-[0.98rem] text-[var(--primary-foreground)]/85">
             Entenda a doença que altera progressivamente o formato da córnea
