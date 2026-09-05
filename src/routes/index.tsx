@@ -129,7 +129,7 @@ const biblioteca = [
     titulo: "Ceratocone",
     file: "biblioteca_01_ceratocone.jpg",
     alt: "Foto macro de um olho — conteúdo sobre ceratocone",
-    to: "/cornea",
+    to: "/ceratocone",
   },
   {
     titulo: "Distrofias",
