@@ -495,7 +495,7 @@ function Page() {
   return (
     <>
       {/* HERO — foto de fundo, degradê preto de baixo pra cima, texto na parte inferior */}
-      <section className="relative flex min-h-[64svh] items-end justify-center overflow-hidden bg-[#1a1a1a] pt-24 text-center text-[var(--primary-foreground)]">
+      <section className="relative flex min-h-[64svh] items-end justify-center overflow-hidden bg-[#1a1a1a] pt-24 text-center text-[var(--primary-foreground)] md:min-h-[82svh]">
         {heroPhoto ? (
           <img
             src={heroPhoto}
