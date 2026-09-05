@@ -494,18 +494,18 @@ function Page() {
 
   return (
     <>
-      {/* HERO — foto de fundo, título centralizado */}
-      <section className="relative flex min-h-[62svh] items-center justify-center overflow-hidden bg-[var(--primary-deep)] pt-24 text-center text-[var(--primary-foreground)]">
+      {/* HERO — foto de fundo, degradê preto de baixo pra cima, texto na parte inferior */}
+      <section className="relative flex min-h-[64svh] items-end justify-center overflow-hidden bg-[#1a1a1a] pt-24 text-center text-[var(--primary-foreground)]">
         {heroPhoto ? (
           <img
             src={heroPhoto}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover object-center opacity-45"
+            className="absolute inset-0 h-full w-full object-cover object-[45%_center]"
           />
         ) : null}
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--primary-deep)]/60 via-transparent to-[var(--primary-deep)]/85" />
-        <Reveal className="relative mx-auto max-w-2xl px-5 pb-20 sm:px-8">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/5" />
+        <Reveal className="relative mx-auto max-w-2xl px-5 pb-[13vh] sm:px-8 md:pb-[15vh]">
           <h1 className="font-display text-[clamp(2.6rem,7vw,4.2rem)] leading-[1.05]">Ceratocone</h1>
           <p className="mx-auto mt-4 max-w-lg text-[0.98rem] text-[var(--primary-foreground)]/85">
             Entenda a doença que altera progressivamente o formato da córnea
