@@ -32,7 +32,7 @@ export const Route = createFileRoute("/ceratocone")({
       {
         property: "og:description",
         content:
-          "Doença que torna a córnea progressivamente mais fina e irregular. Entenda sinais, diagnóstico e tratamentos.",
+          "Entenda a doença que altera progressivamente o formato da córnea: sinais, diagnóstico e tratamentos.",
       },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/ceratocone" },
@@ -42,7 +42,13 @@ export const Route = createFileRoute("/ceratocone")({
   component: Page,
 });
 
-/* ------------------------------- Conteúdo -------------------------------- */
+/* ------------------------------ Links WhatsApp ------------------------------ */
+
+const WHATSAPP_AGENDAR = site.whatsappUrl;
+const WHATSAPP_CONTATO =
+  "https://api.whatsapp.com/send?phone=55051993929951&text=Oi,%20vim%20do%20site%20da%20Dra%20Samara%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta";
+
+/* -------------------------------- Conteúdo -------------------------------- */
 
 const indice = [
   { id: "o-que-e", label: "O que é o ceratocone?" },
@@ -251,9 +257,8 @@ const faq = [
   },
 ];
 
-/* ------------------------------- Helpers -------------------------------- */
+/* -------------------------------- Helpers -------------------------------- */
 
-/** Coluna de leitura do artigo — largura e tipografia constantes. */
 function Prose({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <div
@@ -285,10 +290,7 @@ function H2({ id, children }: { id?: string; children: ReactNode }) {
 
 function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
-    <h3
-      id={id}
-      className="mt-9 text-[1.18rem] leading-snug text-primary"
-    >
+    <h3 id={id} className="mt-9 text-[1.18rem] leading-snug text-primary">
       {children}
     </h3>
   );
@@ -332,7 +334,6 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
   );
 }
 
-/** Foto do artigo — mais larga que a coluna de texto, centrada. */
 function ArticleFigure({ file, alt }: { file: string; alt: string }) {
   return (
     <Reveal variant="image" className="my-12">
@@ -352,63 +353,46 @@ function Page() {
       {/* HERO */}
       <section className="texture-dark relative overflow-hidden bg-[var(--primary-deep)] pb-14 pt-28 text-[var(--primary-foreground)] md:pb-20 md:pt-32">
         <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
-          <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start lg:gap-14">
-            <div>
-              <Reveal>
-                <p className="eyebrow text-gold">Guia · Córnea</p>
-                <h1 className="mt-4 max-w-2xl text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.01em]">
-                  Ceratocone: sintomas, diagnóstico e tratamentos
-                </h1>
-                <div className="mt-6 max-w-xl space-y-4 text-[0.95rem] leading-relaxed text-[var(--primary-foreground)]/80">
-                  <p>
-                    O ceratocone é uma doença que torna a córnea progressivamente mais fina e
-                    irregular, comprometendo a qualidade da visão.
-                  </p>
-                  <p>
-                    Neste guia, você entenderá como reconhecer seus sinais, confirmar o
-                    diagnóstico e conhecer o papel de tratamentos como lentes especiais,
-                    crosslinking, anel intracorneano e transplante de córnea.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal
-                delay={100}
-                className="mt-9 rounded-lg border border-[var(--primary-foreground)]/15 bg-[var(--primary-foreground)]/[0.06] p-5 sm:p-6"
-              >
-                <p className="eyebrow text-gold">Neste guia</p>
-                <ol className="mt-4 grid gap-x-10 gap-y-2.5 text-[0.9rem] sm:grid-cols-2">
-                  {indice.map((item, i) => (
-                    <li key={item.id}>
-                      <a
-                        href={`#${item.id}`}
-                        className="text-[var(--primary-foreground)]/80 transition-colors hover:text-[var(--primary-foreground)]"
-                      >
-                        <span className="mr-1 text-gold">{i + 1}.</span>
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </Reveal>
+          <Reveal className="max-w-2xl">
+            <p className="eyebrow text-gold">Ceratocone</p>
+            <p className="mt-3 text-[0.98rem] text-[var(--primary-foreground)]/70">
+              Entenda a doença que altera progressivamente o formato da córnea
+            </p>
+            <h1 className="mt-4 text-[clamp(2rem,5vw,3rem)] leading-[1.1] tracking-[-0.01em]">
+              Ceratocone: sintomas, diagnóstico e tratamentos
+            </h1>
+            <div className="mt-6 space-y-4 text-[0.95rem] leading-relaxed text-[var(--primary-foreground)]/80">
+              <p>
+                O ceratocone é uma doença que torna a córnea progressivamente mais fina e
+                irregular, comprometendo a qualidade da visão.
+              </p>
+              <p>
+                Neste guia, você entenderá como reconhecer seus sinais, confirmar o diagnóstico
+                e conhecer o papel de tratamentos como lentes especiais, crosslinking, anel
+                intracorneano e transplante de córnea.
+              </p>
             </div>
+          </Reveal>
 
-            {/* Autora — card compacto */}
-            <Reveal delay={140} className="mt-10 lg:mt-0">
-              <div className="rounded-lg border border-[var(--primary-foreground)]/15 bg-[var(--primary-foreground)]/[0.06] p-5">
-                <p className="text-[0.68rem] uppercase tracking-[0.16em] text-[var(--primary-foreground)]/55">
-                  Escrito por
-                </p>
-                <p className="mt-2 font-display text-lg leading-tight">Dra. Samara B. Marafon</p>
-                <p className="mt-2 text-[0.82rem] leading-relaxed text-[var(--primary-foreground)]/75">
-                  Oftalmologista especialista em córnea, catarata e lente de contato.
-                </p>
-                <p className="mt-3 text-[0.76rem] text-[var(--primary-foreground)]/55">
-                  CRM-RS 37669 &nbsp;|&nbsp; RQE 29525
-                </p>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal
+            delay={100}
+            className="mt-9 max-w-2xl rounded-lg border border-[var(--primary-foreground)]/15 bg-[var(--primary-foreground)]/[0.06] p-5 sm:p-6"
+          >
+            <p className="eyebrow text-gold">Neste guia</p>
+            <ol className="mt-4 grid gap-x-10 gap-y-2.5 text-[0.9rem] sm:grid-cols-2">
+              {indice.map((item, i) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    className="text-[var(--primary-foreground)]/80 transition-colors hover:text-[var(--primary-foreground)]"
+                  >
+                    <span className="mr-1 text-gold">{i + 1}.</span>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
         </div>
       </section>
 
@@ -416,7 +400,6 @@ function Page() {
       <section className="texture-paper relative bg-background py-16 text-foreground md:py-20">
         <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
           <article className="mx-auto max-w-[720px]">
-            {/* 1 — O que é */}
             <H2 id="o-que-e">O que é o ceratocone?</H2>
             <Prose className="mt-5">
               <p>
@@ -454,7 +437,6 @@ function Page() {
               alt="Ilustração comparando uma córnea saudável arredondada com uma córnea em formato de cone"
             />
 
-            {/* 2 — Sintomas */}
             <H2 id="sintomas">Quais são os sintomas do ceratocone?</H2>
             <Prose className="mt-5">
               <p>
@@ -507,7 +489,6 @@ function Page() {
               alt="Cena urbana com aparência distorcida e embaçada, simulando a visão no ceratocone"
             />
 
-            {/* 3 — Causas */}
             <H2 id="causas">O que pode causar o ceratocone?</H2>
             <Prose className="mt-5">
               <p>
@@ -580,7 +561,6 @@ function Page() {
               alt="Close-up de um olho, com detalhe da córnea e da íris"
             />
 
-            {/* 4 — Diagnóstico */}
             <H2 id="diagnostico">Como é feito o diagnóstico?</H2>
             <Prose className="mt-5">
               <p>
@@ -647,7 +627,6 @@ function Page() {
               alt="Exame detalhado da córnea em close-up"
             />
 
-            {/* 5 — Tratamentos */}
             <H2 id="tratamentos">Quais são os tratamentos para ceratocone?</H2>
             <Prose className="mt-5">
               <p>O tratamento possui dois objetivos diferentes:</p>
@@ -748,7 +727,6 @@ function Page() {
               alt="Pessoa esfregando os olhos com as mãos"
             />
 
-            {/* 6 — Crosslinking */}
             <H2 id="crosslinking">Crosslinking corneano</H2>
 
             <H3>O que é?</H3>
@@ -834,7 +812,6 @@ function Page() {
               alt="Detalhe da córnea após procedimento, em close-up"
             />
 
-            {/* 7 — Anel */}
             <H2 id="anel">Anel intracorneano ou Anel de Ferrara</H2>
 
             <H3>O que é?</H3>
@@ -905,7 +882,6 @@ function Page() {
               alt="Close-up de um olho com implante de anel intracorneano"
             />
 
-            {/* 8 — Transplante */}
             <H2 id="transplante">Transplante de córnea</H2>
 
             <H3>Todo paciente com ceratocone precisará de transplante?</H3>
@@ -971,7 +947,7 @@ function Page() {
         </div>
       </section>
 
-      {/* CTA — consulta */}
+      {/* CTA — meio do artigo */}
       <section className="relative overflow-hidden bg-[var(--primary-deep)] py-16 text-[var(--primary-foreground)] md:py-20">
         {ctaPhoto ? (
           <img
@@ -992,11 +968,7 @@ function Page() {
               Cada caso é único. Uma avaliação especializada é fundamental para entender o seu
               ceratocone e as possibilidades de tratamento.
             </p>
-            <CTAButton
-              href={site.whatsappUrl}
-              variant="light-solid"
-              className="mt-6"
-            >
+            <CTAButton href={WHATSAPP_AGENDAR} variant="light-solid" className="mt-6">
               Agendar consulta
             </CTAButton>
           </Reveal>
@@ -1034,7 +1006,7 @@ function Page() {
         </div>
       </Section>
 
-      {/* Autora — bloco completo */}
+      {/* Autora */}
       <Section tone="background">
         <Reveal className="flex flex-col gap-6 rounded-xl border border-border bg-paper p-6 sm:flex-row sm:items-center sm:gap-8 sm:p-8">
           <div className="shrink-0 sm:w-40">
@@ -1115,6 +1087,28 @@ function Page() {
               </li>
             ))}
           </ul>
+        </Reveal>
+      </Section>
+
+      {/* CTA final */}
+      <Section tone="deep" className="overflow-hidden">
+        <Reveal className="mx-auto max-w-2xl rounded-lg bg-[#9e4e3a]/90 p-8 text-center shadow-[var(--shadow-lift)] sm:p-10 lg:p-12">
+          <h2 className="text-[clamp(1.7rem,4vw,2.4rem)] leading-tight text-[var(--primary-foreground)]">
+            Cada visão tem uma história.
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-[0.92rem] leading-relaxed text-[var(--primary-foreground)]/80">
+            Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou deseja
+            avaliar a possibilidade de um tratamento cirúrgico, uma consulta especializada é o
+            primeiro passo para compreender o seu caso e definir a melhor conduta.
+          </p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <CTAButton href={WHATSAPP_AGENDAR} variant="light-solid">
+              Agendar consulta
+            </CTAButton>
+            <CTAButton href={WHATSAPP_CONTATO} variant="ghost-light">
+              Entrar em contato
+            </CTAButton>
+          </div>
         </Reveal>
       </Section>
 
