@@ -11,11 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CatarataRouteImport } from './routes/catarata'
+import { Route as CeratoconeRouteImport } from './routes/ceratocone'
 import { Route as CienciaEEnsinoRouteImport } from './routes/ciencia-e-ensino'
 import { Route as CirurgiaRefrativaRouteImport } from './routes/cirurgia-refrativa'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CorneaRouteImport } from './routes/cornea'
-import { Route as DraDianeRouteImport } from './routes/dra-diane'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as DraDianeExplicaIndexRouteImport } from './routes/dra-diane-explica.index'
@@ -29,6 +29,11 @@ const IndexRoute = IndexRouteImport.update({
 const CatarataRoute = CatarataRouteImport.update({
   id: '/catarata',
   path: '/catarata',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CeratoconeRoute = CeratoconeRouteImport.update({
+  id: '/ceratocone',
+  path: '/ceratocone',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CienciaEEnsinoRoute = CienciaEEnsinoRouteImport.update({
@@ -49,11 +54,6 @@ const ContatoRoute = ContatoRouteImport.update({
 const CorneaRoute = CorneaRouteImport.update({
   id: '/cornea',
   path: '/cornea',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DraDianeRoute = DraDianeRouteImport.update({
-  id: '/dra-diane',
-  path: '/dra-diane',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
@@ -80,11 +80,11 @@ const DraDianeExplicaSlugRoute = DraDianeExplicaSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/catarata': typeof CatarataRoute
+  '/ceratocone': typeof CeratoconeRoute
   '/ciencia-e-ensino': typeof CienciaEEnsinoRoute
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
-  '/dra-diane': typeof DraDianeRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/dra-diane-explica/$slug': typeof DraDianeExplicaSlugRoute
@@ -93,11 +93,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/catarata': typeof CatarataRoute
+  '/ceratocone': typeof CeratoconeRoute
   '/ciencia-e-ensino': typeof CienciaEEnsinoRoute
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
-  '/dra-diane': typeof DraDianeRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/dra-diane-explica/$slug': typeof DraDianeExplicaSlugRoute
@@ -107,11 +107,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/catarata': typeof CatarataRoute
+  '/ceratocone': typeof CeratoconeRoute
   '/ciencia-e-ensino': typeof CienciaEEnsinoRoute
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
-  '/dra-diane': typeof DraDianeRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/dra-diane-explica/$slug': typeof DraDianeExplicaSlugRoute
@@ -122,11 +122,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/catarata'
+    | '/ceratocone'
     | '/ciencia-e-ensino'
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
-    | '/dra-diane'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
     | '/dra-diane-explica/$slug'
@@ -135,11 +135,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/catarata'
+    | '/ceratocone'
     | '/ciencia-e-ensino'
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
-    | '/dra-diane'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
     | '/dra-diane-explica/$slug'
@@ -148,11 +148,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/catarata'
+    | '/ceratocone'
     | '/ciencia-e-ensino'
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
-    | '/dra-diane'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
     | '/dra-diane-explica/$slug'
@@ -162,11 +162,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CatarataRoute: typeof CatarataRoute
+  CeratoconeRoute: typeof CeratoconeRoute
   CienciaEEnsinoRoute: typeof CienciaEEnsinoRoute
   CirurgiaRefrativaRoute: typeof CirurgiaRefrativaRoute
   ContatoRoute: typeof ContatoRoute
   CorneaRoute: typeof CorneaRoute
-  DraDianeRoute: typeof DraDianeRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
   DraDianeExplicaSlugRoute: typeof DraDianeExplicaSlugRoute
@@ -187,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/catarata'
       fullPath: '/catarata'
       preLoaderRoute: typeof CatarataRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ceratocone': {
+      id: '/ceratocone'
+      path: '/ceratocone'
+      fullPath: '/ceratocone'
+      preLoaderRoute: typeof CeratoconeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ciencia-e-ensino': {
@@ -215,13 +222,6 @@ declare module '@tanstack/react-router' {
       path: '/cornea'
       fullPath: '/cornea'
       preLoaderRoute: typeof CorneaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dra-diane': {
-      id: '/dra-diane'
-      path: '/dra-diane'
-      fullPath: '/dra-diane'
-      preLoaderRoute: typeof DraDianeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-privacidade': {
@@ -258,11 +258,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CatarataRoute: CatarataRoute,
+  CeratoconeRoute: CeratoconeRoute,
   CienciaEEnsinoRoute: CienciaEEnsinoRoute,
   CirurgiaRefrativaRoute: CirurgiaRefrativaRoute,
   ContatoRoute: ContatoRoute,
   CorneaRoute: CorneaRoute,
-  DraDianeRoute: DraDianeRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
   DraDianeExplicaSlugRoute: DraDianeExplicaSlugRoute,
