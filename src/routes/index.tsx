@@ -608,7 +608,7 @@ function Home() {
           <ParallaxImage
             file="home_14_cta_consultorio.jpg"
             objectPosition="50% 25%"
-            amplitude={13}
+            amplitude={19}
           />
           {/* card terracota translúcido — sobreposição necessária para leitura
               do texto sobre a foto clara do consultório */}

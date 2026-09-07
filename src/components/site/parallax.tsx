@@ -127,7 +127,7 @@ export function ParallaxImage({
           className={cn(
             // 144% da altura da seção, sobrando 22% de cada lado — folga
             // suficiente para o trajeto (±~13%) sem expor as bordas
-            "absolute left-0 top-[-22%] h-[144%] w-full object-cover",
+            "absolute left-0 top-[-35%] h-[170%] w-full object-cover",
             imgClassName,
           )}
           style={objectPosition ? { objectPosition } : undefined}
