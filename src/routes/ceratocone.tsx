@@ -1088,14 +1088,14 @@ function Page() {
       {/* Quando procurar — bloco 2 colunas alternadas */}
       <section id="especialista" className="bg-paper py-14 md:py-16">
         <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
-          <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-            <Reveal variant="image" className="order-2 md:order-1">
+          <div className="grid items-stretch gap-8 md:grid-cols-2 md:gap-12">
+            <Reveal variant="image" className="order-2 md:order-1 md:h-full">
               <Figure
                 file="ceratocone_especialista.jpg"
                 alt="Dra. Samara Marafon ajustando o refrator no consultório"
                 ratio="4/3"
                 imgClassName="object-left"
-                className="rounded-md"
+                className="rounded-md md:h-full md:w-full md:[aspect-ratio:auto]!"
               />
             </Reveal>
             <div className="order-1 md:order-2">
@@ -1119,7 +1119,7 @@ function Page() {
             </div>
           </div>
 
-          <div className="mt-12 grid items-center gap-8 md:mt-16 md:grid-cols-2 md:gap-12">
+          <div className="mt-12 grid items-stretch gap-8 md:mt-16 md:grid-cols-2 md:gap-12">
             <div>
               <Reveal>
                 <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
@@ -1139,12 +1139,12 @@ function Page() {
                 </p>
               </Prose>
             </div>
-            <Reveal variant="image">
+            <Reveal variant="image" className="md:h-full">
               <Figure
                 file="ceratocone_urgencia.jpg"
                 alt="Detalhe de uma consulta médica sobre a mesa do consultório"
                 ratio="4/3"
-                className="rounded-md"
+                className="rounded-md md:h-full md:w-full md:[aspect-ratio:auto]!"
               />
             </Reveal>
           </div>
