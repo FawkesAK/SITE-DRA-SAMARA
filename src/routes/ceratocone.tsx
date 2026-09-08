@@ -743,16 +743,6 @@ function Page() {
                 <p>O acompanhamento periódico serve justamente para diferenciar essas situações.</p>
               </Prose>
 
-              {/* Diagrama — etapas do crosslinking */}
-              <Reveal variant="image" className="my-10">
-                <Figure
-                  file="ceratocone_crosslinking_passos.jpg"
-                  alt="Seis etapas do crosslinking corneano: aplicação do colírio de riboflavina, penetração no estroma, exposição à luz ultravioleta A, ativação da riboflavina, formação de novas ligações entre as fibras de colágeno e, por fim, córnea mais forte e estável"
-                  ratio="3/2"
-                  className="rounded-md"
-                />
-              </Reveal>
-
               {/* 5 — Tratamentos */}
               <H2 id="tratamentos">Quais são os tratamentos para ceratocone?</H2>
               <Prose className="mt-4">
@@ -855,6 +845,15 @@ function Page() {
               </Prose>
 
               {/* 6 — Crosslinking */}
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="ceratocone_crosslinking_passos.jpg"
+                  alt="Seis etapas do crosslinking corneano: aplicação do colírio de riboflavina, penetração no estroma, exposição à luz ultravioleta A, ativação da riboflavina, formação de novas ligações entre as fibras de colágeno e, por fim, córnea mais forte e estável"
+                  ratio="3/2"
+                  className="rounded-md"
+                />
+              </Reveal>
+
               <H2 id="crosslinking">Crosslinking corneano</H2>
 
               <H3>O que é?</H3>
