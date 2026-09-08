@@ -845,6 +845,8 @@ function Page() {
               </Prose>
 
               {/* 6 — Crosslinking */}
+              <H2 id="crosslinking">Crosslinking corneano</H2>
+
               <Reveal variant="image" className="my-10">
                 <Figure
                   file="ceratocone_crosslinking_passos.jpg"
@@ -853,8 +855,6 @@ function Page() {
                   className="rounded-md"
                 />
               </Reveal>
-
-              <H2 id="crosslinking">Crosslinking corneano</H2>
 
               <H3>O que é?</H3>
               <Prose className="mt-3">
