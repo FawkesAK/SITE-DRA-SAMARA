@@ -248,9 +248,17 @@ const faq = [
 /* -------------------------------- Helpers -------------------------------- */
 
 /** Título de seção do artigo — terracota, sans pesada. */
-function H2({ id, children }: { id?: string; children: ReactNode }) {
+function H2({
+  id,
+  children,
+  className,
+}: {
+  id?: string;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <Reveal>
+    <Reveal className={className}>
       <h2
         id={id}
         className="mt-14 font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
@@ -845,7 +853,9 @@ function Page() {
               </Prose>
 
               {/* 6 — Crosslinking */}
-              <H2 id="crosslinking">Crosslinking corneano</H2>
+              <H2 id="crosslinking" className="mt-24 md:mt-28">
+                Crosslinking corneano
+              </H2>
 
               <Reveal variant="image" className="my-10">
                 <Figure
