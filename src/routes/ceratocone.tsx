@@ -1093,8 +1093,8 @@ function Page() {
               <Figure
                 file="ceratocone_especialista.jpg"
                 alt="Dra. Samara Marafon ajustando o refrator no consultório"
-                ratio="4/5"
-                imgClassName="object-[28%_center]"
+                ratio="5/6"
+                imgClassName="object-left"
                 className="rounded-md"
               />
             </Reveal>
