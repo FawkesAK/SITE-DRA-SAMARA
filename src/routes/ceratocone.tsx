@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Clock, CalendarDays } from "lucide-react";
 import { CTAButton, Figure, Reveal } from "@/components/site/blocks";
+import { ParallaxImage } from "@/components/site/parallax";
 import { imageUrl } from "@/content/images";
 import { site } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -442,7 +443,6 @@ function Sidebar() {
 
 function Page() {
   const heroPhoto = imageUrl("ceratocone_hero.jpg");
-  const ctaPhoto = imageUrl("home_14_cta_consultorio.jpg");
 
   return (
     <>
@@ -1173,37 +1173,28 @@ function Page() {
         </div>
       </section>
 
-      {/* CTA final — "Cada visão tem uma história." */}
-      <section className="relative overflow-hidden bg-[var(--primary-deep)] py-16 text-[var(--primary-foreground)] md:py-20">
-        {ctaPhoto ? (
-          <img
-            src={ctaPhoto}
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[50%_30%] opacity-45"
-          />
-        ) : null}
-        <div className="relative mx-auto w-full max-w-[1240px] px-5 sm:px-8">
-          <Reveal className="ml-auto max-w-md rounded-lg bg-[#a9897c]/92 p-8 shadow-[var(--shadow-lift)] lg:p-10">
-            <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight text-[var(--primary-foreground)]">
+      {/* CTA final — mesmo tratamento da última seção da Home */}
+      <section className="relative flex overflow-hidden bg-[var(--primary-deep)] py-16 text-[var(--primary-foreground)] md:py-20 lg:min-h-[560px] lg:items-center lg:py-0">
+        <ParallaxImage
+          file="home_14_cta_consultorio.jpg"
+          objectPosition="50% 25%"
+          amplitude={19}
+        />
+        <div className="relative z-10 mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+          <Reveal className="ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] lg:p-10">
+            <h2 className="text-3xl leading-tight text-[#4a3629] sm:text-4xl">
               Cada visão tem uma história.
             </h2>
-            <p className="mt-3 text-[0.9rem] leading-relaxed text-[var(--primary-foreground)]/85">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858]">
               Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou deseja
               avaliar a possibilidade de um tratamento cirúrgico, uma consulta especializada é o
               primeiro passo para compreender o seu caso e definir a melhor conduta.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <CTAButton href={WHATSAPP_AGENDAR} variant="light-solid">
+            <div className="mt-7 flex flex-wrap gap-3">
+              <CTAButton href={WHATSAPP_AGENDAR} variant="primary">
                 Agendar consulta
               </CTAButton>
-              <CTAButton
-                href={WHATSAPP_CONTATO}
-                variant="primary"
-                className="bg-[var(--primary-deep)] hover:bg-[#5f2f22]"
-              >
+              <CTAButton href={WHATSAPP_CONTATO} variant="light-solid">
                 Entrar em contato
               </CTAButton>
             </div>
