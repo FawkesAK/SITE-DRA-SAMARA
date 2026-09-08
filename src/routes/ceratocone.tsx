@@ -1022,6 +1022,10 @@ function Page() {
               </Prose>
 
               {/* 8 — Transplante */}
+              <H2 id="transplante" className="mt-24 md:mt-28">
+                Transplante de córnea
+              </H2>
+
               <Reveal variant="image" className="my-10">
                 <Figure
                   file="ceratocone_transplante_passos.jpg"
@@ -1030,8 +1034,6 @@ function Page() {
                   className="rounded-md"
                 />
               </Reveal>
-
-              <H2 id="transplante">Transplante de córnea</H2>
 
               <H3>Todo paciente com ceratocone precisará de transplante?</H3>
               <Prose className="mt-3">
