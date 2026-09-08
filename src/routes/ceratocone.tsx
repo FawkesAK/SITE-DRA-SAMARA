@@ -137,15 +137,6 @@ const comparacaoRows = [
   ],
 ];
 
-const passosAnel = [
-  { label: "Córnea com ceratocone", texto: "A córnea com ceratocone tem afinamento e protrusão, causando visão distorcida." },
-  { label: "Túnel intracorneano", texto: "Um túnel é criado dentro da córnea, na camada média (estroma)." },
-  { label: "Inserção do anel", texto: "O anel de Ferrara é cuidadosamente inserido dentro do túnel." },
-  { label: "Posicionamento", texto: "O anel é ajustado e posicionado para regularizar o formato da córnea." },
-  { label: "Efeito do anel", texto: "O anel comprime as áreas mais curvas e ajuda a achatar e regularizar a córnea." },
-  { label: "Resultado", texto: "Córnea mais regular, com melhora da visão e da qualidade de vida." },
-];
-
 const passosTransplante = [
   { label: "Córnea doadora", texto: "Tecido corneano saudável preparado a partir de um doador." },
   { label: "Substituição", texto: "A área comprometida da córnea é removida e substituída pelo tecido doador." },
@@ -991,12 +982,14 @@ function Page() {
               </Prose>
 
               {/* 7 — Anel */}
-              <StepGrid
-                file="ceratocone_passo_anel"
-                alt="Etapas do implante de anel intracorneano"
-                cols={3}
-                steps={passosAnel}
-              />
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="ceratocone_anel_passos.jpg"
+                  alt="Seis etapas do implante do anel de Ferrara: córnea com ceratocone, criação do túnel intracorneano, inserção do anel, posicionamento, efeito de compressão das áreas mais curvas e resultado com a córnea mais regular"
+                  ratio="3/2"
+                  className="rounded-md"
+                />
+              </Reveal>
 
               <H2 id="anel">Anel intracorneano ou Anel de Ferrara</H2>
 
