@@ -267,7 +267,7 @@ function H2({ id, children }: { id?: string; children: ReactNode }) {
     <Reveal>
       <h2
         id={id}
-        className="mt-14 font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
+        className="mt-14 font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
       >
         {children}
       </h2>
@@ -279,7 +279,7 @@ function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
     <h3
       id={id}
-      className="mt-8 font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
+      className="mt-8 font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
     >
       {children}
     </h3>
@@ -530,7 +530,7 @@ function Page() {
           <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-16">
             <article className="min-w-0">
               <Reveal>
-                <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
+                <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
                   Ceratocone: sintomas, diagnóstico e tratamentos
                 </h2>
               </Reveal>
@@ -798,6 +798,16 @@ function Page() {
                 <p>O acompanhamento periódico serve justamente para diferenciar essas situações.</p>
               </Prose>
 
+              {/* Diagrama — etapas do crosslinking */}
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="ceratocone_crosslinking_passos.jpg"
+                  alt="Seis etapas do crosslinking corneano: aplicação do colírio de riboflavina, penetração no estroma, exposição à luz ultravioleta A, ativação da riboflavina, formação de novas ligações entre as fibras de colágeno e, por fim, córnea mais forte e estável"
+                  ratio="3/2"
+                  className="rounded-md"
+                />
+              </Reveal>
+
               {/* 5 — Tratamentos */}
               <H2 id="tratamentos">Quais são os tratamentos para ceratocone?</H2>
               <Prose className="mt-4">
@@ -894,15 +904,6 @@ function Page() {
               </Prose>
 
               {/* 6 — Crosslinking */}
-              <Reveal variant="image" className="my-10">
-                <Figure
-                  file="ceratocone_crosslinking_passos.jpg"
-                  alt="Seis etapas do crosslinking corneano: aplicação do colírio de riboflavina, penetração no estroma, exposição à luz ultravioleta A, ativação da riboflavina, formação de novas ligações entre as fibras de colágeno e, por fim, córnea mais forte e estável"
-                  ratio="3/2"
-                  className="rounded-md"
-                />
-              </Reveal>
-
               <H2 id="crosslinking">Crosslinking corneano</H2>
 
               <H3>O que é?</H3>
@@ -1143,7 +1144,7 @@ function Page() {
             </Reveal>
             <div className="order-1 md:order-2">
               <Reveal>
-                <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
+                <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
                   Quando procurar um especialista em córnea?
                 </h2>
               </Reveal>
@@ -1165,7 +1166,7 @@ function Page() {
           <div className="mt-12 grid items-center gap-8 md:mt-16 md:grid-cols-2 md:gap-12">
             <div>
               <Reveal>
-                <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
+                <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
                   Quando procurar atendimento com urgência?
                 </h2>
               </Reveal>
@@ -1198,7 +1199,7 @@ function Page() {
       <section className="bg-background py-6 md:py-8">
         <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
           <Reveal className="rounded-xl border border-[var(--gold)]/30 bg-[var(--gold)]/[0.1] p-7 sm:p-9">
-            <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold text-primary">
+            <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold text-primary">
               Principais pontos sobre o ceratocone
             </h2>
             <ul className="mt-5 space-y-2.5 text-[0.92rem] leading-relaxed text-foreground/90 [&_li]:relative [&_li]:pl-6">
@@ -1230,7 +1231,7 @@ function Page() {
         ) : null}
         <div className="relative mx-auto w-full max-w-[1240px] px-5 sm:px-8">
           <Reveal className="ml-auto max-w-md rounded-lg bg-[#a9897c]/92 p-8 shadow-[var(--shadow-lift)] lg:p-10">
-            <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight text-[var(--primary-foreground)]">
+            <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight text-[var(--primary-foreground)]">
               Cada visão tem uma história.
             </h2>
             <p className="mt-3 text-[0.9rem] leading-relaxed text-[var(--primary-foreground)]/85">
@@ -1258,14 +1259,14 @@ function Page() {
       <section id="faq" className="bg-background py-14 md:py-20">
         <div className="mx-auto w-full max-w-[820px] px-5 sm:px-8">
           <Reveal>
-            <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight text-primary">
+            <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight text-primary">
               Perguntas frequentes sobre ceratocone
             </h2>
           </Reveal>
           <div className="mt-8 space-y-8">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={Math.min(i, 6) * 40}>
-                <h3 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-snug tracking-[-0.01em] text-primary">
+                <h3 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-snug tracking-[-0.01em] text-primary">
                   {item.q}
                 </h3>
                 <p className="mt-2 text-[0.92rem] leading-relaxed text-foreground/85">{item.a}</p>
