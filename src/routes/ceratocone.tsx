@@ -137,12 +137,6 @@ const comparacaoRows = [
   ],
 ];
 
-const passosTransplante = [
-  { label: "Córnea doadora", texto: "Tecido corneano saudável preparado a partir de um doador." },
-  { label: "Substituição", texto: "A área comprometida da córnea é removida e substituída pelo tecido doador." },
-  { label: "Fixação", texto: "O enxerto é fixado com pontos finos, que são retirados gradualmente." },
-];
-
 const pontosPrincipais = [
   "O ceratocone torna a córnea mais fina e irregular.",
   "Pode causar visão embaçada, distorção e mudanças frequentes no grau.",
@@ -336,46 +330,6 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
           ))}
         </tbody>
       </table>
-    </Reveal>
-  );
-}
-
-/** Grade de passos numerados com legenda (diagramas ilustrativos). */
-function StepGrid({
-  file,
-  alt,
-  cols,
-  steps,
-}: {
-  file: string;
-  alt: string;
-  cols: 2 | 3;
-  steps: Array<string | { label: string; texto: string }>;
-}) {
-  return (
-    <Reveal className="my-8 rounded-lg border border-border bg-paper p-4 sm:p-5">
-      <div className={cn("grid gap-4 sm:gap-5", cols === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2")}>
-        {steps.map((step, i) => {
-          const label = typeof step === "string" ? undefined : step.label;
-          const texto = typeof step === "string" ? step : step.texto;
-          return (
-            <div key={i}>
-              <div className="relative">
-                <span className="absolute left-2 top-2 z-10 grid h-6 w-6 place-items-center rounded-full bg-primary text-[0.7rem] font-bold text-[var(--primary-foreground)]">
-                  {i + 1}
-                </span>
-                <Figure file={`${file}_${i + 1}`} alt={`${alt} — passo ${i + 1}`} ratio="4/3" className="rounded-md" />
-              </div>
-              {label ? (
-                <p className="mt-2 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-primary">
-                  {label}
-                </p>
-              ) : null}
-              <p className="mt-1 text-[0.78rem] leading-relaxed text-muted-foreground">{texto}</p>
-            </div>
-          );
-        })}
-      </div>
     </Reveal>
   );
 }
@@ -1057,12 +1011,14 @@ function Page() {
               </Prose>
 
               {/* 8 — Transplante */}
-              <StepGrid
-                file="ceratocone_passo_transplante"
-                alt="Etapas do transplante de córnea"
-                cols={3}
-                steps={passosTransplante}
-              />
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="ceratocone_transplante_passos.jpg"
+                  alt="Três etapas do transplante de córnea: a córnea doadora como um disco transparente e saudável, a substituição da córnea doente pela doadora e a fixação do enxerto com pontos muito finos"
+                  ratio="1536/814"
+                  className="rounded-md"
+                />
+              </Reveal>
 
               <H2 id="transplante">Transplante de córnea</H2>
 

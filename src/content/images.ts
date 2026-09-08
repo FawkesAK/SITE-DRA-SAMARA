@@ -30,6 +30,7 @@ export const imageMap: Record<string, string> = {
   "ceratocone_crosslinking_passos.jpg": "/images/ceratocone-crosslinking-passos.png",
   "ceratocone_lente_gelatinosa.jpg": "/images/ceratocone-lente-gelatinosa.jpg",
   "ceratocone_anel_passos.jpg": "/images/ceratocone-anel-passos.png",
+  "ceratocone_transplante_passos.jpg": "/images/ceratocone-transplante-passos.png",
   "home_02_sobre_retrato.jpg": "/images/home-sobre-retrato.jpg",
   "home_03_sobre_congresso_palco.jpg": "/images/home-sobre-retrato-topo.png",
   "home_04_sobre_congresso_simposio.jpg": "/images/home-sobre-retrato-base.png",
