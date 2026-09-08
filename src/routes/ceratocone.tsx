@@ -398,10 +398,18 @@ function StepGrid({
   );
 }
 
-function ArticleFigure({ file, alt }: { file: string; alt: string }) {
+function ArticleFigure({
+  file,
+  alt,
+  ratio = "16/10",
+}: {
+  file: string;
+  alt: string;
+  ratio?: string;
+}) {
   return (
     <Reveal variant="image" className="my-10">
-      <Figure file={file} alt={alt} ratio="16/10" className="rounded-md" />
+      <Figure file={file} alt={alt} ratio={ratio} className="rounded-md" />
     </Reveal>
   );
 }
@@ -816,7 +824,8 @@ function Page() {
 
               <ArticleFigure
                 file="ceratocone_lente_contato.jpg"
-                alt="Pessoa colocando uma lente de contato em frente ao espelho"
+                alt="Dra. Samara Marafon examinando um paciente na lâmpada de fenda"
+                ratio="3/4"
               />
 
               <H3>Óculos e lentes gelatinosas</H3>
