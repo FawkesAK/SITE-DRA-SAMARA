@@ -728,13 +728,6 @@ function Page() {
                 </p>
               </Prose>
 
-              <ArticleFigure
-                file="ceratocone_lente_contato.jpg"
-                alt="Dra. Samara Marafon examinando um paciente na lâmpada de fenda"
-                ratio="3/2"
-                imgClassName="object-[50%_18%]"
-              />
-
               {/* 4 — Diagnóstico */}
               <H2 id="diagnostico">Como é feito o diagnóstico?</H2>
               <Prose className="mt-4">
@@ -837,6 +830,13 @@ function Page() {
 
               <H3>Comparação geral</H3>
               <DataTable headers={comparacaoHeaders} rows={comparacaoRows} />
+
+              <ArticleFigure
+                file="ceratocone_lente_contato.jpg"
+                alt="Dra. Samara Marafon examinando um paciente na lâmpada de fenda"
+                ratio="3/2"
+                imgClassName="object-[50%_18%]"
+              />
 
               <H3>Óculos e lentes gelatinosas</H3>
               <Prose className="mt-3">
