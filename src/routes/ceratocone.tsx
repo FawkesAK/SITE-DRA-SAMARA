@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { Clock, CalendarDays } from "lucide-react";
+import { Clock, CalendarDays, ChevronDown } from "lucide-react";
 import { CTAButton, Figure, Reveal } from "@/components/site/blocks";
 import { ParallaxImage } from "@/components/site/parallax";
 import { imageUrl } from "@/content/images";
@@ -1202,21 +1202,27 @@ function Page() {
         </div>
       </section>
 
-      {/* FAQ — perguntas e respostas em texto corrido */}
+      {/* FAQ — acordeão com respostas recolhidas */}
       <section id="faq" className="bg-background py-14 md:py-20">
         <div className="mx-auto w-full max-w-[820px] px-5 sm:px-8">
           <Reveal>
-            <h2 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight text-primary">
+            <h2 className="font-sans text-[clamp(2rem,4.6vw,2.8rem)] font-bold leading-tight text-primary">
               Perguntas frequentes sobre ceratocone
             </h2>
           </Reveal>
-          <div className="mt-8 space-y-8">
+          <div className="mt-8 divide-y divide-border border-y border-border">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={Math.min(i, 6) * 40}>
-                <h3 className="font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-snug tracking-[-0.01em] text-primary">
-                  {item.q}
-                </h3>
-                <p className="mt-2 text-[0.92rem] leading-relaxed text-foreground/85">{item.a}</p>
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-4 font-sans text-[1.05rem] font-semibold leading-snug text-primary [&::-webkit-details-marker]:hidden">
+                    <span>{item.q}</span>
+                    <ChevronDown
+                      aria-hidden="true"
+                      className="mt-0.5 size-5 shrink-0 text-primary/50 transition-transform duration-200 group-open:rotate-180"
+                    />
+                  </summary>
+                  <p className="pb-4 text-[0.92rem] leading-relaxed text-foreground/85">{item.a}</p>
+                </details>
               </Reveal>
             ))}
           </div>
