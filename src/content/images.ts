@@ -24,6 +24,7 @@ export const imageMap: Record<string, string> = {
   "home_14_cta_consultorio.jpg": "/images/home-cta-consultorio.png",
   "logo_samara.png": "/images/logo-samara.png",
   "ceratocone_hero.jpg": "/images/ceratocone-hero.png",
+  "ceratocone_diagrama.jpg": "/images/ceratocone-diagrama.png",
   "home_02_sobre_retrato.jpg": "/images/home-sobre-retrato.jpg",
   "home_03_sobre_congresso_palco.jpg": "/images/home-sobre-retrato-topo.png",
   "home_04_sobre_congresso_simposio.jpg": "/images/home-sobre-retrato-base.png",

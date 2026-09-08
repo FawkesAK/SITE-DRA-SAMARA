@@ -591,24 +591,13 @@ function Page() {
               </Prose>
 
               {/* Diagrama córnea normal x ceratocone */}
-              <Reveal className="my-9 rounded-lg border border-border bg-paper p-4 sm:p-6">
-                <div className="grid gap-5 sm:grid-cols-2">
-                  {[
-                    { t: "Córnea normal", f: "ceratocone_diag_normal.jpg" },
-                    { t: "Ceratocone", f: "ceratocone_diag_cone.jpg" },
-                  ].map((c) => (
-                    <div key={c.t} className="text-center">
-                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-primary">
-                        {c.t}
-                      </p>
-                      <span
-                        aria-hidden="true"
-                        className="mx-auto mt-2 block h-px w-16 bg-[var(--gold)]/60"
-                      />
-                      <Figure file={c.f} alt={c.t} ratio="1/1" className="mt-3 rounded-md" />
-                    </div>
-                  ))}
-                </div>
+              <Reveal variant="image" className="my-9">
+                <Figure
+                  file="ceratocone_diagrama.jpg"
+                  alt="Comparação em corte lateral: uma córnea normal, arredondada, ao lado de uma córnea com ceratocone, projetada em formato de cone"
+                  ratio="3/2"
+                  className="rounded-md"
+                />
               </Reveal>
 
               {/* 2 — Sintomas */}
