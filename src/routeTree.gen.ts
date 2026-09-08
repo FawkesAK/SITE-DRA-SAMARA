@@ -16,6 +16,7 @@ import { Route as CienciaEEnsinoRouteImport } from './routes/ciencia-e-ensino'
 import { Route as CirurgiaRefrativaRouteImport } from './routes/cirurgia-refrativa'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CorneaRouteImport } from './routes/cornea'
+import { Route as OlhoSecoRouteImport } from './routes/olho-seco'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as DraDianeExplicaIndexRouteImport } from './routes/dra-diane-explica.index'
@@ -56,6 +57,11 @@ const CorneaRoute = CorneaRouteImport.update({
   path: '/cornea',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OlhoSecoRoute = OlhoSecoRouteImport.update({
+  id: '/olho-seco',
+  path: '/olho-seco',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
   id: '/politica-de-privacidade',
   path: '/politica-de-privacidade',
@@ -85,6 +91,7 @@ export interface FileRoutesByFullPath {
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
+  '/olho-seco': typeof OlhoSecoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/dra-diane-explica/$slug': typeof DraDianeExplicaSlugRoute
@@ -98,6 +105,7 @@ export interface FileRoutesByTo {
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
+  '/olho-seco': typeof OlhoSecoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/dra-diane-explica/$slug': typeof DraDianeExplicaSlugRoute
@@ -112,6 +120,7 @@ export interface FileRoutesById {
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
+  '/olho-seco': typeof OlhoSecoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/dra-diane-explica/$slug': typeof DraDianeExplicaSlugRoute
@@ -127,6 +136,7 @@ export interface FileRouteTypes {
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
+    | '/olho-seco'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
     | '/dra-diane-explica/$slug'
@@ -140,6 +150,7 @@ export interface FileRouteTypes {
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
+    | '/olho-seco'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
     | '/dra-diane-explica/$slug'
@@ -153,6 +164,7 @@ export interface FileRouteTypes {
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
+    | '/olho-seco'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
     | '/dra-diane-explica/$slug'
@@ -167,6 +179,7 @@ export interface RootRouteChildren {
   CirurgiaRefrativaRoute: typeof CirurgiaRefrativaRoute
   ContatoRoute: typeof ContatoRoute
   CorneaRoute: typeof CorneaRoute
+  OlhoSecoRoute: typeof OlhoSecoRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
   DraDianeExplicaSlugRoute: typeof DraDianeExplicaSlugRoute
@@ -224,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CorneaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/olho-seco': {
+      id: '/olho-seco'
+      path: '/olho-seco'
+      fullPath: '/olho-seco'
+      preLoaderRoute: typeof OlhoSecoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/politica-de-privacidade': {
       id: '/politica-de-privacidade'
       path: '/politica-de-privacidade'
@@ -263,6 +283,7 @@ const rootRouteChildren: RootRouteChildren = {
   CirurgiaRefrativaRoute: CirurgiaRefrativaRoute,
   ContatoRoute: ContatoRoute,
   CorneaRoute: CorneaRoute,
+  OlhoSecoRoute: OlhoSecoRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
   DraDianeExplicaSlugRoute: DraDianeExplicaSlugRoute,

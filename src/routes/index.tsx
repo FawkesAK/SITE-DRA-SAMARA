@@ -141,7 +141,7 @@ const biblioteca = [
     titulo: "Olho seco",
     file: "biblioteca_03_olho_seco.jpg",
     alt: "Foto macro de um olho — conteúdo sobre olho seco",
-    to: "/cornea",
+    to: "/olho-seco",
   },
 ];
 
