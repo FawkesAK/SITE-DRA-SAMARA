@@ -945,6 +945,10 @@ function Page() {
               </Prose>
 
               {/* 7 — Anel */}
+              <H2 id="anel" className="mt-24 md:mt-28">
+                Anel intracorneano ou Anel de Ferrara
+              </H2>
+
               <Reveal variant="image" className="my-10">
                 <Figure
                   file="ceratocone_anel_passos.jpg"
@@ -953,8 +957,6 @@ function Page() {
                   className="rounded-md"
                 />
               </Reveal>
-
-              <H2 id="anel">Anel intracorneano ou Anel de Ferrara</H2>
 
               <H3>O que é?</H3>
               <Prose className="mt-3">
