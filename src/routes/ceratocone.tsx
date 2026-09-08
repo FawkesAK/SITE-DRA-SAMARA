@@ -402,14 +402,22 @@ function ArticleFigure({
   file,
   alt,
   ratio = "16/10",
+  imgClassName,
 }: {
   file: string;
   alt: string;
   ratio?: string;
+  imgClassName?: string;
 }) {
   return (
     <Reveal variant="image" className="my-10">
-      <Figure file={file} alt={alt} ratio={ratio} className="rounded-md" />
+      <Figure
+        file={file}
+        alt={alt}
+        ratio={ratio}
+        className="rounded-md"
+        {...(imgClassName ? { imgClassName } : {})}
+      />
     </Reveal>
   );
 }
@@ -825,7 +833,8 @@ function Page() {
               <ArticleFigure
                 file="ceratocone_lente_contato.jpg"
                 alt="Dra. Samara Marafon examinando um paciente na lâmpada de fenda"
-                ratio="3/4"
+                ratio="16/9"
+                imgClassName="object-[50%_12%]"
               />
 
               <H3>Óculos e lentes gelatinosas</H3>
