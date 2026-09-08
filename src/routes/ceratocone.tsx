@@ -838,6 +838,12 @@ function Page() {
               <H3>Comparação geral</H3>
               <DataTable headers={comparacaoHeaders} rows={comparacaoRows} />
 
+              <ArticleFigure
+                file="ceratocone_lente_gelatinosa.jpg"
+                alt="Dra. Samara Marafon colocando uma lente de contato gelatinosa"
+                ratio="3/2"
+              />
+
               <H3>Óculos e lentes gelatinosas</H3>
               <Prose className="mt-3">
                 <p>
