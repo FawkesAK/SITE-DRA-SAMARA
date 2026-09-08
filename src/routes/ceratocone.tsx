@@ -279,7 +279,7 @@ function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
     <h3
       id={id}
-      className="mt-8 font-sans text-[1.35rem] font-bold leading-snug text-primary"
+      className="mt-8 font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
     >
       {children}
     </h3>
@@ -530,7 +530,7 @@ function Page() {
           <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-16">
             <article className="min-w-0">
               <Reveal>
-                <h2 className="font-display text-[clamp(1.9rem,4vw,2.4rem)] leading-[1.12] text-primary">
+                <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
                   Ceratocone: sintomas, diagnóstico e tratamentos
                 </h2>
               </Reveal>
@@ -1143,7 +1143,7 @@ function Page() {
             </Reveal>
             <div className="order-1 md:order-2">
               <Reveal>
-                <h2 className="font-display text-[clamp(1.9rem,4vw,2.4rem)] leading-tight text-primary">
+                <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
                   Quando procurar um especialista em córnea?
                 </h2>
               </Reveal>
@@ -1165,7 +1165,7 @@ function Page() {
           <div className="mt-12 grid items-center gap-8 md:mt-16 md:grid-cols-2 md:gap-12">
             <div>
               <Reveal>
-                <h2 className="font-display text-[clamp(1.9rem,4vw,2.4rem)] leading-tight text-primary">
+                <h2 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-tight tracking-[-0.01em] text-primary">
                   Quando procurar atendimento com urgência?
                 </h2>
               </Reveal>
@@ -1265,7 +1265,9 @@ function Page() {
           <div className="mt-8 space-y-8">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={Math.min(i, 6) * 40}>
-                <h3 className="font-sans text-[1.35rem] font-bold text-primary">{item.q}</h3>
+                <h3 className="font-sans text-[clamp(1.9rem,4vw,2.4rem)] font-bold leading-snug tracking-[-0.01em] text-primary">
+                  {item.q}
+                </h3>
                 <p className="mt-2 text-[0.92rem] leading-relaxed text-foreground/85">{item.a}</p>
               </Reveal>
             ))}
