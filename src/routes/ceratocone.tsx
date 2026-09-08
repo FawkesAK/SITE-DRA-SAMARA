@@ -267,7 +267,7 @@ function H2({ id, children }: { id?: string; children: ReactNode }) {
     <Reveal>
       <h2
         id={id}
-        className="mt-14 font-sans text-[clamp(1.5rem,3.6vw,1.95rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
+        className="mt-14 font-sans text-[clamp(1.75rem,4.2vw,2.3rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
       >
         {children}
       </h2>
@@ -279,7 +279,7 @@ function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
     <h3
       id={id}
-      className="mt-8 font-sans text-[1.15rem] font-bold leading-snug text-primary"
+      className="mt-8 font-sans text-[1.35rem] font-bold leading-snug text-primary"
     >
       {children}
     </h3>
@@ -530,7 +530,7 @@ function Page() {
           <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-16">
             <article className="min-w-0">
               <Reveal>
-                <h2 className="font-display text-[clamp(1.9rem,4.4vw,2.7rem)] leading-[1.12] text-primary">
+                <h2 className="font-display text-[clamp(2.2rem,5vw,3.1rem)] leading-[1.12] text-primary">
                   Ceratocone: sintomas, diagnóstico e tratamentos
                 </h2>
               </Reveal>
@@ -1143,7 +1143,7 @@ function Page() {
             </Reveal>
             <div className="order-1 md:order-2">
               <Reveal>
-                <h2 className="font-display text-[clamp(1.7rem,4vw,2.4rem)] leading-tight text-primary">
+                <h2 className="font-display text-[clamp(2rem,4.6vw,2.8rem)] leading-tight text-primary">
                   Quando procurar um especialista em córnea?
                 </h2>
               </Reveal>
@@ -1165,7 +1165,7 @@ function Page() {
           <div className="mt-12 grid items-center gap-8 md:mt-16 md:grid-cols-2 md:gap-12">
             <div>
               <Reveal>
-                <h2 className="font-display text-[clamp(1.7rem,4vw,2.4rem)] leading-tight text-primary">
+                <h2 className="font-display text-[clamp(2rem,4.6vw,2.8rem)] leading-tight text-primary">
                   Quando procurar atendimento com urgência?
                 </h2>
               </Reveal>
@@ -1198,7 +1198,7 @@ function Page() {
       <section className="bg-background py-6 md:py-8">
         <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
           <Reveal className="rounded-xl border border-[var(--gold)]/30 bg-[var(--gold)]/[0.1] p-7 sm:p-9">
-            <h2 className="font-sans text-[clamp(1.3rem,3.2vw,1.7rem)] font-bold text-primary">
+            <h2 className="font-sans text-[clamp(1.55rem,3.8vw,2rem)] font-bold text-primary">
               Principais pontos sobre o ceratocone
             </h2>
             <ul className="mt-5 space-y-2.5 text-[0.92rem] leading-relaxed text-foreground/90 [&_li]:relative [&_li]:pl-6">
@@ -1230,7 +1230,7 @@ function Page() {
         ) : null}
         <div className="relative mx-auto w-full max-w-[1240px] px-5 sm:px-8">
           <Reveal className="ml-auto max-w-md rounded-lg bg-[#a9897c]/92 p-8 shadow-[var(--shadow-lift)] lg:p-10">
-            <h2 className="font-sans text-[clamp(1.6rem,4vw,2rem)] font-bold leading-tight text-[var(--primary-foreground)]">
+            <h2 className="font-sans text-[clamp(1.9rem,4.6vw,2.4rem)] font-bold leading-tight text-[var(--primary-foreground)]">
               Cada visão tem uma história.
             </h2>
             <p className="mt-3 text-[0.9rem] leading-relaxed text-[var(--primary-foreground)]/85">
@@ -1258,14 +1258,14 @@ function Page() {
       <section id="faq" className="bg-background py-14 md:py-20">
         <div className="mx-auto w-full max-w-[820px] px-5 sm:px-8">
           <Reveal>
-            <h2 className="font-sans text-[clamp(1.7rem,4vw,2.2rem)] font-bold leading-tight text-primary">
+            <h2 className="font-sans text-[clamp(2rem,4.6vw,2.6rem)] font-bold leading-tight text-primary">
               Perguntas frequentes sobre ceratocone
             </h2>
           </Reveal>
           <div className="mt-8 space-y-8">
             {faq.map((item, i) => (
               <Reveal key={item.q} delay={Math.min(i, 6) * 40}>
-                <h3 className="font-sans text-[1.1rem] font-bold text-primary">{item.q}</h3>
+                <h3 className="font-sans text-[1.3rem] font-bold text-primary">{item.q}</h3>
                 <p className="mt-2 text-[0.92rem] leading-relaxed text-foreground/85">{item.a}</p>
               </Reveal>
             ))}
