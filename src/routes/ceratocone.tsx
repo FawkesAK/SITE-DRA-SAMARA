@@ -1092,8 +1092,9 @@ function Page() {
             <Reveal variant="image" className="order-2 md:order-1">
               <Figure
                 file="ceratocone_especialista.jpg"
-                alt="Dra. Samara Marafon realizando um exame no consultório"
+                alt="Dra. Samara Marafon ajustando o refrator no consultório"
                 ratio="4/5"
+                imgClassName="object-[28%_center]"
                 className="rounded-md"
               />
             </Reveal>
