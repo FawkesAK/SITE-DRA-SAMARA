@@ -265,7 +265,7 @@ function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
     <h3
       id={id}
-      className="mt-8 font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
+      className="mt-8 font-sans text-[clamp(1.3rem,2.9vw,1.6rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
     >
       {children}
     </h3>
