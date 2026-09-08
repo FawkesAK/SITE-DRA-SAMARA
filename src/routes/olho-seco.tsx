@@ -246,7 +246,7 @@ function Sidebar() {
         <p className="text-[0.8rem] font-semibold text-foreground">Continue aprendendo</p>
         <ul className="mt-3 space-y-2">
           {[
-            { titulo: "Distrofia de córnea", file: "biblioteca_02_distrofias.jpg", to: "/cornea" },
+            { titulo: "Distrofias da córnea", file: "biblioteca_02_distrofias.jpg", to: "/distrofias" },
             { titulo: "Ceratocone", file: "biblioteca_01_ceratocone.jpg", to: "/ceratocone" },
           ].map((r) => (
             <li key={r.titulo}>

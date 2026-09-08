@@ -400,12 +400,16 @@ function Sidebar() {
         <p className="text-[0.8rem] font-semibold text-foreground">Continue aprendendo</p>
         <ul className="mt-3 space-y-2">
           {[
-            { titulo: "Olho seco", file: "ceratocone_rel_olho_seco.jpg" },
-            { titulo: "Distrofia de córnea", file: "ceratocone_rel_distrofia.jpg" },
+            { titulo: "Olho seco", file: "biblioteca_03_olho_seco.jpg", to: "/olho-seco" as const },
+            {
+              titulo: "Distrofias da córnea",
+              file: "biblioteca_02_distrofias.jpg",
+              to: "/distrofias" as const,
+            },
           ].map((r) => (
             <li key={r.titulo}>
               <Link
-                to="/cornea"
+                to={r.to}
                 className="group flex items-center gap-3 rounded-lg border border-border bg-paper p-2 transition-colors hover:bg-[var(--gold)]/10"
               >
                 <span className="h-11 w-11 shrink-0 overflow-hidden rounded-md">

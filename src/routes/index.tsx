@@ -135,7 +135,7 @@ const biblioteca = [
     titulo: "Distrofias",
     file: "biblioteca_02_distrofias.jpg",
     alt: "Foto macro de um olho — conteúdo sobre distrofias da córnea",
-    to: "/cornea",
+    to: "/distrofias",
   },
   {
     titulo: "Olho seco",

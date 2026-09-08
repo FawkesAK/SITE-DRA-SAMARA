@@ -16,6 +16,7 @@ import { Route as CienciaEEnsinoRouteImport } from './routes/ciencia-e-ensino'
 import { Route as CirurgiaRefrativaRouteImport } from './routes/cirurgia-refrativa'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CorneaRouteImport } from './routes/cornea'
+import { Route as DistrofiasRouteImport } from './routes/distrofias'
 import { Route as OlhoSecoRouteImport } from './routes/olho-seco'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
@@ -57,6 +58,11 @@ const CorneaRoute = CorneaRouteImport.update({
   path: '/cornea',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DistrofiasRoute = DistrofiasRouteImport.update({
+  id: '/distrofias',
+  path: '/distrofias',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OlhoSecoRoute = OlhoSecoRouteImport.update({
   id: '/olho-seco',
   path: '/olho-seco',
@@ -91,6 +97,7 @@ export interface FileRoutesByFullPath {
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
+  '/distrofias': typeof DistrofiasRoute
   '/olho-seco': typeof OlhoSecoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
@@ -105,6 +112,7 @@ export interface FileRoutesByTo {
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
+  '/distrofias': typeof DistrofiasRoute
   '/olho-seco': typeof OlhoSecoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
@@ -120,6 +128,7 @@ export interface FileRoutesById {
   '/cirurgia-refrativa': typeof CirurgiaRefrativaRoute
   '/contato': typeof ContatoRoute
   '/cornea': typeof CorneaRoute
+  '/distrofias': typeof DistrofiasRoute
   '/olho-seco': typeof OlhoSecoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
@@ -136,6 +145,7 @@ export interface FileRouteTypes {
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
+    | '/distrofias'
     | '/olho-seco'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
@@ -150,6 +160,7 @@ export interface FileRouteTypes {
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
+    | '/distrofias'
     | '/olho-seco'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
@@ -164,6 +175,7 @@ export interface FileRouteTypes {
     | '/cirurgia-refrativa'
     | '/contato'
     | '/cornea'
+    | '/distrofias'
     | '/olho-seco'
     | '/politica-de-privacidade'
     | '/termos-de-uso'
@@ -179,6 +191,7 @@ export interface RootRouteChildren {
   CirurgiaRefrativaRoute: typeof CirurgiaRefrativaRoute
   ContatoRoute: typeof ContatoRoute
   CorneaRoute: typeof CorneaRoute
+  DistrofiasRoute: typeof DistrofiasRoute
   OlhoSecoRoute: typeof OlhoSecoRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
@@ -237,6 +250,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CorneaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/distrofias': {
+      id: '/distrofias'
+      path: '/distrofias'
+      fullPath: '/distrofias'
+      preLoaderRoute: typeof DistrofiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/olho-seco': {
       id: '/olho-seco'
       path: '/olho-seco'
@@ -283,6 +303,7 @@ const rootRouteChildren: RootRouteChildren = {
   CirurgiaRefrativaRoute: CirurgiaRefrativaRoute,
   ContatoRoute: ContatoRoute,
   CorneaRoute: CorneaRoute,
+  DistrofiasRoute: DistrofiasRoute,
   OlhoSecoRoute: OlhoSecoRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
