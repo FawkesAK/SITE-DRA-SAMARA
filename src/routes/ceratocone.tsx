@@ -137,15 +137,6 @@ const comparacaoRows = [
   ],
 ];
 
-const passosCrosslinking = [
-  "Colírio com riboflavina (vitamina B2) é aplicado na superfície da córnea.",
-  "A riboflavina penetra nas camadas da córnea e se concentra no estroma.",
-  "A córnea é exposta à luz ultravioleta A por um tempo determinado.",
-  "A luz UV ativa a riboflavina, que estimula a formação de novas ligações entre as fibras de colágeno.",
-  "Essas novas ligações aumentam a resistência e a rigidez da córnea.",
-  "Resultado: córnea mais forte e estável, reduzindo o risco de progressão do ceratocone.",
-];
-
 const passosAnel = [
   { label: "Córnea com ceratocone", texto: "A córnea com ceratocone tem afinamento e protrusão, causando visão distorcida." },
   { label: "Túnel intracorneano", texto: "Um túnel é criado dentro da córnea, na camada média (estroma)." },
@@ -903,12 +894,14 @@ function Page() {
               </Prose>
 
               {/* 6 — Crosslinking */}
-              <StepGrid
-                file="ceratocone_passo_crosslinking"
-                alt="Etapas do crosslinking corneano"
-                cols={3}
-                steps={passosCrosslinking}
-              />
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="ceratocone_crosslinking_passos.jpg"
+                  alt="Seis etapas do crosslinking corneano: aplicação do colírio de riboflavina, penetração no estroma, exposição à luz ultravioleta A, ativação da riboflavina, formação de novas ligações entre as fibras de colágeno e, por fim, córnea mais forte e estável"
+                  ratio="3/2"
+                  className="rounded-md"
+                />
+              </Reveal>
 
               <H2 id="crosslinking">Crosslinking corneano</H2>
 
