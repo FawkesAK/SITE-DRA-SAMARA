@@ -986,7 +986,7 @@ function Page() {
                 <Figure
                   file="ceratocone_anel_passos.jpg"
                   alt="Seis etapas do implante do anel de Ferrara: córnea com ceratocone, criação do túnel intracorneano, inserção do anel, posicionamento, efeito de compressão das áreas mais curvas e resultado com a córnea mais regular"
-                  ratio="3/2"
+                  ratio="1536/892"
                   className="rounded-md"
                 />
               </Reveal>
