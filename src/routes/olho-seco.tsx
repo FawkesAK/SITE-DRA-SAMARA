@@ -44,11 +44,11 @@ const indice = [
   { id: "causas", label: "O que causa o olho seco?" },
   { id: "tipos", label: "Tipos de olho seco" },
   { id: "fatores", label: "Fatores associados ao olho seco" },
-  { id: "diagnostico", label: "Como é feito o diagnóstico?" },
+  { id: "diagnostico", label: "Como é feito o diagnóstico" },
   { id: "exames", label: "Principais exames" },
   { id: "tratamentos", label: "Tratamentos para olho seco" },
-  { id: "telas", label: "Olho seco e uso de telas" },
-  { id: "lentes-de-contato", label: "Olho seco e lentes de contato" },
+  { id: "telas", label: "Uso de tela" },
+  { id: "lentes-de-contato", label: "Lentes de contato" },
 ];
 
 const sintomas = [
@@ -166,15 +166,6 @@ function Prose({ children, className }: { children: ReactNode; className?: strin
   );
 }
 
-/** Trecho destacado (fundo pêssego), como no material original. */
-function Mark({ children }: { children: ReactNode }) {
-  return (
-    <mark className="rounded bg-[var(--gold)]/25 box-decoration-clone px-1 text-inherit">
-      {children}
-    </mark>
-  );
-}
-
 function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
   return (
     <Reveal className="my-7 overflow-x-auto rounded-lg border border-border">
@@ -246,8 +237,8 @@ function Sidebar() {
         <p className="text-[0.8rem] font-semibold text-foreground">Continue aprendendo</p>
         <ul className="mt-3 space-y-2">
           {[
-            { titulo: "Distrofias da córnea", file: "biblioteca_02_distrofias.jpg", to: "/distrofias" },
             { titulo: "Ceratocone", file: "biblioteca_01_ceratocone.jpg", to: "/ceratocone" },
+            { titulo: "Distrofia de Córnea", file: "biblioteca_02_distrofias.jpg", to: "/distrofias" },
           ].map((r) => (
             <li key={r.titulo}>
               <Link
@@ -288,6 +279,13 @@ function Sidebar() {
           Oftalmologista especialista em córnea, catarata e lente de contato.
         </p>
         <p className="mt-2 text-[0.76rem] text-muted-foreground">CRM-RS 37669 &nbsp;|&nbsp; RQE 29525</p>
+        <Link
+          to="/"
+          hash="sobre"
+          className="mt-3 inline-block text-[0.8rem] font-medium text-primary transition-colors hover:text-[var(--primary-deep)]"
+        >
+          Conheça a trajetória →
+        </Link>
       </div>
     </aside>
   );
@@ -477,7 +475,7 @@ function Page() {
                   suficiente para manter a superfície ocular adequadamente protegida.
                 </p>
                 <p>
-                  Portanto: <Mark>lacrimejamento não exclui olho seco.</Mark>
+                  Portanto: lacrimejamento não exclui olho seco.
                 </p>
               </Prose>
 
@@ -563,7 +561,7 @@ function Page() {
                 </p>
               </Prose>
 
-              <H3 id="exames">Principais exames</H3>
+              <H2 id="exames">Principais exames</H2>
               <DataTable headers={examesHeaders} rows={examesRows} />
               <Prose>
                 <p>A avaliação deve integrar sintomas, sinais e subclassificação.</p>
@@ -647,12 +645,19 @@ function Page() {
                   específicas, corticosteroides por períodos controlados.
                 </p>
                 <p>
-                  <Mark>
-                    Corticoide ocular não deve ser utilizado por conta própria. Uso inadequado pode
-                    provocar complicações importantes e requer acompanhamento oftalmológico.
-                  </Mark>
+                  Corticoide ocular não deve ser utilizado por conta própria. Uso inadequado pode
+                  provocar complicações importantes e requer acompanhamento oftalmológico.
                 </p>
               </Prose>
+
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="olho_seco_ipl.jpg"
+                  alt="Paciente reclinada, com protetores oculares, recebendo uma aplicação de luz intensa pulsada (IPL) na região das pálpebras"
+                  ratio="16/9"
+                  className="rounded-md"
+                />
+              </Reveal>
 
               <H3>Luz pulsada para olho seco</H3>
               <Prose className="mt-3">
@@ -680,10 +685,11 @@ function Page() {
 
               <Reveal variant="image" className="my-10">
                 <Figure
-                  file="olho_seco_ipl.jpg"
-                  alt="Paciente reclinada, com protetores oculares, recebendo uma aplicação de luz intensa pulsada (IPL) na região das pálpebras"
-                  ratio="16/9"
-                  className="rounded-md"
+                  file="olho_seco_plug.jpg"
+                  alt="Representação de dois pequenos plugs cilíndricos usados para ocluir os pontos lacrimais e manter a lágrima mais tempo sobre a superfície ocular"
+                  ratio="16/10"
+                  imgClassName="object-contain"
+                  className="rounded-md bg-paper"
                 />
               </Reveal>
 
@@ -701,16 +707,6 @@ function Page() {
                   precisa considerar o contexto completo.
                 </p>
               </Prose>
-
-              <Reveal variant="image" className="my-10">
-                <Figure
-                  file="olho_seco_plug.jpg"
-                  alt="Representação de dois pequenos plugs cilíndricos usados para ocluir os pontos lacrimais e manter a lágrima mais tempo sobre a superfície ocular"
-                  ratio="16/10"
-                  imgClassName="object-contain"
-                  className="rounded-md bg-[var(--gold)]/[0.08]"
-                />
-              </Reveal>
 
               <H3>Lentes esclerais</H3>
               <Prose className="mt-3">
@@ -765,9 +761,6 @@ function Page() {
                 </p>
               </Prose>
 
-              {/* 8 — Uso de telas */}
-              <H2 id="telas">Olho seco e uso de telas</H2>
-
               <Reveal variant="image" className="my-10">
                 <Figure
                   file="olho_seco_telas.jpg"
@@ -776,6 +769,9 @@ function Page() {
                   className="rounded-md"
                 />
               </Reveal>
+
+              {/* 8 — Uso de telas */}
+              <H2 id="telas">Olho seco e uso de telas</H2>
 
               <Prose className="mt-4">
                 <p>
