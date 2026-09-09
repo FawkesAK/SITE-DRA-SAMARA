@@ -793,6 +793,9 @@ function Page() {
               </Prose>
 
               <H3>Comparação geral</H3>
+              {/* TROCAR IMAGEM AQUI: [SUBSTITUIR TABELA/IMAGEM — TRATAMENTOS DO CERATOCONE]
+                  Tabela indicada pela médica para substituição posterior. Não recriar agora;
+                  manter o espaço. A tabela atual foi preservada até o novo conteúdo chegar. */}
               <DataTable headers={comparacaoHeaders} rows={comparacaoRows} />
 
               <ArticleFigure
@@ -870,10 +873,15 @@ function Page() {
                 Crosslinking corneano
               </H2>
 
+              {/* TROCAR IMAGEM AQUI: [SUBSTITUIR IMAGEM — CROSSLINKING SEM FLAP]
+                  A imagem anterior mostrava criação de flap. No crosslinking a córnea é
+                  apenas desepitelizada, sem flap (as etapas mostradas eram de EXTRA-LASIK,
+                  técnica não realizada pela médica). Aguardando nova imagem.
+                  Manter o mesmo espaço no layout. */}
               <Reveal variant="image" className="my-10">
                 <Figure
-                  file="ceratocone_crosslinking_passos.jpg"
-                  alt="Seis etapas do crosslinking corneano: aplicação do colírio de riboflavina, penetração no estroma, exposição à luz ultravioleta A, ativação da riboflavina, formação de novas ligações entre as fibras de colágeno e, por fim, córnea mais forte e estável"
+                  file="[SUBSTITUIR IMAGEM — CROSSLINKING SEM FLAP]"
+                  alt="Placeholder: nova imagem de crosslinking corneano, com desepitelização da córnea, sem flap"
                   ratio="3/2"
                   className="rounded-md"
                 />
@@ -960,14 +968,28 @@ function Page() {
                 Anel intracorneano ou Anel de Ferrara
               </H2>
 
+              {/* TROCAR IMAGEM AQUI: infográfico do anel intracorneano (6 etapas) removido.
+                  Corrigir nas novas imagens fornecidas pela médica:
+                  [SUBSTITUIR IMAGEM 2 — INCISÃO PREFERENCIALMENTE A LASER] (remover o bisturi)
+                  [SUBSTITUIR IMAGEM 4 — ANEL COM ABERTURA PARA CIMA] (o anel estava de ponta-cabeça)
+                  [SUBSTITUIR IMAGEM 5 — ANEL LOCALIZADO NA CÓRNEA] (estava representado na íris)
+                  [SUBSTITUIR IMAGEM 6 — RESULTADO COM ANEL VISÍVEL] (faltava o anel na foto)
+                  Manter o mesmo espaço no layout. */}
               <Reveal variant="image" className="my-10">
                 <Figure
-                  file="ceratocone_anel_passos.jpg"
-                  alt="Seis etapas do implante do anel de Ferrara: córnea com ceratocone, criação do túnel intracorneano, inserção do anel, posicionamento, efeito de compressão das áreas mais curvas e resultado com a córnea mais regular"
+                  file="[SUBSTITUIR IMAGEM — ANEL INTRACORNEANO — ETAPAS 2, 4, 5 E 6]"
+                  alt="Placeholder: nova sequência de etapas do implante do anel intracorneano"
                   ratio="1536/892"
                   className="rounded-md"
                 />
               </Reveal>
+
+              {/* TROCAR IMAGEM AQUI: [SUBSTITUIR IMAGEM — TOPOGRAFIA PRÉ]
+                  Espaço reservado pela médica — imagem de topografia corneana pré-operatória
+                  (a ser enviada). Sem box renderizado por ora para não alterar o layout atual. */}
+              {/* TROCAR IMAGEM AQUI: [SUBSTITUIR IMAGEM — TOPOGRAFIA PÓS]
+                  Espaço reservado pela médica — imagem de topografia corneana pós-operatória
+                  (a ser enviada). Sem box renderizado por ora para não alterar o layout atual. */}
 
               <H3>O que é?</H3>
               <Prose className="mt-3">
