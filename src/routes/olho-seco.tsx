@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Clock, CalendarDays, ChevronDown } from "lucide-react";
 import { CTAButton, Figure, Reveal } from "@/components/site/blocks";
-import { ArticleIndex } from "@/components/site/ArticleIndex";
 import { ParallaxImage } from "@/components/site/parallax";
 import { imageUrl } from "@/content/images";
 import { site } from "@/content/site";
@@ -261,9 +260,8 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
 
 function Sidebar() {
   return (
-    <aside className="mt-14 lg:mt-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5">
-      <ArticleIndex items={indice} />
-      <ul className="space-y-2 text-[0.85rem] text-muted-foreground lg:mt-7">
+    <aside className="mt-14 lg:mt-0 lg:sticky lg:top-28 lg:self-start">
+      <ul className="space-y-2 text-[0.85rem] text-muted-foreground">
         <li className="flex items-center gap-2">
           <Clock size={15} strokeWidth={1.75} className="text-primary" />8 minutos de leitura
         </li>
