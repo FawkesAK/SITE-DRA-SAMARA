@@ -500,8 +500,10 @@ function Page() {
               </Reveal>
               <Prose className="mt-5">
                 <p>
-                  O ceratocone é uma doença que torna a córnea progressivamente mais fina e
-                  irregular, comprometendo a qualidade da visão.
+                  O ceratocone é uma doença que acomete a córnea, a primeira camada do olho, e
+                  altera seu formato e espessura, resultando em astigmatismo e perda da qualidade da
+                  visão. Normalmente acomete os dois olhos e pode ser progressiva, com piora da
+                  acuidade visual e mudança frequente do grau.
                 </p>
                 <p>
                   Neste guia, você entenderá como reconhecer seus sinais, confirmar o diagnóstico e
@@ -648,9 +650,10 @@ function Page() {
               <H3>Predisposição genética</H3>
               <Prose className="mt-3">
                 <p>
-                  Pessoas com familiares que apresentam ceratocone podem ter risco aumentado. Ainda
-                  assim, ter um parente com a doença não significa que o diagnóstico ocorrerá
-                  obrigatoriamente, e muitos pacientes não relatam histórico familiar conhecido.
+                  Familiares de pessoas com ceratocone têm risco cerca de 13% maior de desenvolver
+                  a doença. Ainda assim, ter um parente com ceratocone não significa que o
+                  diagnóstico ocorrerá obrigatoriamente, e muitos pacientes não relatam histórico
+                  familiar conhecido.
                 </p>
               </Prose>
 
@@ -948,10 +951,8 @@ function Page() {
               <H3>Quais são as limitações e os riscos?</H3>
               <Prose className="mt-3">
                 <p>
-                  Embora seja considerado um procedimento seguro quando bem indicado, pode haver
-                  infecção, atraso da cicatrização, opacidade corneana, dor e redução visual.
-                  Córneas muito finas exigem protocolos e cuidados específicos para proteger suas
-                  camadas internas.
+                  Embora seja considerado um procedimento seguro quando bem indicado, os resultados
+                  visuais podem variar individualmente.
                 </p>
               </Prose>
 
