@@ -26,7 +26,7 @@ export const site = {
  */
 export const nav = [
   { label: "Início", hash: "inicio" },
-  { label: "Trajetória", hash: "sobre" },
+  { label: "Trajetória", hash: "especialidades" },
   { label: "Biblioteca da Córnea", hash: "formacoes" },
   { label: "Depoimento", hash: "catarata" },
   { label: "Agendamento", hash: "contato" },
