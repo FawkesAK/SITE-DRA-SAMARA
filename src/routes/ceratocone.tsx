@@ -832,7 +832,6 @@ function Page() {
                 </p>
                 <ul>
                   <li>exigem adaptação especializada;</li>
-                  <li>podem causar desconforto inicial;</li>
                   <li>precisam ser higienizadas corretamente;</li>
                   <li>não devem ser usadas durante dor, vermelhidão ou suspeita de infecção;</li>
                   <li>não impedem, por si só, a progressão do ceratocone.</li>
