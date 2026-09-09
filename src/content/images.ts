@@ -39,6 +39,7 @@ export const imageMap: Record<string, string> = {
   "olho_seco_plug.jpg": "/images/olho-seco-plug.png",
   "olho_seco_telas.jpg": "/images/olho-seco-telas.png",
   "distrofias_fuchs_edema.jpg": "/images/distrofias-fuchs-edema.png",
+  "dra_samara_autora.jpg": "/images/dra-samara-autora.jpg",
   "home_02_sobre_retrato.jpg": "/images/home-sobre-retrato.jpg",
   "home_03_sobre_congresso_palco.jpg": "/images/home-sobre-retrato-topo.png",
   "home_04_sobre_congresso_simposio.jpg": "/images/home-sobre-retrato-base.png",

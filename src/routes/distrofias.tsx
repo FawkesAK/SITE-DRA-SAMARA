@@ -333,11 +333,11 @@ function Sidebar() {
         <div className="flex items-start gap-3">
           <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full">
             <Figure
-              file="home_01_hero_dra_samara.jpg"
+              file="dra_samara_autora.jpg"
               alt="Dra. Samara B. Marafon"
               ratio="1/1"
               className="rounded-full"
-              imgClassName="object-[50%_12%]"
+              imgClassName="object-top"
             />
           </span>
           <div>
