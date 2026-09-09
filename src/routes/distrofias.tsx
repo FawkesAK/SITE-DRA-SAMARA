@@ -505,9 +505,9 @@ function Page() {
                   <li>desconforto em fases mais avançadas.</li>
                 </ul>
                 <p>
-                  A piora matinal pode ocorrer porque, durante o sono, a evaporação da lágrima
-                  diminui, favorecendo maior hidratação da córnea. Inicialmente, a visão pode
-                  melhorar ao longo do dia.
+                  A piora da visão pela manhã pode ocorrer pela redução da oxigenação da córnea
+                  durante o sono, quando as pálpebras permanecem fechadas. Ao longo do dia, com os
+                  olhos abertos, a oxigenação aumenta e a visão pode apresentar melhora gradual.
                 </p>
                 <p>
                   Quando o comprometimento passa a interferir significativamente na visão e na função
