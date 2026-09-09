@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { Clock, CalendarDays } from "lucide-react";
+import { Clock, CalendarDays, ChevronDown } from "lucide-react";
 import { CTAButton, Figure, Reveal } from "@/components/site/blocks";
 import { ParallaxImage } from "@/components/site/parallax";
 import { imageUrl } from "@/content/images";
@@ -49,6 +49,50 @@ const indice = [
   { id: "tratamentos", label: "Tratamentos para olho seco" },
   { id: "telas", label: "Uso de tela" },
   { id: "lentes-de-contato", label: "Lentes de contato" },
+  { id: "faq", label: "Perguntas frequentes" },
+];
+
+const faq = [
+  {
+    q: "Olho seco pode piorar em determinadas épocas do ano?",
+    a: "Sim. Clima seco, vento, frio, baixa umidade e ambientes climatizados podem intensificar o desconforto em algumas pessoas.",
+  },
+  {
+    q: "Olho seco pode causar lacrimejamento excessivo?",
+    a: "Sim. Parece contraditório, mas a irritação da superfície ocular pode provocar uma produção reflexa de lágrimas, fazendo o olho lacrimejar mesmo estando seco.",
+  },
+  {
+    q: "Olho seco pode afetar a qualidade da visão?",
+    a: "Pode. Alterações no filme lacrimal podem provocar visão oscilante ou embaçada, principalmente ao longo do dia.",
+  },
+  {
+    q: "Olho seco e alergia ocular são a mesma coisa?",
+    a: "Não. Apesar de alguns sintomas serem parecidos, como vermelhidão e irritação, são condições diferentes e podem exigir abordagens distintas.",
+  },
+  {
+    q: "Alguns medicamentos podem piorar o olho seco?",
+    a: "Sim. Alguns medicamentos podem interferir na produção ou na qualidade da lágrima. Por isso, é importante informar ao oftalmologista quais medicamentos você utiliza.",
+  },
+  {
+    q: "Alterações hormonais podem influenciar o olho seco?",
+    a: "Sim. Mudanças hormonais, especialmente em determinadas fases da vida, podem influenciar a produção e a estabilidade da lágrima.",
+  },
+  {
+    q: "Cirurgias nos olhos podem causar olho seco?",
+    a: "Algumas cirurgias oculares podem provocar ou intensificar temporariamente sintomas de olho seco. A avaliação da superfície ocular antes e depois do procedimento é importante.",
+  },
+  {
+    q: "Maquiagem pode piorar o olho seco?",
+    a: "Em algumas pessoas, sim. Produtos aplicados muito próximos à margem das pálpebras podem interferir nas glândulas responsáveis por parte da composição da lágrima.",
+  },
+  {
+    q: "Olho seco pode causar danos ao olho se não for tratado?",
+    a: "Casos persistentes ou mais intensos podem comprometer a superfície ocular. Por isso, sintomas frequentes não devem ser apenas ignorados ou mascarados com colírios.",
+  },
+  {
+    q: "Como saber se meu olho seco precisa de uma avaliação especializada?",
+    a: "Quando os sintomas são recorrentes, pioram progressivamente, interferem nas atividades diárias ou não melhoram com medidas simples, é indicada uma avaliação oftalmológica.",
+  },
 ];
 
 const sintomas = [
@@ -863,6 +907,33 @@ function Page() {
               </CTAButton>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* FAQ — acordeão com respostas recolhidas */}
+      <section id="faq" className="bg-background py-14 md:py-20">
+        <div className="mx-auto w-full max-w-[820px] px-5 sm:px-8">
+          <Reveal>
+            <h2 className="font-sans text-[clamp(2rem,4.6vw,2.8rem)] font-bold leading-tight text-primary">
+              Perguntas frequentes sobre olho seco
+            </h2>
+          </Reveal>
+          <div className="mt-8 divide-y divide-border border-y border-border">
+            {faq.map((item, i) => (
+              <Reveal key={item.q} delay={Math.min(i, 6) * 40}>
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-4 font-sans text-[1.05rem] font-semibold leading-snug text-primary [&::-webkit-details-marker]:hidden">
+                    <span>{item.q}</span>
+                    <ChevronDown
+                      aria-hidden="true"
+                      className="mt-0.5 size-5 shrink-0 text-primary/50 transition-transform duration-200 group-open:rotate-180"
+                    />
+                  </summary>
+                  <p className="pb-4 text-[0.92rem] leading-relaxed text-foreground/85">{item.a}</p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </>
