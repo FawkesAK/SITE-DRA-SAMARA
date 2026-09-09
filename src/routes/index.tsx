@@ -187,7 +187,7 @@ function Home() {
               <span>CRM-RS 37669&nbsp;&nbsp;|&nbsp;&nbsp;RQE 29525</span>
               <span>Porto Alegre - RS</span>
             </p>
-            <h1 className="mt-3 text-[clamp(1.6rem,6vw,2.4rem)] font-normal leading-[1.03] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.35rem,3.5vw,2.9rem)] lg:leading-[1.05] xl:text-[clamp(2.9rem,3vw,3.7rem)] xl:leading-[1]">
+            <h1 className="mt-3 text-[clamp(1.6rem,6vw,2.4rem)] font-normal leading-[1.03] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.7rem,4.1vw,3.4rem)] lg:leading-[1.05] xl:text-[clamp(3.4rem,3.5vw,4.4rem)] xl:leading-[1]">
               Quando a córnea
               <br className="hidden lg:block" />{" "}
               <span className="text-primary">perde a transparência,</span>
@@ -200,14 +200,14 @@ function Home() {
               aria-hidden="true"
               className="mt-4 block h-px w-12 bg-primary sm:mt-5 lg:mt-6 lg:w-14"
             />
-            <p className="mt-3 text-[0.78rem] leading-[1.5] text-muted-foreground sm:mt-4 sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[0.98rem] lg:leading-[1.6]">
+            <p className="mt-3 text-[0.78rem] leading-[1.5] text-muted-foreground sm:mt-4 sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[1.12rem] lg:leading-[1.6] xl:max-w-[480px] xl:text-[1.2rem]">
               Especialista em córnea, catarata e cirurgia refrativa, com atuação no
               diagnóstico e tratamento das doenças corneanas.
             </p>
             <div className="mt-5 flex flex-col items-start gap-3 sm:mt-6 lg:mt-8">
               <CTAButton
                 href={site.whatsappUrl}
-                className="h-11 rounded-md bg-primary px-7 text-[0.8rem] shadow-none hover:bg-[var(--primary-deep)] sm:h-12 sm:px-8 sm:text-[0.88rem]"
+                className="h-11 rounded-md bg-primary px-7 text-[0.8rem] shadow-none hover:bg-[var(--primary-deep)] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
               >
                 Agendar consulta
               </CTAButton>
@@ -215,7 +215,7 @@ function Home() {
                 to="/"
                 hash="especialidades"
                 variant="secondary"
-                className="h-11 rounded-md border-primary/45 px-7 text-[0.8rem] text-primary hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem]"
+                className="h-11 rounded-md border-primary/45 px-7 text-[0.8rem] text-primary hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
               >
                 Conheça as doenças da córnea
               </CTAButton>
