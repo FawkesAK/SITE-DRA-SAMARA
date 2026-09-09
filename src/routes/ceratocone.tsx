@@ -446,6 +446,13 @@ function Sidebar() {
           Oftalmologista especialista em córnea, catarata e lente de contato.
         </p>
         <p className="mt-2 text-[0.76rem] text-muted-foreground">CRM-RS 37669 &nbsp;|&nbsp; RQE 29525</p>
+        <Link
+          to="/"
+          hash="especialidades"
+          className="mt-3 inline-block text-[0.8rem] font-medium text-primary transition-colors hover:text-[var(--primary-deep)]"
+        >
+          Conheça a trajetória →
+        </Link>
       </div>
     </aside>
   );
