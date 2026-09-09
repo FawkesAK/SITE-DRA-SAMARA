@@ -10,12 +10,12 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span
-                className="optic-ring grid h-9 w-9 shrink-0 place-items-center rounded-full border-primary/40"
+              <img
+                src="/images/logo-samara-sm.png"
+                alt=""
                 aria-hidden="true"
-              >
-                <span className="block h-2.5 w-2.5 rounded-full bg-primary" />
-              </span>
+                className="h-10 w-auto shrink-0"
+              />
               <span className="font-display text-xl text-[#4a3629]">Dra. Samara Marafon</span>
             </div>
             <p className="mt-5 max-w-sm text-sm text-muted-foreground">

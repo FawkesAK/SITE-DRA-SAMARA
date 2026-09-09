@@ -5,32 +5,18 @@ import { cn } from "@/lib/utils";
 import { nav, site } from "@/content/site";
 import { CTAButton } from "./primitives";
 
-const LOGO_MASK = {
-  WebkitMaskImage: "url(/images/logo-samara.png)",
-  maskImage: "url(/images/logo-samara.png)",
-  WebkitMaskRepeat: "no-repeat",
-  maskRepeat: "no-repeat",
-  WebkitMaskPosition: "center",
-  maskPosition: "center",
-  WebkitMaskSize: "contain",
-  maskSize: "contain",
-} as const;
-
-function Logo({ invert = false }: { invert?: boolean }) {
+function Logo() {
   return (
     <Link
       to="/"
       hash="inicio"
       className="block"
-      aria-label="Samara B. Marafon — Oftalmologia, início"
+      aria-label="Dra. Samara Marafon — Oftalmologista, início"
     >
-      <span
-        aria-hidden="true"
-        className={cn(
-          "block h-[46px] w-[69px] sm:h-[52px] sm:w-[78px]",
-          invert ? "bg-[var(--primary-foreground)]" : "bg-primary",
-        )}
-        style={LOGO_MASK}
+      <img
+        src="/images/logo-samara-nome.png"
+        alt="Dra. Samara Marafon — Oftalmologista"
+        className="h-9 w-auto sm:h-10"
       />
     </Link>
   );
