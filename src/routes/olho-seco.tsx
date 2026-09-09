@@ -750,10 +750,9 @@ function Page() {
               <Reveal variant="image" className="my-11">
                 <Figure
                   file="olho_seco_plug.jpg"
-                  alt="Representação de dois pequenos plugs cilíndricos usados para ocluir os pontos lacrimais e manter a lágrima mais tempo sobre a superfície ocular"
-                  ratio="16/10"
-                  imgClassName="object-contain"
-                  className="rounded-md bg-paper shadow-[var(--shadow-lift)]"
+                  alt="Ilustração de um plug lacrimal inserido no ponto lacrimal da pálpebra inferior, ocluindo a via de drenagem para manter a lágrima mais tempo sobre a superfície ocular"
+                  ratio="3/2"
+                  className="rounded-md shadow-[var(--shadow-lift)]"
                 />
               </Reveal>
 
