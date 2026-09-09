@@ -187,13 +187,13 @@ function Home() {
               <span>CRM-RS 37669&nbsp;&nbsp;|&nbsp;&nbsp;RQE 29525</span>
               <span>Porto Alegre - RS</span>
             </p>
-            <h1 className="mt-3 text-[clamp(1.6rem,6vw,2.4rem)] font-normal leading-[1.03] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.7rem,4.1vw,3.4rem)] lg:leading-[1.05] xl:text-[clamp(3.4rem,3.5vw,4.4rem)] xl:leading-[1]">
+            <h1 className="mt-3 whitespace-nowrap text-[clamp(1.6rem,6vw,2.4rem)] font-normal leading-[1.03] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.7rem,4.1vw,3.4rem)] lg:leading-[1.05] xl:text-[clamp(3.4rem,3.5vw,4.4rem)] xl:leading-[1]">
               Quando a córnea
-              <br className="hidden lg:block" />{" "}
+              <br />
               <span className="text-primary">perde a transparência,</span>
-              <br className="hidden lg:block" />{" "}
+              <br />
               enxergar deixa de
-              <br className="hidden lg:block" />{" "}
+              <br />
               <span className="text-primary">ser simples.</span>
             </h1>
             <span
