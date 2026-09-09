@@ -26,12 +26,10 @@ export const site = {
  */
 export const nav = [
   { label: "Início", hash: "inicio" },
-  { label: "Sobre", hash: "sobre" },
-  { label: "Especialidades", hash: "especialidades" },
-  { label: "Catarata", hash: "catarata" },
-  { label: "Formações", hash: "formacoes" },
-  { label: "Atuação", hash: "atuacao" },
-  { label: "Contato", hash: "contato" },
+  { label: "Trajetória", hash: "sobre" },
+  { label: "Biblioteca da Córnea", hash: "formacoes" },
+  { label: "Depoimento", hash: "catarata" },
+  { label: "Agendamento", hash: "contato" },
 ] as const;
 
 export const metricas = [
