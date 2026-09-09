@@ -472,6 +472,15 @@ function Page() {
               {/* 2 — Principais distrofias */}
               <H2 id="principais">Principais distrofias da córnea</H2>
 
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="distrofias_fuchs_edema.jpg"
+                  alt="Close-up de um olho com a córnea difusamente opaca e azulada por edema, aspecto de vidro fosco típico da descompensação endotelial avançada"
+                  ratio="4/3"
+                  className="rounded-md"
+                />
+              </Reveal>
+
               <H3>Distrofia de Fuchs</H3>
               <Prose className="mt-3">
                 <p>
