@@ -760,11 +760,11 @@ function Page() {
               <H3>Por que a visão pode piorar pela manhã?</H3>
               <Prose className="mt-3">
                 <p>
-                  Durante a noite, os olhos permanecem fechados e há menor evaporação. Quando a
-                  capacidade endotelial está comprometida, a córnea pode acumular mais água nesse
-                  período. Nos estágios iniciais, a evaporação ao longo do dia pode diminuir parte
-                  desse edema e a visão melhora progressivamente. Esse padrão matinal é clássico da
-                  Fuchs sintomática.
+                  Durante o sono, as pálpebras permanecem fechadas e a oxigenação da córnea diminui.
+                  Quando a função endotelial já está comprometida, esse período de menor oxigenação
+                  pode acentuar a piora visual ao acordar. Ao longo do dia, com os olhos abertos, a
+                  oxigenação aumenta e a visão tende a apresentar melhora gradual. Esse padrão
+                  matinal é clássico da Fuchs sintomática.
                 </p>
               </Prose>
 
