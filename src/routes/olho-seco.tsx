@@ -414,6 +414,15 @@ function Page() {
                 </p>
               </Prose>
 
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="olho_seco_comparacao.jpg"
+                  alt="Comparação lado a lado: à esquerda um olho saudável e calmo; à direita um olho com a superfície irritada e vermelha, como no olho seco"
+                  ratio="3/2"
+                  className="rounded-md"
+                />
+              </Reveal>
+
               {/* 2 — Sintomas */}
               <H2 id="sintomas">Quais são os sintomas?</H2>
               <Prose className="mt-4">
@@ -474,6 +483,15 @@ function Page() {
 
               {/* 4 — Tipos */}
               <H2 id="tipos">Tipos de olho seco</H2>
+
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="olho_seco_tipos.jpg"
+                  alt="Infográfico com os três tipos de olho seco: aquodeficiente (menor produção da lágrima), evaporativo (evaporação aumentada, ligada à disfunção das glândulas de Meibômio) e misto (combinação dos dois mecanismos)"
+                  ratio="1491/1055"
+                  className="rounded-md"
+                />
+              </Reveal>
 
               <H3>Deficiência aquosa</H3>
               <Prose className="mt-3">
@@ -660,6 +678,15 @@ function Page() {
                 </p>
               </Prose>
 
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="olho_seco_ipl.jpg"
+                  alt="Paciente reclinada, com protetores oculares, recebendo uma aplicação de luz intensa pulsada (IPL) na região das pálpebras"
+                  ratio="16/9"
+                  className="rounded-md"
+                />
+              </Reveal>
+
               <H3>Plug lacrimal</H3>
               <Prose className="mt-3">
                 <p>
@@ -674,6 +701,16 @@ function Page() {
                   precisa considerar o contexto completo.
                 </p>
               </Prose>
+
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="olho_seco_plug.jpg"
+                  alt="Representação de dois pequenos plugs cilíndricos usados para ocluir os pontos lacrimais e manter a lágrima mais tempo sobre a superfície ocular"
+                  ratio="16/10"
+                  imgClassName="object-contain"
+                  className="rounded-md bg-[var(--gold)]/[0.08]"
+                />
+              </Reveal>
 
               <H3>Lentes esclerais</H3>
               <Prose className="mt-3">
@@ -730,6 +767,16 @@ function Page() {
 
               {/* 8 — Uso de telas */}
               <H2 id="telas">Olho seco e uso de telas</H2>
+
+              <Reveal variant="image" className="my-10">
+                <Figure
+                  file="olho_seco_telas.jpg"
+                  alt="Pessoa no sofá olhando o celular de perto, situação de uso prolongado de tela que pode agravar os sintomas do olho seco"
+                  ratio="16/9"
+                  className="rounded-md"
+                />
+              </Reveal>
+
               <Prose className="mt-4">
                 <p>
                   Ficar diante de um computador ou celular pode piorar sintomas. Um dos principais
