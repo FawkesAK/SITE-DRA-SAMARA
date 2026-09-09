@@ -5,8 +5,8 @@
 export const site = {
   nome: "Dra. Samara Marafon",
   especialidade: "Oftalmologia",
-  crm: "CRM-RS 16.740",
-  rqe: "RQE 8.146",
+  crm: "CRM-RS 37669",
+  rqe: "RQE 29525",
   clinica: "Oftalmocentro",
   cidade: "Porto Alegre — RS",
   endereco: "Av. Dr. Nilo Peçanha, 724, 4º andar – Bairro Petrópolis",

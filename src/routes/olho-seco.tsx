@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Clock, CalendarDays, ChevronDown } from "lucide-react";
 import { CTAButton, Figure, Reveal } from "@/components/site/blocks";
+import { ArticleIndex } from "@/components/site/ArticleIndex";
 import { ParallaxImage } from "@/components/site/parallax";
 import { imageUrl } from "@/content/images";
 import { site } from "@/content/site";
@@ -172,10 +173,15 @@ function H2({
   className?: string;
 }) {
   return (
-    <Reveal className={className}>
+    <Reveal
+      className={cn(
+        "mt-16 border-t border-border/80 pt-9 first:mt-0 first:border-0 first:pt-0",
+        className,
+      )}
+    >
       <h2
         id={id}
-        className="mt-14 font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
+        className="font-sans text-[clamp(1.7rem,3.7vw,2.2rem)] font-bold leading-[1.15] tracking-[-0.015em] text-primary"
       >
         {children}
       </h2>
@@ -187,7 +193,7 @@ function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
     <h3
       id={id}
-      className="mt-8 font-sans text-[clamp(1.3rem,2.9vw,1.6rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
+      className="mt-9 border-l-2 border-primary/50 pl-3.5 font-sans text-[clamp(1.15rem,2.5vw,1.34rem)] font-semibold leading-snug tracking-[-0.005em] text-[#4a3629]"
     >
       {children}
     </h3>
@@ -198,7 +204,7 @@ function Prose({ children, className }: { children: ReactNode; className?: strin
   return (
     <div
       className={cn(
-        "space-y-4 text-[0.95rem] leading-[1.75] text-foreground/90",
+        "max-w-[68ch] space-y-4 text-[0.95rem] leading-[1.75] text-foreground/90",
         "[&_strong]:font-semibold [&_strong]:text-[#4a3629]",
         "[&_a]:font-medium [&_a]:text-primary [&_a]:underline [&_a]:decoration-primary/30 [&_a]:underline-offset-2",
         "[&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:pl-5 [&_li]:pl-1",
@@ -215,11 +221,11 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
     <Reveal className="my-7 overflow-x-auto rounded-lg border border-border">
       <table className="w-full border-collapse text-left">
         <thead>
-          <tr className="border-b border-border">
+          <tr className="border-b border-border bg-secondary/25">
             {headers.map((h) => (
               <th
                 key={h}
-                className="px-4 py-3 align-bottom text-[0.8rem] font-bold text-primary"
+                className="px-4 py-3.5 align-bottom text-[0.8rem] font-bold text-primary"
               >
                 {h}
               </th>
@@ -228,12 +234,15 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr key={i} className="border-b border-border last:border-0 align-top">
+            <tr
+              key={i}
+              className="border-b border-border align-top even:bg-secondary/[0.07] last:border-0"
+            >
               {row.map((cell, j) => (
                 <td
                   key={j}
                   className={cn(
-                    "px-4 py-4 text-[0.83rem] leading-relaxed text-foreground/85",
+                    "px-4 py-[1.1rem] text-[0.83rem] leading-relaxed text-foreground/85",
                     j === 0 && "font-semibold text-primary",
                   )}
                 >
@@ -252,8 +261,9 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
 
 function Sidebar() {
   return (
-    <aside className="mt-14 lg:mt-0 lg:sticky lg:top-28 lg:self-start">
-      <ul className="space-y-2 text-[0.85rem] text-muted-foreground">
+    <aside className="mt-14 lg:mt-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5">
+      <ArticleIndex items={indice} />
+      <ul className="space-y-2 text-[0.85rem] text-muted-foreground lg:mt-7">
         <li className="flex items-center gap-2">
           <Clock size={15} strokeWidth={1.75} className="text-primary" />8 minutos de leitura
         </li>
@@ -456,7 +466,10 @@ function Page() {
                 </p>
               </Prose>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal
+                variant="image"
+                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
+              >
                 <Figure
                   file="olho_seco_comparacao.jpg"
                   alt="Comparação lado a lado: à esquerda um olho saudável e calmo; à direita um olho com a superfície irritada e vermelha, como no olho seco"
@@ -526,7 +539,10 @@ function Page() {
               {/* 4 — Tipos */}
               <H2 id="tipos">Tipos de olho seco</H2>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal
+                variant="image"
+                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
+              >
                 <Figure
                   file="olho_seco_tipos.jpg"
                   alt="Infográfico com os três tipos de olho seco: aquodeficiente (menor produção da lágrima), evaporativo (evaporação aumentada, ligada à disfunção das glândulas de Meibômio) e misto (combinação dos dois mecanismos)"
@@ -581,6 +597,8 @@ function Page() {
               </Prose>
 
               {/* 6 — Diagnóstico */}
+              {/* faixa tonalizada (identidade — areia ~13%) para quebrar a monotonia do bloco */}
+              <div className="my-12 rounded-[24px] bg-secondary/[0.13] px-4 pb-4 pt-8 sm:px-8 sm:pb-8 sm:pt-12 [&>*:first-child]:!mt-0">
               <H2 id="diagnostico">Como é feito o diagnóstico?</H2>
               <Prose className="mt-4">
                 <p>
@@ -611,7 +629,11 @@ function Page() {
                 <p>A avaliação deve integrar sintomas, sinais e subclassificação.</p>
               </Prose>
 
+              </div>
+
               {/* 7 — Tratamentos */}
+              {/* faixa tonalizada (identidade — areia ~13%) para quebrar a monotonia do bloco */}
+              <div className="my-12 rounded-[24px] bg-secondary/[0.13] px-4 pb-4 pt-8 sm:px-8 sm:pb-8 sm:pt-12 [&>*:first-child]:!mt-0">
               <H2 id="tratamentos">Tratamentos para olho seco</H2>
               <Prose className="mt-4">
                 <p>
@@ -694,12 +716,12 @@ function Page() {
                 </p>
               </Prose>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal variant="image" className="my-11">
                 <Figure
                   file="olho_seco_ipl.jpg"
                   alt="Paciente reclinada, com protetores oculares, recebendo uma aplicação de luz intensa pulsada (IPL) na região das pálpebras"
                   ratio="16/9"
-                  className="rounded-md"
+                  className="rounded-md shadow-[var(--shadow-lift)]"
                 />
               </Reveal>
 
@@ -727,13 +749,13 @@ function Page() {
                 </p>
               </Prose>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal variant="image" className="my-11">
                 <Figure
                   file="olho_seco_plug.jpg"
                   alt="Representação de dois pequenos plugs cilíndricos usados para ocluir os pontos lacrimais e manter a lágrima mais tempo sobre a superfície ocular"
                   ratio="16/10"
                   imgClassName="object-contain"
-                  className="rounded-md bg-paper"
+                  className="rounded-md bg-paper shadow-[var(--shadow-lift)]"
                 />
               </Reveal>
 
@@ -805,12 +827,12 @@ function Page() {
                 </p>
               </Prose>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal variant="image" className="my-11">
                 <Figure
                   file="olho_seco_telas.jpg"
                   alt="Pessoa no sofá olhando o celular de perto, situação de uso prolongado de tela que pode agravar os sintomas do olho seco"
                   ratio="16/9"
-                  className="rounded-md"
+                  className="rounded-md shadow-[var(--shadow-lift)]"
                 />
               </Reveal>
 
@@ -874,6 +896,7 @@ function Page() {
                   condições e exigem avaliação oftalmológica.
                 </p>
               </Prose>
+              </div>
             </article>
 
             <Sidebar />

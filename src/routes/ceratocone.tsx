@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Clock, CalendarDays, ChevronDown } from "lucide-react";
 import { CTAButton, Figure, Reveal } from "@/components/site/blocks";
+import { ArticleIndex } from "@/components/site/ArticleIndex";
 import { ParallaxImage } from "@/components/site/parallax";
 import { imageUrl } from "@/content/images";
 import { site } from "@/content/site";
@@ -258,10 +259,15 @@ function H2({
   className?: string;
 }) {
   return (
-    <Reveal className={className}>
+    <Reveal
+      className={cn(
+        "mt-16 border-t border-border/80 pt-9 first:mt-0 first:border-0 first:pt-0",
+        className,
+      )}
+    >
       <h2
         id={id}
-        className="mt-14 font-sans text-[clamp(1.6rem,3.5vw,2rem)] font-bold leading-tight tracking-[-0.01em] text-primary first:mt-0"
+        className="font-sans text-[clamp(1.7rem,3.7vw,2.2rem)] font-bold leading-[1.15] tracking-[-0.015em] text-primary"
       >
         {children}
       </h2>
@@ -273,7 +279,7 @@ function H3({ id, children }: { id?: string; children: ReactNode }) {
   return (
     <h3
       id={id}
-      className="mt-8 font-sans text-[clamp(1.3rem,2.9vw,1.6rem)] font-bold leading-snug tracking-[-0.01em] text-primary"
+      className="mt-9 border-l-2 border-primary/50 pl-3.5 font-sans text-[clamp(1.15rem,2.5vw,1.34rem)] font-semibold leading-snug tracking-[-0.005em] text-[#4a3629]"
     >
       {children}
     </h3>
@@ -284,7 +290,7 @@ function Prose({ children, className }: { children: ReactNode; className?: strin
   return (
     <div
       className={cn(
-        "space-y-4 text-[0.95rem] leading-[1.75] text-foreground/90",
+        "max-w-[68ch] space-y-4 text-[0.95rem] leading-[1.75] text-foreground/90",
         "[&_strong]:font-semibold [&_strong]:text-[#4a3629]",
         "[&_a]:font-medium [&_a]:text-primary [&_a]:underline [&_a]:decoration-primary/30 [&_a]:underline-offset-2",
         "[&_ul]:list-disc [&_ul]:space-y-1.5 [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:pl-5 [&_li]:pl-1",
@@ -310,11 +316,11 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
     <Reveal className="my-7 overflow-x-auto rounded-lg border border-border">
       <table className="w-full border-collapse text-left">
         <thead>
-          <tr className="border-b border-border">
+          <tr className="border-b border-border bg-secondary/25">
             {headers.map((h) => (
               <th
                 key={h}
-                className="px-4 py-3 align-bottom text-[0.8rem] font-bold text-primary"
+                className="px-4 py-3.5 align-bottom text-[0.8rem] font-bold text-primary"
               >
                 {h}
               </th>
@@ -323,12 +329,15 @@ function DataTable({ headers, rows }: { headers: string[]; rows: string[][] }) {
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr key={i} className="border-b border-border last:border-0 align-top">
+            <tr
+              key={i}
+              className="border-b border-border align-top even:bg-secondary/[0.07] last:border-0"
+            >
               {row.map((cell, j) => (
                 <td
                   key={j}
                   className={cn(
-                    "px-4 py-4 text-[0.83rem] leading-relaxed text-foreground/85",
+                    "px-4 py-[1.1rem] text-[0.83rem] leading-relaxed text-foreground/85",
                     j === 0 && "font-semibold text-primary",
                   )}
                 >
@@ -355,12 +364,12 @@ function ArticleFigure({
   imgClassName?: string;
 }) {
   return (
-    <Reveal variant="image" className="my-10">
+    <Reveal variant="image" className="my-11">
       <Figure
         file={file}
         alt={alt}
         ratio={ratio}
-        className="rounded-md"
+        className="rounded-md shadow-[var(--shadow-lift)]"
         {...(imgClassName ? { imgClassName } : {})}
       />
     </Reveal>
@@ -371,8 +380,9 @@ function ArticleFigure({
 
 function Sidebar() {
   return (
-    <aside className="mt-14 lg:mt-0 lg:sticky lg:top-28 lg:self-start">
-      <ul className="space-y-2 text-[0.85rem] text-muted-foreground">
+    <aside className="mt-14 lg:mt-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5">
+      <ArticleIndex items={indice} />
+      <ul className="space-y-2 text-[0.85rem] text-muted-foreground lg:mt-7">
         <li className="flex items-center gap-2">
           <Clock size={15} strokeWidth={1.75} className="text-primary" />8 minutos de leitura
         </li>
@@ -564,7 +574,10 @@ function Page() {
               </Prose>
 
               {/* Diagrama córnea normal x ceratocone */}
-              <Reveal variant="image" className="my-9">
+              <Reveal
+                variant="image"
+                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
+              >
                 <Figure
                   file="ceratocone_diagrama.jpg"
                   alt="Comparação em corte lateral: uma córnea normal, arredondada, ao lado de uma córnea com ceratocone, projetada em formato de cone"
@@ -703,6 +716,8 @@ function Page() {
               />
 
               {/* 4 — Diagnóstico */}
+              {/* faixa tonalizada (identidade — areia ~13%) para quebrar a monotonia do bloco */}
+              <div className="my-12 rounded-[24px] bg-secondary/[0.13] px-4 pb-4 pt-8 sm:px-8 sm:pb-8 sm:pt-12 [&>*:first-child]:!mt-0">
               <H2 id="diagnostico">Como é feito o diagnóstico?</H2>
               <Prose className="mt-4">
                 <p>
@@ -765,7 +780,11 @@ function Page() {
                 <p>O acompanhamento periódico serve justamente para diferenciar essas situações.</p>
               </Prose>
 
+              </div>
+
               {/* 5 — Tratamentos */}
+              {/* faixa tonalizada (identidade — areia ~13%) para quebrar a monotonia do bloco */}
+              <div className="my-12 rounded-[24px] bg-secondary/[0.13] px-4 pb-4 pt-8 sm:px-8 sm:pb-8 sm:pt-12 [&>*:first-child]:!mt-0">
               <H2 id="tratamentos">Quais são os tratamentos para ceratocone?</H2>
               <Prose className="mt-4">
                 <p>O tratamento possui dois objetivos diferentes:</p>
@@ -873,7 +892,10 @@ function Page() {
                 Crosslinking corneano
               </H2>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal
+                variant="image"
+                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
+              >
                 <Figure
                   file="ceratocone_crosslinking_passos.jpg"
                   alt="Seis etapas do crosslinking corneano: aplicação de colírios anestésicos, remoção cuidadosa do epitélio da córnea (desepitelização, sem flap), aplicação de riboflavina (vitamina B2), difusão da riboflavina pelo estroma corneano, exposição à luz ultravioleta A por tempo controlado e, por fim, formação de novas ligações entre as fibras de colágeno, deixando a córnea mais forte e estável"
@@ -963,7 +985,10 @@ function Page() {
                 Anel intracorneano ou Anel de Ferrara
               </H2>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal
+                variant="image"
+                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
+              >
                 <Figure
                   file="ceratocone_anel_passos.jpg"
                   alt="Seis etapas do implante do anel de Ferrara: córnea com ceratocone (afinamento e protrusão), criação do túnel intracorneano no estroma, inserção cuidadosa do anel no túnel, posicionamento do anel para regularizar o formato da córnea, efeito de compressão das áreas mais curvas e resultado com a córnea mais regular"
@@ -1047,7 +1072,10 @@ function Page() {
                 Transplante de córnea
               </H2>
 
-              <Reveal variant="image" className="my-10">
+              <Reveal
+                variant="image"
+                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
+              >
                 <Figure
                   file="ceratocone_transplante_passos.jpg"
                   alt="Três etapas do transplante de córnea: a córnea doadora como um disco transparente e saudável, a substituição da córnea doente pela doadora e a fixação do enxerto com pontos muito finos"
@@ -1112,6 +1140,7 @@ function Page() {
                   resultado funcional adequado.
                 </p>
               </Prose>
+              </div>
             </article>
 
             <Sidebar />
