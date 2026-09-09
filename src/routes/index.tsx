@@ -213,7 +213,7 @@ function Home() {
               </CTAButton>
               <CTAButton
                 to="/"
-                hash="especialidades"
+                hash="formacoes"
                 variant="secondary"
                 className="h-11 rounded-md border-primary/45 px-7 text-[0.8rem] text-primary hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
               >
