@@ -881,28 +881,37 @@ function Page() {
         </div>
       </section>
 
-      {/* CTA final — mesmo tratamento da última seção da Home */}
-      <section className="relative flex overflow-hidden bg-[var(--primary-deep)] py-16 text-[var(--primary-foreground)] md:py-20 lg:min-h-[560px] lg:items-center lg:py-0">
+      {/* CTA final — mesmo tratamento da última seção da Home
+          (mobile: card menor no rodapé, imagem reenquadrada à esquerda p/ não cortar a Dra.) */}
+      <section className="relative flex overflow-hidden bg-[var(--primary-deep)] py-16 text-[var(--primary-foreground)] max-md:min-h-[82svh] max-md:items-end max-md:py-8 md:py-20 lg:min-h-[560px] lg:items-center lg:py-0">
         <ParallaxImage
           file="home_14_cta_consultorio.jpg"
-          objectPosition="50% 25%"
           amplitude={19}
+          imgClassName="max-md:top-0 max-md:h-full max-md:object-left md:object-[50%_25%]"
         />
         <div className="relative z-10 mx-auto w-full max-w-[1240px] px-5 sm:px-8">
-          <Reveal className="ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] lg:p-10">
-            <h2 className="text-3xl leading-tight text-[#4a3629] sm:text-4xl">
+          <Reveal className="ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] max-md:p-5 lg:p-10">
+            <h2 className="text-3xl leading-tight text-[#4a3629] max-md:text-2xl sm:text-4xl">
               Cada visão tem uma história.
             </h2>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858]">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858] max-md:mt-2.5 max-md:text-[0.82rem]">
               Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou deseja
               avaliar a possibilidade de um tratamento cirúrgico, uma consulta especializada é o
               primeiro passo para compreender o seu caso e definir a melhor conduta.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <CTAButton href={WHATSAPP_AGENDAR} variant="primary">
+            <div className="mt-7 flex flex-wrap gap-3 max-md:mt-4 max-md:flex-nowrap max-md:gap-2">
+              <CTAButton
+                href={WHATSAPP_AGENDAR}
+                variant="primary"
+                className="max-md:flex-1 max-md:px-2.5 max-md:text-[0.78rem]"
+              >
                 Agendar consulta
               </CTAButton>
-              <CTAButton href={WHATSAPP_CONTATO} variant="light-solid">
+              <CTAButton
+                href={WHATSAPP_CONTATO}
+                variant="light-solid"
+                className="max-md:flex-1 max-md:px-2.5 max-md:text-[0.78rem]"
+              >
                 Entrar em contato
               </CTAButton>
             </div>
