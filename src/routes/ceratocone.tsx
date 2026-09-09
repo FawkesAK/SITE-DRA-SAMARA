@@ -873,15 +873,10 @@ function Page() {
                 Crosslinking corneano
               </H2>
 
-              {/* TROCAR IMAGEM AQUI: [SUBSTITUIR IMAGEM — CROSSLINKING SEM FLAP]
-                  A imagem anterior mostrava criação de flap. No crosslinking a córnea é
-                  apenas desepitelizada, sem flap (as etapas mostradas eram de EXTRA-LASIK,
-                  técnica não realizada pela médica). Aguardando nova imagem.
-                  Manter o mesmo espaço no layout. */}
               <Reveal variant="image" className="my-10">
                 <Figure
-                  file="[SUBSTITUIR IMAGEM — CROSSLINKING SEM FLAP]"
-                  alt="Placeholder: nova imagem de crosslinking corneano, com desepitelização da córnea, sem flap"
+                  file="ceratocone_crosslinking_passos.jpg"
+                  alt="Seis etapas do crosslinking corneano: aplicação de colírios anestésicos, remoção cuidadosa do epitélio da córnea (desepitelização, sem flap), aplicação de riboflavina (vitamina B2), difusão da riboflavina pelo estroma corneano, exposição à luz ultravioleta A por tempo controlado e, por fim, formação de novas ligações entre as fibras de colágeno, deixando a córnea mais forte e estável"
                   ratio="3/2"
                   className="rounded-md"
                 />
