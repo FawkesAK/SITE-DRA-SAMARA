@@ -963,17 +963,10 @@ function Page() {
                 Anel intracorneano ou Anel de Ferrara
               </H2>
 
-              {/* TROCAR IMAGEM AQUI: infográfico do anel intracorneano (6 etapas) removido.
-                  Corrigir nas novas imagens fornecidas pela médica:
-                  [SUBSTITUIR IMAGEM 2 — INCISÃO PREFERENCIALMENTE A LASER] (remover o bisturi)
-                  [SUBSTITUIR IMAGEM 4 — ANEL COM ABERTURA PARA CIMA] (o anel estava de ponta-cabeça)
-                  [SUBSTITUIR IMAGEM 5 — ANEL LOCALIZADO NA CÓRNEA] (estava representado na íris)
-                  [SUBSTITUIR IMAGEM 6 — RESULTADO COM ANEL VISÍVEL] (faltava o anel na foto)
-                  Manter o mesmo espaço no layout. */}
               <Reveal variant="image" className="my-10">
                 <Figure
-                  file="[SUBSTITUIR IMAGEM — ANEL INTRACORNEANO — ETAPAS 2, 4, 5 E 6]"
-                  alt="Placeholder: nova sequência de etapas do implante do anel intracorneano"
+                  file="ceratocone_anel_passos.jpg"
+                  alt="Seis etapas do implante do anel de Ferrara: córnea com ceratocone (afinamento e protrusão), criação do túnel intracorneano no estroma, inserção cuidadosa do anel no túnel, posicionamento do anel para regularizar o formato da córnea, efeito de compressão das áreas mais curvas e resultado com a córnea mais regular"
                   ratio="1536/892"
                   className="rounded-md"
                 />
