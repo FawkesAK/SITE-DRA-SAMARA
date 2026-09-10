@@ -572,10 +572,7 @@ function Page() {
               </Prose>
 
               {/* Diagrama córnea normal x ceratocone */}
-              <Reveal
-                variant="image"
-                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
-              >
+              <Reveal variant="image" className="-mx-3 my-12 sm:-mx-8 sm:my-14">
                 <Figure
                   file="ceratocone_diagrama.jpg"
                   alt="Comparação em corte lateral: uma córnea normal, arredondada, ao lado de uma córnea com ceratocone, projetada em formato de cone"
@@ -890,10 +887,7 @@ function Page() {
                 Crosslinking corneano
               </H2>
 
-              <Reveal
-                variant="image"
-                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
-              >
+              <Reveal variant="image" className="-mx-3 my-12 sm:-mx-8 sm:my-14">
                 <Figure
                   file="ceratocone_crosslinking_passos.jpg"
                   alt="Seis etapas do crosslinking corneano: aplicação de colírios anestésicos, remoção cuidadosa do epitélio da córnea (desepitelização, sem flap), aplicação de riboflavina (vitamina B2), difusão da riboflavina pelo estroma corneano, exposição à luz ultravioleta A por tempo controlado e, por fim, formação de novas ligações entre as fibras de colágeno, deixando a córnea mais forte e estável"
@@ -983,10 +977,7 @@ function Page() {
                 Anel intracorneano ou Anel de Ferrara
               </H2>
 
-              <Reveal
-                variant="image"
-                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
-              >
+              <Reveal variant="image" className="-mx-3 my-12 sm:-mx-8 sm:my-14">
                 <Figure
                   file="ceratocone_anel_passos.jpg"
                   alt="Seis etapas do implante do anel de Ferrara: córnea com ceratocone (afinamento e protrusão), criação do túnel intracorneano no estroma, inserção cuidadosa do anel no túnel, posicionamento do anel para regularizar o formato da córnea, efeito de compressão das áreas mais curvas e resultado com a córnea mais regular"
@@ -1070,10 +1061,7 @@ function Page() {
                 Transplante de córnea
               </H2>
 
-              <Reveal
-                variant="image"
-                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
-              >
+              <Reveal variant="image" className="-mx-3 my-12 sm:-mx-8 sm:my-14">
                 <Figure
                   file="ceratocone_transplante_passos.jpg"
                   alt="Três etapas do transplante de córnea: a córnea doadora como um disco transparente e saudável, a substituição da córnea doente pela doadora e a fixação do enxerto com pontos muito finos"

@@ -464,10 +464,7 @@ function Page() {
                 </p>
               </Prose>
 
-              <Reveal
-                variant="image"
-                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
-              >
+              <Reveal variant="image" className="-mx-3 my-12 sm:-mx-8 sm:my-14">
                 <Figure
                   file="olho_seco_comparacao.jpg"
                   alt="Comparação lado a lado: à esquerda um olho saudável e calmo; à direita um olho com a superfície irritada e vermelha, como no olho seco"
@@ -537,10 +534,7 @@ function Page() {
               {/* 4 — Tipos */}
               <H2 id="tipos">Tipos de olho seco</H2>
 
-              <Reveal
-                variant="image"
-                className="-mx-3 my-12 rounded-2xl border border-border bg-paper p-3 sm:-mx-8 sm:my-14 sm:p-5"
-              >
+              <Reveal variant="image" className="-mx-3 my-12 sm:-mx-8 sm:my-14">
                 <Figure
                   file="olho_seco_tipos.jpg"
                   alt="Infográfico com os três tipos de olho seco: aquodeficiente (menor produção da lágrima), evaporativo (evaporação aumentada, ligada à disfunção das glândulas de Meibômio) e misto (combinação dos dois mecanismos)"
@@ -747,12 +741,13 @@ function Page() {
                 </p>
               </Prose>
 
-              <Reveal variant="image" className="my-11">
+              <Reveal variant="image" className="mx-auto my-11 max-w-md">
                 <Figure
                   file="olho_seco_plug.jpg"
                   alt="Ilustração de um plug lacrimal inserido no ponto lacrimal da pálpebra inferior, ocluindo a via de drenagem para manter a lágrima mais tempo sobre a superfície ocular"
-                  ratio="3/2"
-                  className="rounded-md shadow-[var(--shadow-lift)]"
+                  ratio="1/1"
+                  className="rounded-none bg-transparent"
+                  imgClassName="object-contain"
                 />
               </Reveal>
 
