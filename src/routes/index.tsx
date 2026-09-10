@@ -182,7 +182,7 @@ function Home() {
           diagonal (`bg-gold` + `bg-primary`) no rodapé como transição. */}
       <section id="inicio" className="texture-paper relative overflow-hidden bg-background">
         <div className="relative mx-auto mt-[4.25rem] min-h-[clamp(560px,158vw,620px)] w-full max-w-[1920px] sm:mt-[4.5rem] sm:min-h-[clamp(520px,72vw,580px)] lg:aspect-[1.85/1] lg:min-h-[660px] lg:max-h-[calc(100svh+14rem)]">
-          <Reveal className="absolute inset-y-0 left-0 z-10 flex w-[66%] flex-col justify-center px-4 py-6 sm:w-[58%] sm:px-6 lg:left-[clamp(64px,10vw,170px)] lg:top-1/2 lg:h-auto lg:w-[34%] lg:max-w-[480px] lg:min-w-[380px] lg:-translate-y-1/2 lg:px-0 lg:py-0 xl:top-[14.8%] xl:bottom-auto xl:max-w-[540px] xl:-mt-[2.25rem] xl:translate-y-0">
+          <Reveal className="absolute inset-y-0 left-0 z-10 flex w-[66%] flex-col justify-center px-5 py-6 sm:w-[58%] sm:px-8 lg:left-10 lg:top-1/2 lg:h-auto lg:w-[34%] lg:max-w-[480px] lg:min-w-[380px] lg:-translate-y-1/2 lg:px-0 lg:py-0 xl:left-14 xl:top-[14.8%] xl:bottom-auto xl:max-w-[540px] xl:-mt-[2.25rem] xl:translate-y-0">
             <p className="eyebrow flex flex-wrap items-center gap-x-8 gap-y-1 text-[0.6rem] leading-snug text-muted-foreground sm:gap-x-10 sm:text-[0.65rem] lg:text-[0.7rem]">
               <span>CRM-RS 37669&nbsp;&nbsp;|&nbsp;&nbsp;RQE 29525</span>
               <span>Porto Alegre - RS</span>
