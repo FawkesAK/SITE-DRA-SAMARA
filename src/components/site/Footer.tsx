@@ -43,11 +43,13 @@ export function Footer() {
           <div className="text-sm text-muted-foreground">
             <p className="eyebrow mb-4 text-gold">Atendimento</p>
             <address className="not-italic leading-relaxed">
-              {site.clinica}
+              Neofocus Oftalmologia
               <br />
-              {site.cidade}
+              R. Furriel Luíz Antônio de Vargas, 250 - Bela Vista
               <br />
-              {site.endereco}
+              Porto Alegre - RS
+              <br />
+              Telefone: (51) 3273-2005
             </address>
             <p className="mt-4 leading-relaxed">WhatsApp: {site.whatsapp}</p>
             <a
