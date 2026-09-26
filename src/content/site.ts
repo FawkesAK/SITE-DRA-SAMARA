@@ -13,7 +13,7 @@ export const site = {
   telefone: "{{TELEFONE}}",
   whatsapp: "(51) 99392-9951",
   whatsappUrl:
-    "https://api.whatsapp.com/send?phone=55051993929951&text=Oi,%20quero%20agendar%20uma%20consulta%20com%20a%20Dra%20Samara",
+    "https://api.whatsapp.com/send?phone=55051993929951&text=Ol%C3%A1%2C%20encontrei%20o%20contato%20atrav%C3%A9s%20do%20site%20da%20Dra%20Samara%20e%20gostaria%20de%20agendar%20uma%20consulta",
   instagramUrl: "https://www.instagram.com/oftalmosamara/",
   instagramHandle: "@oftalmosamara",
   googleMapsEmbed: "{{GOOGLE_MAPS_EMBED}}",
