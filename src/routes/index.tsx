@@ -77,6 +77,9 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const WHATSAPP_CONTATO =
+  "https://api.whatsapp.com/send?phone=55051993929951&text=Ol%C3%A1%2C%20encontrei%20o%20contato%20atrav%C3%A9s%20do%20site%20da%20Dra%20Samara%20e%20gostaria%20de%20agendar%20uma%20consulta";
+
 const areas = [
   {
     title: "Córnea",
@@ -567,77 +570,46 @@ function Home() {
         </div>
       </section>
 
-      {/* CTA final — mesma lógica da seção da lente intraocular: mobile e
-          desktop são composições irmãs (lg:hidden / hidden lg:flex). No
-          mobile a imagem (retrato do olho, vertical, arquivo próprio) vira
-          background da própria seção com o mesmo recorte-por-aspect-ratio +
-          cor de fundo amostrada no ponto de corte; no desktop mantém-se o
-          `FinalCTA` original (foto em paisagem, overlay full-bleed) sem
-          nenhuma alteração. */}
-      <div id="contato">
-        <section
-          className="relative overflow-hidden bg-[#605c2f] bg-no-repeat pb-6 pt-0 text-[var(--primary-foreground)] sm:pb-7 md:pb-7 md:pt-0 lg:hidden"
-          style={{
-            backgroundImage: `url(${imageUrl("home_13b_final_cta_olho_mobile.jpg")})`,
-            backgroundPosition: "center top",
-            backgroundSize: "100% auto",
-          }}
-        >
-          <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
-            <div aria-hidden="true" className="-mx-5 aspect-[941/836] w-[calc(100%+2.5rem)] sm:-mx-8 sm:w-[calc(100%+4rem)]" />
-
-            <Reveal className="pt-3 sm:pt-4">
-              <h2 className="text-[clamp(1.4rem,6.2vw,1.95rem)] leading-[1.18] text-[var(--primary-foreground)]">
-                Cada visão tem uma história.
-              </h2>
-              <p className="mt-2.5 max-w-[480px] text-[clamp(0.86rem,3.8vw,0.96rem)] leading-[1.5] text-[var(--primary-foreground)]/75">
-                Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou
-                deseja avaliar a possibilidade de um tratamento cirúrgico, a consulta é o
-                primeiro passo.
-              </p>
-              <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-7">
-                <CTAButton href={site.whatsappUrl} variant="light-solid" className="h-11 px-5 text-[0.92rem]">
-                  Agendar consulta
-                </CTAButton>
-                <CTAButton href={site.whatsappUrl} variant="ghost-light" className="h-11 px-5 text-[0.92rem]">
-                  Entrar em contato
-                </CTAButton>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <Section
-          tone="deep"
-          className="relative hidden overflow-hidden py-16 lg:flex lg:min-h-[560px] lg:items-center lg:py-0"
-        >
-          <ParallaxImage
-            file="home_14_cta_consultorio.jpg"
-            objectPosition="50% 25%"
-            amplitude={19}
-          />
-          {/* card terracota translúcido — sobreposição necessária para leitura
-              do texto sobre a foto clara do consultório */}
-          <Reveal className="relative z-10 ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] lg:p-10">
-            <h2 className="text-3xl leading-tight text-[#4a3629] sm:text-4xl">
+      {/* CTA final — igual ao das páginas da Biblioteca da Córnea (foto da Dra.
+          no consultório com efeito parallax)
+          (mobile: card menor no rodapé, imagem reenquadrada à esquerda p/ não cortar a Dra.) */}
+      <section
+        id="contato"
+        className="relative flex overflow-hidden bg-[var(--primary-deep)] py-16 text-[var(--primary-foreground)] max-md:min-h-[82svh] max-md:items-end max-md:py-8 md:py-20 lg:min-h-[560px] lg:items-center lg:py-0">
+        <ParallaxImage
+          file="home_14_cta_consultorio.jpg"
+          amplitude={19}
+          imgClassName="max-md:top-0 max-md:h-full max-md:object-left md:object-[50%_25%]"
+        />
+        <div className="relative z-10 mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+          <Reveal className="ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] max-md:p-5 lg:p-10">
+            <h2 className="text-3xl leading-tight text-[#4a3629] max-md:text-2xl sm:text-4xl">
               Cada visão tem uma história.
             </h2>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858]">
-              Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou
-              deseja avaliar a possibilidade de um tratamento cirúrgico, a consulta é o
-              primeiro passo.
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858] max-md:mt-2.5 max-md:text-[0.82rem]">
+              Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou deseja
+              avaliar a possibilidade de um tratamento cirúrgico, uma consulta especializada é o
+              primeiro passo para compreender o seu caso e definir a melhor conduta.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <CTAButton href={site.whatsappUrl} variant="primary">
+            <div className="mt-7 flex flex-wrap gap-3 max-md:mt-4 max-md:flex-nowrap max-md:gap-2">
+              <CTAButton
+                href={site.whatsappUrl}
+                variant="primary"
+                className="max-md:flex-1 max-md:px-2.5 max-md:text-[0.78rem]"
+              >
                 Agendar consulta
               </CTAButton>
-              <CTAButton href={site.whatsappUrl} variant="light-solid">
+              <CTAButton
+                href={WHATSAPP_CONTATO}
+                variant="light-solid"
+                className="max-md:flex-1 max-md:px-2.5 max-md:text-[0.78rem]"
+              >
                 Entrar em contato
               </CTAButton>
             </div>
           </Reveal>
-        </Section>
-      </div>
+        </div>
+      </section>
       <p className="sr-only">
         Dra. Samara Marafon — oftalmologista em Porto Alegre. Atendimento em {site.clinica}.
       </p>
