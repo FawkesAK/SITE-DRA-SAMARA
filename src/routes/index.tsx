@@ -208,7 +208,7 @@ function Home() {
               aria-hidden="true"
               className="mt-3 block h-px w-10 bg-primary sm:mt-5 sm:w-12 lg:mt-6 lg:w-14"
             />
-            <p className="mt-2.5 text-[clamp(0.68rem,3.15vw,0.82rem)] leading-[1.5] text-muted-foreground sm:mt-4 sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[1.12rem] lg:leading-[1.6] xl:max-w-[480px] xl:text-[1.2rem]">
+            <p className="mt-2.5 text-[clamp(0.68rem,3.15vw,0.82rem)] leading-[1.5] text-muted-foreground max-sm:font-medium max-sm:text-[#1c1714] sm:mt-4 sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[1.12rem] lg:leading-[1.6] xl:max-w-[480px] xl:text-[1.2rem]">
               Especialista em córnea, catarata e cirurgia refrativa, com atuação no
               diagnóstico e tratamento das doenças corneanas.
             </p>
@@ -223,7 +223,7 @@ function Home() {
                 to="/"
                 hash="formacoes"
                 variant="secondary"
-                className="h-[clamp(2.25rem,10.4vw,2.75rem)] w-full whitespace-nowrap rounded-md border-primary/45 px-1.5 text-[clamp(0.64rem,3.1vw,0.82rem)] text-primary sm:w-auto hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
+                className="h-[clamp(2.25rem,10.4vw,2.75rem)] w-full whitespace-nowrap rounded-md border-primary/45 px-1.5 text-[clamp(0.64rem,3.1vw,0.82rem)] text-primary max-sm:border-white/70 max-sm:bg-white/35 max-sm:shadow-[0_4px_18px_-6px_rgba(80,40,25,0.35),inset_0_1px_0_rgba(255,255,255,0.7)] max-sm:backdrop-blur-md max-sm:backdrop-saturate-150 sm:w-auto hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
               >
                 Conheça as doenças da córnea
               </CTAButton>
