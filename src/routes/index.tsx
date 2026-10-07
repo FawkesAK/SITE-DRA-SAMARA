@@ -15,6 +15,7 @@ import {
 import { ScienceCards } from "@/components/site/science";
 import { Depoimentos } from "@/components/site/depoimentos";
 import { InstagramStrip } from "@/components/site/instagram";
+import { ParallaxImage } from "@/components/site/parallax";
 
 /**
  * Rola até uma seção da Home e só então executa `onArrived` — usado pelos
@@ -566,6 +567,77 @@ function Home() {
         </div>
       </section>
 
+      {/* CTA final — mesma lógica da seção da lente intraocular: mobile e
+          desktop são composições irmãs (lg:hidden / hidden lg:flex). No
+          mobile a imagem (retrato do olho, vertical, arquivo próprio) vira
+          background da própria seção com o mesmo recorte-por-aspect-ratio +
+          cor de fundo amostrada no ponto de corte; no desktop mantém-se o
+          `FinalCTA` original (foto em paisagem, overlay full-bleed) sem
+          nenhuma alteração. */}
+      <div id="contato">
+        <section
+          className="relative overflow-hidden bg-[#605c2f] bg-no-repeat pb-6 pt-0 text-[var(--primary-foreground)] sm:pb-7 md:pb-7 md:pt-0 lg:hidden"
+          style={{
+            backgroundImage: `url(${imageUrl("home_13b_final_cta_olho_mobile.jpg")})`,
+            backgroundPosition: "center top",
+            backgroundSize: "100% auto",
+          }}
+        >
+          <div className="mx-auto w-full max-w-[1240px] px-5 sm:px-8">
+            <div aria-hidden="true" className="-mx-5 aspect-[941/836] w-[calc(100%+2.5rem)] sm:-mx-8 sm:w-[calc(100%+4rem)]" />
+
+            <Reveal className="pt-3 sm:pt-4">
+              <h2 className="text-[clamp(1.4rem,6.2vw,1.95rem)] leading-[1.18] text-[var(--primary-foreground)]">
+                Cada visão tem uma história.
+              </h2>
+              <p className="mt-2.5 max-w-[480px] text-[clamp(0.86rem,3.8vw,0.96rem)] leading-[1.5] text-[var(--primary-foreground)]/75">
+                Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou
+                deseja avaliar a possibilidade de um tratamento cirúrgico, a consulta é o
+                primeiro passo.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-7">
+                <CTAButton href={site.whatsappUrl} variant="light-solid" className="h-11 px-5 text-[0.92rem]">
+                  Agendar consulta
+                </CTAButton>
+                <CTAButton href={site.whatsappUrl} variant="ghost-light" className="h-11 px-5 text-[0.92rem]">
+                  Entrar em contato
+                </CTAButton>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <Section
+          tone="deep"
+          className="relative hidden overflow-hidden py-16 lg:flex lg:min-h-[560px] lg:items-center lg:py-0"
+        >
+          <ParallaxImage
+            file="home_14_cta_consultorio.jpg"
+            objectPosition="50% 25%"
+            amplitude={19}
+          />
+          {/* card terracota translúcido — sobreposição necessária para leitura
+              do texto sobre a foto clara do consultório */}
+          <Reveal className="relative z-10 ml-auto max-w-md rounded-lg bg-[#dcc4bb]/88 p-8 shadow-[var(--shadow-lift)] lg:p-10">
+            <h2 className="text-3xl leading-tight text-[#4a3629] sm:text-4xl">
+              Cada visão tem uma história.
+            </h2>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#7d6858]">
+              Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou
+              deseja avaliar a possibilidade de um tratamento cirúrgico, a consulta é o
+              primeiro passo.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <CTAButton href={site.whatsappUrl} variant="primary">
+                Agendar consulta
+              </CTAButton>
+              <CTAButton href={site.whatsappUrl} variant="light-solid">
+                Entrar em contato
+              </CTAButton>
+            </div>
+          </Reveal>
+        </Section>
+      </div>
       <p className="sr-only">
         Dra. Samara Marafon — oftalmologista em Porto Alegre. Atendimento em {site.clinica}.
       </p>

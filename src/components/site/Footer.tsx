@@ -5,7 +5,7 @@ import { site, nav } from "@/content/site";
 export function Footer() {
   const links = nav.filter((n) => n.hash !== "inicio");
   return (
-    <footer id="contato" className="texture-paper bg-[var(--background)] text-foreground">
+    <footer className="texture-paper bg-[var(--background)] text-foreground">
       <div className="mx-auto w-full max-w-[1240px] px-5 py-16 sm:px-8">
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
