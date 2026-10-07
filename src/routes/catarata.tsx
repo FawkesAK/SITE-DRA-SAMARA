@@ -844,6 +844,13 @@ function Page() {
               </Prose>
 
               <H3>Comparação geral das lentes intraoculares</H3>
+              <Prose className="mt-3">
+                <p>
+                  Existem diferentes tipos de lente intraocular. O quadro abaixo apresenta, de forma
+                  geral, as principais categorias e suas características — a indicação de cada uma
+                  depende das particularidades de cada olho e é definida na avaliação.
+                </p>
+              </Prose>
               <DataTable headers={lentesHeaders} rows={lentesRows} />
 
               {/* 6 — Cirurgia */}

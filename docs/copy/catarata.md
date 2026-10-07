@@ -211,6 +211,8 @@ O planejamento depende de fatores como:
 
 ### Comparação geral das lentes intraoculares
 
+Existem diferentes tipos de lente intraocular. O quadro abaixo apresenta, de forma geral, as principais categorias e suas características — a indicação de cada uma depende das particularidades de cada olho e é definida na avaliação.
+
 | Tipo de lente | O que busca | Quando pode ser considerada | Limitações |
 |---|---|---|---|
 | Monofocal | Visão nítida em uma distância, geralmente para longe. | Na maioria dos pacientes; é a lente mais utilizada. | Normalmente exige óculos para perto (e às vezes para distância intermediária). |
@@ -218,7 +220,6 @@ O planejamento depende de fatores como:
 | Foco estendido (EDOF) | Boa visão para longe e para distâncias intermediárias, como o computador. | Para quem deseja reduzir a dependência de óculos no dia a dia. | Pode ainda exigir óculos para leitura de letras pequenas; halos leves são possíveis. |
 | Multifocal / trifocal | Visão para longe, intermediária e perto. | Para quem deseja maior independência dos óculos e tem olho saudável para essa lente. | Maior chance de halos e ofuscamento noturnos; nem todo olho é candidato. |
 
-**[VALIDAR]** Confirmar com a Dra. Samara quais tipos de lente ela utiliza e se deseja citar alguma tecnologia específica (ex.: lentes de visão monovisão, luz ajustável etc.).
 
 ---
 
