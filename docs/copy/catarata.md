@@ -4,6 +4,8 @@
 > **Página:** `/catarata` (substitui a página antiga herdada do modelo da Dra. Diane).
 > **Modelo:** mesma estrutura do guia de Ceratocone (hero → lead → "Neste guia" → artigo com sidebar → quando procurar → principais pontos → CTA → FAQ).
 >
+> Conferido no Notion (posts da própria Dra. Samara): tempo de cirurgia (< 20 min), anestesia local, alta no mesmo dia, "não precisa amadurecer", opacificação da cápsula tratada com laser, catarata + DMEK na mesma cirurgia e transplante antes da catarata em córneas com ceratotomia radial.
+>
 > Trechos marcados com **[VALIDAR]** dependem da prática da Dra. Samara (técnicas que ela realiza, lentes que oferece, condutas pessoais) e precisam de confirmação antes de publicar.
 > Trechos marcados com **[IMAGEM]** indicam onde entra cada imagem, seguindo as mesmas posições do guia de Ceratocone.
 
@@ -143,6 +145,8 @@ Não. Até o momento, não existe colírio, suplemento, exercício ou tratamento
 
 ## 4 — Como é feito o diagnóstico? *(faixa com fundo destacado)*
 
+Nem todo embaçamento é catarata. Muitas vezes, a névoa vem da superfície ocular — olho seco, irregularidade na córnea ou até o uso inadequado de colírios. Por isso, antes de pensar em cirurgia, é preciso entender de onde ela vem.
+
 O diagnóstico da catarata é feito no consultório, com o exame do cristalino na lâmpada de fenda após a dilatação da pupila. Mas confirmar que existe catarata é apenas o primeiro passo: também é preciso entender o quanto ela explica a queda da visão e avaliar todas as estruturas do olho que influenciam o resultado da cirurgia.
 
 Durante a consulta, o especialista pode investigar:
@@ -236,7 +240,9 @@ Em geral, a incisão é tão pequena que se fecha sozinha, sem necessidade de po
 
 ### Como é a anestesia?
 
-Na maioria dos casos, utiliza-se anestesia com colírios, associada a uma sedação leve aplicada pelo anestesista. O paciente permanece confortável e não precisa ficar completamente adormecido. A cirurgia costuma durar entre 15 e 30 minutos, e a alta acontece no mesmo dia.
+A cirurgia é feita com anestesia local, e o paciente permanece confortável durante o procedimento. Costuma durar menos de 20 minutos, e a alta acontece no mesmo dia, com poucos cuidados no pós-operatório.
+
+**[VALIDAR]** Se a Dra. Samara costuma associar sedação leve com anestesista, acrescentar: "Em geral, a anestesia com colírios é associada a uma sedação leve, e o paciente não precisa ficar completamente adormecido."
 
 ### Os dois olhos são operados juntos?
 
@@ -284,7 +290,7 @@ O grau é calculado a partir das medidas da biometria, das informações da cór
 
 ### Como escolher a lente?
 
-Não existe uma lente melhor para todos. Existe a lente mais adequada para cada olho e para cada rotina. A escolha considera os exames, a presença de astigmatismo, a saúde da córnea e da retina, as atividades do dia a dia e o quanto o paciente deseja — e aceita — depender de óculos.
+Não existe uma lente melhor para todos. Existe a lente escolhida para aquele olhar específico — não uma lente padrão de catálogo. A escolha considera os exames, a presença de astigmatismo, a saúde da córnea e da retina, as atividades do dia a dia e o quanto o paciente deseja — e aceita — depender de óculos.
 
 Lentes que oferecem visão em várias distâncias podem proporcionar mais independência dos óculos, mas costumam vir acompanhadas de algum grau de halos e ofuscamento noturnos. Para algumas pessoas, essa troca vale a pena; para outras, não. Essa conversa faz parte do planejamento.
 
@@ -310,7 +316,7 @@ No ceratocone, a córnea é irregular, e as medidas usadas para calcular a lente
 
 ### Distrofia de Fuchs
 
-Na distrofia de Fuchs, as células endoteliais — responsáveis por manter a córnea transparente — estão reduzidas. A cirurgia de catarata pode sobrecarregar ainda mais essas células. A microscopia especular e a tomografia ajudam a avaliar o risco e, em alguns casos, a planejar a cirurgia de catarata em conjunto com um transplante endotelial de córnea.
+Na distrofia de Fuchs, as células endoteliais — responsáveis por manter a córnea transparente — estão reduzidas. A cirurgia de catarata pode sobrecarregar ainda mais essas células. A microscopia especular e a tomografia ajudam a avaliar o risco e, em alguns casos, a planejar a cirurgia de catarata em conjunto com um transplante da camada interna da córnea (DMEK), muitas vezes no mesmo procedimento. Em outros casos, como em córneas com cirurgias antigas, pode ser mais seguro fazer o transplante primeiro, esperar a córnea cicatrizar no seu próprio tempo e só depois operar a catarata, com mais precisão.
 
 ### Olho seco
 
@@ -397,10 +403,10 @@ Não. Essa orientação é antiga. Hoje, a cirurgia é indicada quando a catarat
 Não. Até o momento, nenhum colírio, suplemento ou tratamento natural é capaz de reverter ou impedir a progressão da catarata. O único tratamento eficaz é a cirurgia.
 
 **A cirurgia de catarata dói?**
-Na maioria dos casos, a cirurgia é feita com colírios anestésicos e sedação leve, e o paciente sente apenas uma leve pressão ou desconforto. No pós-operatório, é comum sensação de areia e sensibilidade à luz nos primeiros dias.
+A cirurgia é feita com anestesia local, e o paciente costuma sentir apenas uma leve pressão ou desconforto. No pós-operatório, é comum sensação de areia e sensibilidade à luz nos primeiros dias.
 
 **Quanto tempo dura a cirurgia?**
-Em geral, entre 15 e 30 minutos. O paciente costuma ir para casa no mesmo dia.
+Em geral, menos de 20 minutos. O paciente costuma ir para casa no mesmo dia.
 
 **Os dois olhos podem ser operados no mesmo dia?**
 Normalmente, os olhos são operados em dias diferentes. Esse intervalo permite avaliar a recuperação e o resultado do primeiro olho antes de operar o segundo.
