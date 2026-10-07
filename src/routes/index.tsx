@@ -339,10 +339,10 @@ function Home() {
         id="especialidades"
         className="relative overflow-hidden bg-background text-foreground"
       >
-        <div className="relative px-5 py-16 sm:px-8 md:py-20 lg:flex lg:items-center lg:px-0 lg:py-16 lg:min-h-[100svh]">
+        <div className="relative flex flex-col px-5 py-16 sm:px-8 md:py-20 lg:flex-row lg:items-center lg:px-0 lg:py-16 lg:min-h-[100svh]">
           {/* Coluna de texto — flui no mobile; no desktop começa em ~15%, ~30% de
               largura e fica centrada na vertical (alinhada à altura da foto) */}
-          <div className="lg:ml-[15%] lg:w-[30%] lg:shrink-0">
+          <div className="max-lg:contents lg:ml-[15%] lg:w-[30%] lg:shrink-0">
             <Reveal>
               <h2 className="text-[clamp(1.85rem,5.8vw,2.2rem)] leading-[1.12] tracking-[-0.01em] sm:text-[2.45rem] md:text-[2.9rem] lg:text-[clamp(2.6rem,3.6vw,3.8rem)] lg:leading-[1.08]">
                 <span className="text-[#4a3629]">Uma carreira</span>
@@ -353,7 +353,7 @@ function Home() {
 
             <Reveal
               delay={80}
-              className="mt-6 space-y-5 text-left text-[0.9rem] leading-[1.7] sm:text-justify text-[#7d6858] sm:mt-7 sm:space-y-6 sm:text-[0.86rem] lg:mt-7 lg:space-y-6 lg:text-[1rem] lg:leading-[1.75]"
+              className="mt-6 space-y-5 text-left text-[0.9rem] max-lg:order-2 leading-[1.7] sm:text-justify text-[#7d6858] sm:mt-7 sm:space-y-6 sm:text-[0.86rem] lg:mt-7 lg:space-y-6 lg:text-[1rem] lg:leading-[1.75]"
             >
               <p>
                 Algumas áreas da oftalmologia exigem uma dedicação integral.{" "}
@@ -381,7 +381,7 @@ function Home() {
               </p>
             </Reveal>
 
-            <ul className="mt-8 flex flex-wrap gap-1.5 sm:mt-9 lg:mt-10 lg:gap-2 xl:flex-nowrap xl:gap-2.5">
+            <ul className="mt-8 flex flex-wrap gap-1.5 max-lg:order-2 sm:mt-9 lg:mt-10 lg:gap-2 xl:flex-nowrap xl:gap-2.5">
               {["Atendimento Clínico", "Cirurgia", "Pesquisa", "Ensino"].map((tag, i) => (
                 <Reveal
                   key={tag}
@@ -395,8 +395,10 @@ function Home() {
             </ul>
           </div>
 
-          {/* Foto — mobile / tablet: em fluxo, abaixo do texto (grande e horizontal) */}
-          <Reveal variant="image" className="mt-10 lg:hidden">
+          {/* Foto — mobile / tablet: em fluxo, logo abaixo do título (order-1;
+              a coluna de texto vira `contents` abaixo de lg para os filhos
+              entrarem na mesma pilha: título → foto → parágrafos → tags) */}
+          <Reveal variant="image" className="mt-8 max-lg:order-1 lg:hidden">
             <Figure
               file="home_03_carreira_cornea.jpg"
               alt="Dra. Samara Marafon, oftalmologista especialista em córnea, em seu consultório"
@@ -434,14 +436,15 @@ function Home() {
           serif bicolor ("meus pacientes" em itálico + terracota) e o botão
           "Ver mais no Doctoralia"; à direita o carrossel de avaliações (2 páginas
           de 3 cards). A margem direita dos cards = a margem esquerda do texto
-          (15%). Empilha no mobile (título → carrossel).
+          (15%). Empilha abaixo de lg (título → carrossel → botão), com a coluna do
+          título como `contents` para o botão poder ir para depois dos cards.
           id="catarata" mantido (âncora do menu). */}
       <section
         id="catarata"
         className="relative overflow-hidden bg-background py-16 text-foreground md:py-24"
       >
-        <div className="px-5 sm:px-8 lg:flex lg:items-center lg:gap-12 lg:px-0">
-          <div className="lg:ml-[15%] lg:w-[26%] lg:shrink-0">
+        <div className="flex flex-col px-5 sm:px-8 lg:flex-row lg:items-center lg:gap-12 lg:px-0">
+          <div className="max-lg:contents lg:ml-[15%] lg:w-[26%] lg:shrink-0">
             <Reveal>
               <h2 className="text-[clamp(1.9rem,5.8vw,2.3rem)] leading-[1.14] tracking-[-0.01em] sm:text-[2.4rem] md:text-[2.7rem] lg:text-[clamp(2.4rem,3.2vw,3.2rem)] lg:leading-[1.1]">
                 <span className="text-[#4a3629]">Veja o que</span>
@@ -451,7 +454,7 @@ function Home() {
                 <span className="text-[#4a3629]">têm a dizer:</span>
               </h2>
             </Reveal>
-            <Reveal delay={80} className="mt-7 lg:mt-9">
+            <Reveal delay={80} className="mt-8 max-lg:order-3 lg:mt-9">
               <CTAButton
                 href="https://www.doctoralia.com.br/samara-b-marafon/oftalmologista/porto-alegre#profile-reviews"
                 className="rounded-md bg-primary px-6 text-[0.82rem] shadow-none hover:bg-[var(--primary-deep)]"
@@ -461,7 +464,7 @@ function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-10 min-w-0 flex-1 lg:mr-[15%] lg:mt-0">
+          <div className="mt-10 min-w-0 flex-1 max-lg:order-2 lg:mr-[15%] lg:mt-0">
             <Depoimentos />
           </div>
         </div>
