@@ -143,6 +143,12 @@ const biblioteca = [
     alt: "Foto macro de um olho — conteúdo sobre olho seco",
     to: "/olho-seco",
   },
+  {
+    titulo: "Catarata",
+    file: "biblioteca_04_catarata.jpg",
+    alt: "Foto macro de um olho com catarata — conteúdo sobre catarata",
+    to: "/catarata",
+  },
 ];
 
 function Home() {
@@ -472,7 +478,7 @@ function Home() {
           </p>
         </Reveal>
 
-        <ul className="mx-auto mt-12 grid max-w-[1160px] gap-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-16">
+        <ul className="mx-auto mt-12 grid max-w-[1160px] gap-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-10">
           {biblioteca.map((item, i) => (
             <Reveal as="li" key={item.titulo} delay={i * 90}>
               <Link
