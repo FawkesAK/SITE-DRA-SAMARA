@@ -178,22 +178,24 @@ function Home() {
   return (
     <>
       {/* 01 — Hero
-          sm+ (>= 640px): foto full-bleed (absolute inset-0) com o texto
-          sobreposto em faixa absoluta à esquerda. Abaixo de sm, texto e foto
-          empilham (texto → foto 5:4 ancorada à direita), para que a Dra.
-          apareça inteira em vez de ficar recortada atrás do texto.
+          Foto full-bleed (absolute inset-0) com o texto sobreposto em faixa
+          absoluta à esquerda, em todas as larguras. Abaixo de sm o container
+          tem altura proporcional à largura (135vw, até 640px) e a foto é ancorada em 86%,
+          o que deixa o rosto da Dra. sempre entre ~64% e ~91% da largura; a
+          faixa de texto ocupa os 64% à esquerda, com tipografia em vw, para
+          que nada fique sobre o rosto em nenhum celular.
           Adaptado à identidade da Dra. Samara (terracota, tokens em styles.css):
           credencial no lugar do eyebrow, título bicolor (trechos em `text-primary`),
           dois CTAs empilhados, "feather" na borda esquerda da foto e faixa
           diagonal (`bg-gold` + `bg-primary`) no rodapé como transição. */}
       <section id="inicio" className="texture-paper relative overflow-hidden bg-background">
-        <div className="relative mx-auto mt-[4.25rem] flex w-full max-w-[1920px] flex-col sm:mt-[4.5rem] sm:block sm:min-h-[clamp(520px,72vw,580px)] lg:aspect-[1.85/1] lg:min-h-[660px] lg:max-h-[calc(100svh+14rem)]">
-          <Reveal className="relative z-10 flex w-full flex-col justify-center px-5 pb-8 pt-10 sm:absolute sm:inset-y-0 sm:left-0 sm:w-[58%] sm:px-6 sm:py-6 lg:left-[clamp(64px,10vw,170px)] lg:top-1/2 lg:h-auto lg:w-[34%] lg:max-w-[480px] lg:min-w-[380px] lg:-translate-y-1/2 lg:px-0 lg:py-0 xl:top-[14.8%] xl:bottom-auto xl:max-w-[540px] xl:-mt-[2.25rem] xl:translate-y-0">
-            <p className="eyebrow flex flex-wrap items-center gap-x-8 gap-y-1 text-[0.66rem] leading-snug text-muted-foreground sm:gap-x-10 sm:text-[0.65rem] lg:text-[0.7rem]">
+        <div className="relative mx-auto mt-[4.25rem] h-[min(135vw,640px)] w-full max-w-[1920px] sm:mt-[4.5rem] sm:h-auto sm:min-h-[clamp(520px,72vw,580px)] lg:aspect-[1.85/1] lg:min-h-[660px] lg:max-h-[calc(100svh+14rem)]">
+          <Reveal className="absolute inset-y-0 left-0 z-10 flex w-[64%] flex-col justify-center pb-12 pl-5 pr-2 pt-3 sm:w-[58%] sm:px-6 sm:py-6 lg:left-[clamp(64px,10vw,170px)] lg:top-1/2 lg:h-auto lg:w-[34%] lg:max-w-[480px] lg:min-w-[380px] lg:-translate-y-1/2 lg:px-0 lg:py-0 xl:top-[14.8%] xl:bottom-auto xl:max-w-[540px] xl:-mt-[2.25rem] xl:translate-y-0">
+            <p className="eyebrow flex flex-wrap items-center gap-x-4 gap-y-0.5 text-[clamp(0.52rem,2.4vw,0.62rem)] leading-snug text-muted-foreground sm:gap-x-10 sm:gap-y-1 sm:text-[0.65rem] lg:text-[0.7rem]">
               <span>CRM-RS 37669&nbsp;&nbsp;|&nbsp;&nbsp;RQE 29525</span>
               <span>Porto Alegre - RS</span>
             </p>
-            <h1 className="mt-3 whitespace-nowrap text-[clamp(1.7rem,8.4vw,2.4rem)] font-normal leading-[1.03] tracking-[-0.01em] sm:mt-4 sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.7rem,4.1vw,3.4rem)] lg:leading-[1.05] xl:text-[clamp(3.4rem,3.5vw,4.4rem)] xl:leading-[1]">
+            <h1 className="mt-2.5 whitespace-nowrap text-[5.9vw] font-normal leading-[1.06] tracking-[-0.01em] sm:mt-4 sm:leading-[1.03] sm:text-[clamp(2rem,4.4vw,2.75rem)] lg:mt-5 lg:text-[clamp(2.7rem,4.1vw,3.4rem)] lg:leading-[1.05] xl:text-[clamp(3.4rem,3.5vw,4.4rem)] xl:leading-[1]">
               Quando a córnea
               <br />
               <span className="text-primary">perde a transparência,</span>
@@ -204,16 +206,16 @@ function Home() {
             </h1>
             <span
               aria-hidden="true"
-              className="mt-4 block h-px w-12 bg-primary sm:mt-5 lg:mt-6 lg:w-14"
+              className="mt-3 block h-px w-10 bg-primary sm:mt-5 sm:w-12 lg:mt-6 lg:w-14"
             />
-            <p className="mt-3 text-[0.92rem] leading-[1.6] text-muted-foreground sm:mt-4 sm:leading-[1.5] sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[1.12rem] lg:leading-[1.6] xl:max-w-[480px] xl:text-[1.2rem]">
+            <p className="mt-2.5 text-[clamp(0.68rem,3.15vw,0.82rem)] leading-[1.5] text-muted-foreground sm:mt-4 sm:text-[0.85rem] lg:mt-5 lg:max-w-[430px] lg:text-[1.12rem] lg:leading-[1.6] xl:max-w-[480px] xl:text-[1.2rem]">
               Especialista em córnea, catarata e cirurgia refrativa, com atuação no
               diagnóstico e tratamento das doenças corneanas.
             </p>
-            <div className="mt-6 flex flex-col items-stretch gap-3 sm:items-start lg:mt-8">
+            <div className="mt-4 flex flex-col items-stretch gap-2 sm:mt-6 sm:items-start sm:gap-3 lg:mt-8">
               <CTAButton
                 href={site.whatsappUrl}
-                className="h-12 w-full rounded-md bg-primary px-7 text-[0.9rem] shadow-none sm:w-auto hover:bg-[var(--primary-deep)] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
+                className="h-[clamp(2.25rem,10.4vw,2.75rem)] w-full whitespace-nowrap rounded-md bg-primary px-1.5 text-[clamp(0.64rem,3.1vw,0.82rem)] shadow-none sm:w-auto hover:bg-[var(--primary-deep)] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
               >
                 Agendar consulta
               </CTAButton>
@@ -221,7 +223,7 @@ function Home() {
                 to="/"
                 hash="formacoes"
                 variant="secondary"
-                className="h-12 w-full rounded-md border-primary/45 px-7 text-[0.9rem] text-primary sm:w-auto hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
+                className="h-[clamp(2.25rem,10.4vw,2.75rem)] w-full whitespace-nowrap rounded-md border-primary/45 px-1.5 text-[clamp(0.64rem,3.1vw,0.82rem)] text-primary sm:w-auto hover:border-primary hover:bg-primary/[0.06] sm:h-12 sm:px-8 sm:text-[0.88rem] lg:h-[3.5rem] lg:px-10 lg:text-[1rem]"
               >
                 Conheça as doenças da córnea
               </CTAButton>
@@ -230,7 +232,7 @@ function Home() {
 
           <Reveal
             delay={120}
-            className="relative z-0 mb-[38px] aspect-[5/4] w-full sm:absolute sm:inset-0 sm:mb-0 sm:aspect-auto"
+            className="absolute inset-0 z-0"
           >
             {heroPhoto ? (
               <img
@@ -238,7 +240,7 @@ function Home() {
                 alt="Dra. Samara Marafon em seu consultório de oftalmologia em Porto Alegre"
                 loading="eager"
                 decoding="async"
-                className="h-full w-full object-cover object-right sm:object-[68%_center] lg:object-[72%_center]"
+                className="h-full w-full object-cover object-[86%_center] sm:object-[68%_center] lg:object-[72%_center]"
               />
             ) : (
               <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-center">
@@ -252,19 +254,10 @@ function Home() {
             {/* Feather: funde a borda esquerda da foto com o fundo, como na referência. */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 max-sm:hidden"
+              className="pointer-events-none absolute inset-0"
               style={{
                 background:
                   "linear-gradient(to right, var(--background) 0%, color-mix(in srgb, var(--background) 72%, transparent) 34%, transparent 64%)",
-              }}
-            />
-            {/* Mobile (foto empilhada abaixo do texto): o feather vira uma
-                transição suave no topo da foto, em vez da borda esquerda. */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 top-0 h-1/4 sm:hidden"
-              style={{
-                background: "linear-gradient(to bottom, var(--background), transparent)",
               }}
             />
           </Reveal>
