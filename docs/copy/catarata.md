@@ -1,4 +1,4 @@
-# Copy — Guia da Catarata (Biblioteca da Córnea)
+# Copy do Guia da Catarata (Biblioteca da Córnea)
 
 > **Status:** rascunho para revisão da Dra. Samara.
 > **Página:** `/catarata` (substitui a página antiga herdada do modelo da Dra. Diane).
@@ -34,7 +34,7 @@
 
 A catarata é a perda progressiva da transparência do cristalino, a lente natural que fica dentro do olho, logo atrás da íris. Com o tempo, a visão fica mais embaçada, as cores perdem o brilho e tarefas simples, como ler, dirigir à noite ou reconhecer rostos, passam a exigir mais esforço. É uma das causas mais comuns de baixa visão no mundo e, ao mesmo tempo, uma das mais tratáveis.
 
-Neste guia, você entenderá como reconhecer seus sinais, como é feito o diagnóstico, qual é o momento adequado para operar, como funciona a cirurgia e quais são os tipos de lente intraocular — e por que a avaliação da córnea faz parte desse planejamento.
+Neste guia, você entenderá como reconhecer seus sinais, como é feito o diagnóstico, qual é o momento adequado para operar, como funciona a cirurgia e quais são os tipos de lente intraocular. Também verá por que a avaliação da córnea faz parte desse planejamento.
 
 ---
 
@@ -48,28 +48,28 @@ Neste guia, você entenderá como reconhecer seus sinais, como é feito o diagn�
 6. Cirurgia de catarata
 7. Lentes intraoculares
 8. Catarata e córnea
-9. Perguntas frequentes
-10. Quando procurar um especialista?
+9. Quando procurar um oftalmologista?
+10. Perguntas frequentes
 
 ---
 
-## 1 — O que é a catarata?
+## 1. O que é a catarata?
 
-Dentro do olho existe uma lente natural chamada cristalino. Ela fica atrás da íris — a parte colorida do olho — e, junto com a córnea, é responsável por focalizar a luz sobre a retina para formar uma imagem nítida.
+Dentro do olho existe uma lente natural chamada cristalino. Ela fica atrás da íris, a parte colorida do olho, e, junto com a córnea, é responsável por focalizar a luz sobre a retina para formar uma imagem nítida.
 
 Na juventude, o cristalino é transparente e flexível. Ao longo dos anos, as proteínas que o compõem se modificam e se agrupam, e a lente vai perdendo sua transparência. Essa opacificação é o que chamamos de catarata.
 
 Uma forma simples de entender é imaginar uma janela de vidro que, com o tempo, vai ficando fosca. A paisagem continua lá fora, mas chega aos olhos cada vez mais apagada, sem contraste e com menos detalhes. Trocar o grau dos óculos pode ajudar por um período, mas não devolve a transparência ao vidro.
 
-> **[DESTAQUE]** A catarata não é uma película que cresce sobre o olho, nem algo que se "raspa". É o próprio cristalino que perde a transparência — e, por isso, o tratamento consiste em substituí-lo.
+> **[DESTAQUE]** A catarata não é uma película que cresce sobre o olho, nem algo que se "raspa". É o próprio cristalino que perde a transparência e, por isso, o tratamento consiste em substituí-lo.
 
 Na maioria das pessoas, a catarata está relacionada ao envelhecimento natural do olho e se desenvolve lentamente, ao longo de anos. Costuma afetar os dois olhos, mas nem sempre no mesmo ritmo: é comum um olho estar mais comprometido do que o outro.
 
-**[IMAGEM — DIAGRAMA]** Corte lateral do olho: cristalino transparente ao lado de um cristalino opaco (catarata).
+**[IMAGEM: DIAGRAMA]** Corte lateral do olho: cristalino transparente ao lado de um cristalino opaco (catarata).
 
 ---
 
-## 2 — Quais são os sintomas da catarata?
+## 2. Quais são os sintomas da catarata?
 
 Os sintomas costumam aparecer de forma gradual, e muitas pessoas se adaptam a eles sem perceber o quanto a visão mudou. Muitas vezes, é só depois da cirurgia que o paciente percebe o quanto as cores e os detalhes haviam se apagado.
 
@@ -96,13 +96,13 @@ A velocidade dessa evolução varia muito. Em algumas pessoas, a catarata perman
 
 ### Um sinal que merece atenção
 
-Algumas pessoas percebem que voltaram a ler sem os óculos de perto. Essa "melhora" pode parecer uma boa notícia, mas muitas vezes é causada pela mudança do grau provocada pela própria catarata — e costuma vir acompanhada de piora da visão para longe. Vale uma avaliação.
+Algumas pessoas percebem que voltaram a ler sem os óculos de perto. Essa "melhora" pode parecer uma boa notícia, mas muitas vezes é causada pela mudança do grau provocada pela própria catarata e costuma vir acompanhada de piora da visão para longe. Vale uma avaliação.
 
-**[IMAGEM — SIMULAÇÃO DA VISÃO]** Cena do dia a dia (ex.: trânsito à noite ou paisagem) com visão enevoada, cores amareladas e halos nas luzes.
+**[IMAGEM: SIMULAÇÃO DA VISÃO]** Cena do dia a dia (ex.: trânsito à noite ou paisagem) com visão enevoada, cores amareladas e halos nas luzes.
 
 ---
 
-## 3 — O que pode causar a catarata?
+## 3. O que pode causar a catarata?
 
 A causa mais comum é o envelhecimento natural do cristalino. Porém, diversos fatores podem antecipar o seu aparecimento ou acelerar a sua progressão.
 
@@ -117,11 +117,11 @@ A causa mais comum é o envelhecimento natural do cristalino. Porém, diversos f
 
 ### Diabetes
 
-O diabetes está associado ao aparecimento mais precoce da catarata e à sua progressão mais rápida. O bom controle da glicemia faz parte do cuidado com os olhos — e o exame de retina é indispensável no planejamento cirúrgico de quem tem diabetes.
+O diabetes está associado ao aparecimento mais precoce da catarata e à sua progressão mais rápida. O bom controle da glicemia faz parte do cuidado com os olhos, e o exame de retina é indispensável no planejamento cirúrgico de quem tem diabetes.
 
 ### Uso de corticoides
 
-O uso prolongado de corticoides — em comprimidos, colírios, inalatórios ou pomadas ao redor dos olhos — pode favorecer um tipo específico de catarata. Nenhum tratamento deve ser interrompido por conta própria; a decisão deve ser feita com o médico que o prescreveu.
+O uso prolongado de corticoides (em comprimidos, colírios, inalatórios ou pomadas ao redor dos olhos) pode favorecer um tipo específico de catarata. Nenhum tratamento deve ser interrompido por conta própria; a decisão deve ser feita com o médico que o prescreveu.
 
 ### Trauma e cirurgias oculares anteriores
 
@@ -139,13 +139,13 @@ A catarata também pode estar presente ao nascimento ou surgir na infância, por
 
 Não. Até o momento, não existe colírio, suplemento, exercício ou tratamento natural capaz de reverter ou dissolver a catarata. Promessas nesse sentido devem ser vistas com cautela. O único tratamento eficaz é a cirurgia.
 
-**[IMAGEM — FOTO DA DRA.]** Dra. Samara examinando um paciente na lâmpada de fenda.
+**[IMAGEM: FOTO DA DRA.]** Dra. Samara examinando um paciente na lâmpada de fenda.
 
 ---
 
-## 4 — Como é feito o diagnóstico? *(faixa com fundo destacado)*
+## 4. Como é feito o diagnóstico? *(faixa com fundo destacado)*
 
-Nem todo embaçamento é catarata. Muitas vezes, a névoa vem da superfície ocular — olho seco, irregularidade na córnea ou até o uso inadequado de colírios. Por isso, antes de pensar em cirurgia, é preciso entender de onde ela vem.
+Nem todo embaçamento é catarata. Muitas vezes, a névoa vem da superfície ocular: olho seco, irregularidade na córnea ou até o uso inadequado de colírios. Por isso, antes de pensar em cirurgia, é preciso entender de onde ela vem.
 
 O diagnóstico da catarata é feito no consultório, com o exame do cristalino na lâmpada de fenda após a dilatação da pupila. Mas confirmar que existe catarata é apenas o primeiro passo: também é preciso entender o quanto ela explica a queda da visão e avaliar todas as estruturas do olho que influenciam o resultado da cirurgia.
 
@@ -171,13 +171,13 @@ Durante a consulta, o especialista pode investigar:
 | Mapeamento de retina | Retina e nervo óptico. | Identifica alterações que podem limitar a visão após a cirurgia. |
 | Tomografia de coerência óptica (OCT) | Camadas da mácula, a região central da retina. | Detecta alterações sutis que podem influenciar o prognóstico e a escolha da lente. |
 
-A catarata explica a baixa visão quando a opacidade do cristalino é compatível com os sintomas e as demais estruturas do olho estão saudáveis. Quando existe outra condição associada — na córnea, na retina ou no nervo óptico — ela precisa ser identificada antes da cirurgia, porque pode influenciar o resultado esperado.
+A catarata explica a baixa visão quando a opacidade do cristalino é compatível com os sintomas e as demais estruturas do olho estão saudáveis. Quando existe outra condição associada, na córnea, na retina ou no nervo óptico, ela precisa ser identificada antes da cirurgia, porque pode influenciar o resultado esperado.
 
 ### Qual é o momento certo de operar?
 
 Não é preciso esperar a catarata "amadurecer". Essa recomendação vem de uma época em que as técnicas cirúrgicas eram outras. Hoje, cataratas muito avançadas tendem a tornar a cirurgia tecnicamente mais complexa.
 
-Em geral, a cirurgia é indicada quando a catarata passa a interferir na qualidade de vida: dificuldade para dirigir, ler, trabalhar, praticar atividades ou realizar tarefas com segurança. Não existe um número mágico de visão que defina essa decisão — ela é construída em conjunto, considerando os exames, os sintomas e a rotina de cada pessoa.
+Em geral, a cirurgia é indicada quando a catarata passa a interferir na qualidade de vida: dificuldade para dirigir, ler, trabalhar, praticar atividades ou realizar tarefas com segurança. Não existe um número mágico de visão que defina essa decisão. Ela é construída em conjunto, considerando os exames, os sintomas e a rotina de cada pessoa.
 
 Em algumas situações, a cirurgia pode ser recomendada mesmo com sintomas leves, como quando a catarata dificulta o tratamento ou o acompanhamento de outras doenças oculares.
 
@@ -187,7 +187,7 @@ Uma catarata inicial, que não atrapalha a rotina, pode ser apenas acompanhada c
 
 ---
 
-## 5 — Qual é o tratamento para catarata? *(faixa com fundo destacado)*
+## 5. Qual é o tratamento para catarata? *(faixa com fundo destacado)*
 
 Nas fases iniciais, a troca dos óculos, uma iluminação adequada e o uso de óculos de sol podem melhorar o conforto visual. Porém, essas medidas não interrompem a progressão da catarata.
 
@@ -211,21 +211,21 @@ O planejamento depende de fatores como:
 
 ### Comparação geral das lentes intraoculares
 
-Existem diferentes tipos de lente intraocular. O quadro abaixo apresenta, de forma geral, as principais categorias e suas características — a indicação de cada uma depende das particularidades de cada olho e é definida na avaliação.
+Existem diferentes tipos de lente intraocular. O quadro abaixo apresenta, de forma geral, as principais categorias e suas características. A indicação de cada uma depende das particularidades de cada olho e é definida na avaliação.
 
 | Tipo de lente | O que busca | Quando pode ser considerada | Limitações |
 |---|---|---|---|
 | Monofocal | Visão nítida em uma distância, geralmente para longe. | Na maioria dos pacientes; é a lente mais utilizada. | Normalmente exige óculos para perto (e às vezes para distância intermediária). |
-| Tórica | Corrigir o astigmatismo da córnea junto com a catarata. | Quando há astigmatismo regular significativo. | Depende de posicionamento preciso; pode existir em versões monofocal, multifocal ou EDOF. |
-| Foco estendido (EDOF) | Boa visão para longe e para distâncias intermediárias, como o computador. | Para quem deseja reduzir a dependência de óculos no dia a dia. | Pode ainda exigir óculos para leitura de letras pequenas; halos leves são possíveis. |
 | Multifocal / trifocal | Visão para longe, intermediária e perto. | Para quem deseja maior independência dos óculos e tem olho saudável para essa lente. | Maior chance de halos e ofuscamento noturnos; nem todo olho é candidato. |
+| Tórica | Correção do astigmatismo da córnea junto com a catarata. | Quando há astigmatismo regular significativo. | Depende de posicionamento preciso; pode existir em versões monofocal, multifocal ou EDOF. |
+| Foco estendido (EDOF) | Boa visão para longe e para distâncias intermediárias, como o computador. | Para quem deseja reduzir a dependência de óculos no dia a dia. | Pode ainda exigir óculos para leitura de letras pequenas; halos leves são possíveis. |
 
 
 ---
 
-## 6 — Cirurgia de catarata
+## 6. Cirurgia de catarata
 
-**[IMAGEM — ETAPAS DA CIRURGIA]** Ilustração em etapas: (1) anestesia com colírio; (2) pequena incisão na córnea; (3) abertura da cápsula do cristalino; (4) fragmentação e aspiração do cristalino opaco (facoemulsificação); (5) implante da lente intraocular dobrável dentro da cápsula; (6) lente posicionada e olho fechado sem pontos.
+**[IMAGEM: ETAPAS DA CIRURGIA]** Ilustração em etapas: (1) anestesia com colírio; (2) pequena incisão na córnea; (3) abertura da cápsula do cristalino; (4) fragmentação e aspiração do cristalino opaco (facoemulsificação); (5) implante da lente intraocular dobrável dentro da cápsula; (6) lente posicionada e olho fechado sem pontos.
 
 ### O que é?
 
@@ -267,7 +267,7 @@ O grau definitivo dos óculos, quando necessário, costuma ser prescrito algumas
 
 A cirurgia de catarata é um dos procedimentos mais realizados e seguros da medicina quando bem indicada e planejada. Ainda assim, como qualquer cirurgia, não é isenta de riscos, como inflamação, aumento da pressão ocular, inchaço da córnea ou da retina e, raramente, infecção ou descolamento de retina.
 
-O resultado visual também depende da saúde das demais estruturas do olho. Quando há doenças na córnea, na retina ou no nervo óptico, a melhora pode ser menor do que a esperada — por isso a avaliação completa antes da cirurgia é tão importante.
+O resultado visual também depende da saúde das demais estruturas do olho. Quando há doenças na córnea, na retina ou no nervo óptico, a melhora pode ser menor do que a esperada. Por isso, a avaliação completa antes da cirurgia é tão importante.
 
 ### A catarata pode voltar?
 
@@ -277,9 +277,9 @@ O tratamento é simples: um procedimento rápido com laser (YAG laser), feito no
 
 ---
 
-## 7 — Lentes intraoculares
+## 7. Lentes intraoculares
 
-**[IMAGEM — TIPOS DE LENTE]** Ilustração comparando os tipos de lente intraocular (monofocal, tórica, EDOF, multifocal/trifocal) ou foto de uma lente intraocular dobrável.
+**[IMAGEM: TIPOS DE LENTE]** Ilustração comparando os tipos de lente intraocular (monofocal, tórica, EDOF, multifocal/trifocal) ou foto de uma lente intraocular dobrável.
 
 ### O que é uma lente intraocular?
 
@@ -291,7 +291,7 @@ O grau é calculado a partir das medidas da biometria, das informações da cór
 
 ### Como escolher a lente?
 
-Não existe uma lente melhor para todos. Existe a lente escolhida para aquele olhar específico — não uma lente padrão de catálogo. A escolha considera os exames, a presença de astigmatismo, a saúde da córnea e da retina, as atividades do dia a dia e o quanto o paciente deseja — e aceita — depender de óculos.
+Não existe uma lente melhor para todos. Existe a lente escolhida para aquele olhar específico, e não uma lente padrão de catálogo. A escolha considera os exames, a presença de astigmatismo, a saúde da córnea e da retina, as atividades do dia a dia e o quanto o paciente deseja e aceita depender de óculos.
 
 Lentes que oferecem visão em várias distâncias podem proporcionar mais independência dos óculos, mas costumam vir acompanhadas de algum grau de halos e ofuscamento noturnos. Para algumas pessoas, essa troca vale a pena; para outras, não. Essa conversa faz parte do planejamento.
 
@@ -305,7 +305,7 @@ Sim. Quando o astigmatismo da córnea é regular e significativo, as lentes tór
 
 ---
 
-## 8 — Catarata e córnea: por que essa avaliação faz diferença
+## 8. Catarata e córnea: por que essa avaliação faz diferença
 
 A córnea é a primeira lente do olho e responde pela maior parte do seu poder de foco. Por isso, a saúde e o formato da córnea influenciam diretamente o cálculo da lente intraocular, a escolha do tipo de lente e o resultado final da cirurgia de catarata.
 
@@ -317,7 +317,7 @@ No ceratocone, a córnea é irregular, e as medidas usadas para calcular a lente
 
 ### Distrofia de Fuchs
 
-Na distrofia de Fuchs, as células endoteliais — responsáveis por manter a córnea transparente — estão reduzidas. A cirurgia de catarata pode sobrecarregar ainda mais essas células. A microscopia especular e a tomografia ajudam a avaliar o risco e, em alguns casos, a planejar a cirurgia de catarata em conjunto com um transplante da camada interna da córnea (DMEK), muitas vezes no mesmo procedimento. Em outros casos, como em córneas com cirurgias antigas, pode ser mais seguro fazer o transplante primeiro, esperar a córnea cicatrizar no seu próprio tempo e só depois operar a catarata, com mais precisão.
+Na distrofia de Fuchs, as células endoteliais, responsáveis por manter a córnea transparente, estão reduzidas. A cirurgia de catarata pode sobrecarregar ainda mais essas células. A microscopia especular e a tomografia ajudam a avaliar o risco e, em alguns casos, a planejar a cirurgia de catarata em conjunto com um transplante da camada interna da córnea (DMEK), muitas vezes no mesmo procedimento. Em outros casos, como em córneas com cirurgias antigas, pode ser mais seguro fazer o transplante primeiro, esperar a córnea cicatrizar no seu próprio tempo e só depois operar a catarata, com mais precisão.
 
 ### Olho seco
 
@@ -374,7 +374,7 @@ Esses sinais não devem ser atribuídos automaticamente à catarata, que costuma
 - O único tratamento definitivo é a cirurgia, que substitui o cristalino por uma lente intraocular.
 - Não é preciso esperar a catarata "amadurecer"; a cirurgia é indicada quando ela passa a interferir na qualidade de vida.
 - A escolha da lente intraocular deve ser individual, de acordo com os exames e a rotina de cada paciente.
-- Nem todo paciente ficará totalmente livre dos óculos — isso depende da lente e das características do olho.
+- Nem todo paciente ficará totalmente livre dos óculos, pois isso depende da lente e das características do olho.
 - A saúde da córnea influencia o cálculo da lente e o resultado da cirurgia.
 - A catarata não volta, mas a cápsula pode opacificar e é tratada com laser no consultório.
 
@@ -431,13 +431,13 @@ Sim. O controle adequado da glicemia e a avaliação cuidadosa da retina antes e
 Sim. Em muitos casos, a cirurgia pode até ajudar no controle da pressão ocular. O planejamento deve considerar o estágio do glaucoma, a escolha da lente e o acompanhamento da pressão após a cirurgia.
 
 **Quem já fez LASIK ou PRK pode operar catarata?**
-Sim. Como a córnea foi modificada, o cálculo da lente exige fórmulas específicas. Informar o médico sobre a cirurgia anterior — e levar os dados dela, se disponíveis — ajuda no planejamento.
+Sim. Como a córnea foi modificada, o cálculo da lente exige fórmulas específicas. Informar o médico sobre a cirurgia anterior e levar os dados dela, se disponíveis, ajuda no planejamento.
 
 **Quem tem ceratocone pode operar catarata?**
 Sim, mas o planejamento é diferente. A irregularidade da córnea torna o cálculo da lente menos previsível, e muitos pacientes continuam precisando de lentes de contato especiais após a cirurgia. A avaliação por um especialista em córnea é especialmente importante nesses casos.
 
 **Catarata pode aparecer em pessoas jovens?**
-Sim. Embora seja mais comum após os 60 anos, a catarata pode surgir mais cedo em pessoas com diabetes, uso prolongado de corticoides, trauma ocular, alta miopia ou outras condições — e também pode estar presente desde o nascimento.
+Sim. Embora seja mais comum após os 60 anos, a catarata pode surgir mais cedo em pessoas com diabetes, uso prolongado de corticoides, trauma ocular, alta miopia ou outras condições. Também pode estar presente desde o nascimento.
 
 **Depois da cirurgia, posso dirigir?**
 A liberação depende da recuperação da visão e da avaliação no pós-operatório. Muitas pessoas voltam a dirigir em poucos dias, mas a decisão deve ser feita com o médico.
@@ -449,7 +449,7 @@ A liberação depende da recuperação da visão e da avaliação no pós-operat
 - 8 minutos de leitura · Atualizado em [mês/ano de publicação]
 - **Ficou com alguma dúvida?** Cada caso é único. Uma avaliação especializada é fundamental. → Agendar consulta
 - **Continue aprendendo:** Ceratocone · Distrofias da córnea · Olho seco
-- **Escrito por** Dra. Samara B. Marafon — Oftalmologista especialista em córnea, catarata e lente de contato. CRM-RS 37669 | RQE 29525 → Conheça a trajetória
+- **Escrito por** Dra. Samara B. Marafon, oftalmologista especialista em córnea, catarata e lente de contato. CRM-RS 37669 | RQE 29525 → Conheça a trajetória
 
 ---
 
