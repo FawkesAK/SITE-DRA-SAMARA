@@ -104,7 +104,7 @@ export function Depoimentos() {
                     ))}
                   </span>
                 </div>
-                <p className="mt-4 flex-1 text-justify text-[0.82rem] leading-relaxed text-foreground">
+                <p className="mt-4 flex-1 text-left text-[0.88rem] sm:text-justify sm:text-[0.82rem] leading-relaxed text-foreground">
                   {d.texto}
                 </p>
                 <p className="mt-4 text-[0.8rem] italic text-foreground">{d.nome}</p>
