@@ -2,7 +2,7 @@
 
 > **Status:** rascunho para revisão da Dra. Samara.
 > **Página:** `/catarata` (substitui a página antiga herdada do modelo da Dra. Diane).
-> **Modelo:** mesma estrutura do guia de Ceratocone (hero → lead → "Neste guia" → artigo com sidebar → quando procurar → principais pontos → CTA → FAQ).
+> **Modelo:** mesma estrutura do guia de Ceratocone (hero → lead → "Neste guia" → artigo com sidebar → quando procurar → principais pontos → FAQ).
 >
 > Conferido no Notion (posts da própria Dra. Samara): tempo de cirurgia (< 20 min), anestesia local, alta no mesmo dia, "não precisa amadurecer", opacificação da cápsula tratada com laser, catarata + DMEK na mesma cirurgia e transplante antes da catarata em córneas com ceratotomia radial.
 >
@@ -377,18 +377,6 @@ Esses sinais não devem ser atribuídos automaticamente à catarata, que costuma
 - Nem todo paciente ficará totalmente livre dos óculos, pois isso depende da lente e das características do olho.
 - A saúde da córnea influencia o cálculo da lente e o resultado da cirurgia.
 - A catarata não volta, mas a cápsula pode opacificar e é tratada com laser no consultório.
-
----
-
-## CTA FINAL *(padrão das outras páginas)*
-
-**Título:** Cada visão tem uma história.
-
-**Texto:** Se você apresenta sintomas relacionados à córnea, recebeu um diagnóstico ou deseja avaliar a possibilidade de um tratamento cirúrgico, uma consulta especializada é o primeiro passo para compreender o seu caso e definir a melhor conduta.
-
-**Botões:** Agendar consulta · Entrar em contato
-
-> Sugestão opcional, só para esta página: "Se a sua visão perdeu nitidez, cor ou contraste, ou se você recebeu o diagnóstico de catarata, uma consulta especializada é o primeiro passo para entender o momento certo da cirurgia e planejar a lente mais adequada para a sua rotina."
 
 ---
 
