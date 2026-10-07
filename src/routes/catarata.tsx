@@ -576,9 +576,10 @@ function Page() {
                 </p>
               </Prose>
 
-              {/* TROCAR IMAGEM AQUI: [INSERIR IMAGEM — DIAGRAMA CRISTALINO NORMAL × CATARATA] */}
+              {/* Diagrama cristalino normal × catarata */}
               <Illustration
                 file="catarata_diagrama.jpg"
+                ratio="4/3"
                 alt="Comparação em corte lateral: um cristalino transparente ao lado de um cristalino opaco, com catarata"
               />
 
@@ -632,11 +633,12 @@ function Page() {
                 </p>
               </Prose>
 
-              {/* TROCAR IMAGEM AQUI: [INSERIR IMAGEM — SIMULAÇÃO DA VISÃO COM CATARATA] */}
-              <Illustration
+              {/* Simulação da visão com catarata (foto vertical → recorte 4:3 centralizado) */}
+              <ArticleFigure
                 file="catarata_visao.jpg"
-                alt="Cena do dia a dia vista com catarata: imagem enevoada, cores amareladas e halos nas luzes"
-                ratio="16/10"
+                alt="Rua à noite vista com catarata: imagem enevoada, amarelada e com halos ao redor das luzes"
+                ratio="4/3"
+                imgClassName="object-[50%_55%]"
               />
 
               {/* 3 — Causas */}
@@ -858,10 +860,11 @@ function Page() {
                 Cirurgia de catarata
               </H2>
 
-              {/* TROCAR IMAGEM AQUI: [INSERIR IMAGEM — ETAPAS DA CIRURGIA DE CATARATA] */}
+              {/* Etapas da cirurgia de catarata */}
               <Illustration
                 file="catarata_cirurgia_passos.jpg"
-                alt="Etapas da cirurgia de catarata: anestesia com colírio, pequena incisão na córnea, abertura da cápsula do cristalino, fragmentação e aspiração do cristalino opaco, implante da lente intraocular dobrável e lente posicionada, sem pontos"
+                ratio="1672/941"
+                alt="Cinco etapas da cirurgia de catarata: microincisão na córnea, fragmentação do cristalino opaco com ultrassom, aspiração dos fragmentos, implante da lente intraocular no lugar do cristalino e resultado com a visão mais nítida após a recuperação"
               />
 
               <H3>O que é?</H3>
@@ -960,10 +963,11 @@ function Page() {
                 Lentes intraoculares
               </H2>
 
-              {/* TROCAR IMAGEM AQUI: [INSERIR IMAGEM — TIPOS DE LENTE INTRAOCULAR] */}
+              {/* Tipos de lente intraocular */}
               <Illustration
                 file="catarata_lentes.jpg"
-                alt="Tipos de lente intraocular: monofocal, tórica, de foco estendido e multifocal"
+                ratio="1672/941"
+                alt="Quatro tipos de lente intraocular: monofocal, com foco único para longe ou perto; multifocal, com múltiplos focos para diferentes distâncias; tórica, que corrige catarata e astigmatismo; e EDOF, que amplia a faixa de foco com transição suave"
               />
 
               <H3>O que é uma lente intraocular?</H3>

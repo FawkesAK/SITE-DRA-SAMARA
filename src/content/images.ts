@@ -39,13 +39,15 @@ export const imageMap: Record<string, string> = {
   "olho_seco_plug.jpg": "/images/olho-seco-plug.png",
   "olho_seco_telas.jpg": "/images/olho-seco-telas.png",
   "distrofias_fuchs_edema.jpg": "/images/distrofias-fuchs-edema.png",
-  // Guia da Catarata — hero e card da Biblioteca usam a foto do card de
-  // especialidades; fotos de consultório provisórias reaproveitadas do guia de
-  // Ceratocone (trocar aqui quando chegarem as fotos próprias). Ilustrações
-  // (catarata_diagrama, catarata_visao, catarata_cirurgia_passos,
-  // catarata_lentes) ainda não existem e não são renderizadas até entrarem aqui.
-  "catarata_hero.jpg": "/images/home-card-catarata.png",
-  "biblioteca_04_catarata.jpg": "/images/home-card-catarata.png",
+  // Guia da Catarata — ilustrações e foto do hero/card da Biblioteca enviadas
+  // pela equipe; fotos de consultório (abaixo) ainda provisórias, reaproveitadas
+  // do guia de Ceratocone (trocar aqui quando chegarem as fotos próprias).
+  "catarata_hero.jpg": "/images/catarata-hero.jpg",
+  "biblioteca_04_catarata.jpg": "/images/catarata-hero.jpg",
+  "catarata_diagrama.jpg": "/images/catarata-diagrama.jpg",
+  "catarata_visao.jpg": "/images/catarata-visao.jpg",
+  "catarata_cirurgia_passos.jpg": "/images/catarata-cirurgia-passos.png",
+  "catarata_lentes.jpg": "/images/catarata-lentes.png",
   "catarata_consultorio.jpg": "/images/ceratocone-lente-contato.jpg",
   "catarata_especialista.jpg": "/images/ceratocone-especialista.jpg",
   "catarata_urgencia.jpg": "/images/ceratocone-urgencia.jpg",
