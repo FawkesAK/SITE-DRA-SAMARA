@@ -471,8 +471,8 @@ function Page() {
                   A catarata é a perda progressiva da transparência do cristalino, a lente natural
                   que fica dentro do olho, logo atrás da íris. Com o tempo, a visão fica mais
                   embaçada, as cores perdem o brilho e tarefas simples, como ler, dirigir à noite ou
-                  reconhecer rostos, passam a exigir mais esforço. É uma das causas mais comuns de
-                  baixa visão no mundo e, ao mesmo tempo, uma das mais tratáveis.
+                  reconhecer rostos, passam a exigir mais esforço. É a principal causa de cegueira
+                  reversível no mundo.
                 </p>
                 <p>
                   Neste guia, você entenderá como reconhecer seus sinais, como é feito o
@@ -1024,8 +1024,7 @@ function Page() {
                     catarata pode sobrecarregar ainda mais essas células. A microscopia especular e
                     a tomografia ajudam a avaliar o risco e, em alguns casos, a planejar a cirurgia
                     de catarata em conjunto com um transplante da camada interna da córnea (DMEK),
-                    muitas vezes no mesmo procedimento. Em outros casos, como em córneas com
-                    cirurgias antigas, pode ser mais seguro fazer o transplante primeiro, esperar a
+                    muitas vezes no mesmo procedimento. Em outros casos, pode ser mais seguro fazer o transplante primeiro, esperar a
                     córnea cicatrizar no seu próprio tempo e só depois operar a catarata, com mais
                     precisão.
                   </p>
